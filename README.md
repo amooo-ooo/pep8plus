@@ -3,23 +3,24 @@ pep8plus is an online tool to help Python enthusiasts of all levels enforce and 
 
 ## Features
 
-There are several key features pep8plus has which differentiates from other online checkers. 
+Three major features of the pep8plus project: 
 
-- Customisation: 
-pep8plus allows educators to select enforced rules from three different linters, Ruff, Pylint and Flake8. With over 1000 built-in convention rules combined, all convention settings are able to be easily activated and deactivated to share with students.
+- Customisation:
+pep8plus offers three different popular linters: Ruff, Pylint and Flake8. With over 1000 built-in convention guides and rules combined, all convention settings are able to be easily activated and deactivated to share with students.
 - Shareability:
-pep8plus allows educators and teachers to easily share customised convention rule settings to their students by generating a custom link.
+pep8plus allows educators to easily share customised convention settings to their students by generating a custom link.
 - Suggestions:
-pep8plus offers direct suggestions and solutions to improving your code to convention.
-- Open Source:
-With the project being open-source, pep8plus allows educational institutions to self-host the program and build their own plugins 
-- Live Code Editor:
-pep8plus
-
-pep8plus currently supports projects
-
-## Documentation
+pep8plus offers direct solutions to improving your code to convention.
+and more!
 
 ## Get Started
 
+## Documentation
+
+## Plugins
+
 ## Contact
+You can contact me at [amor.budiyanto@gmail.com](mailto:amor.budiyanto@gmail.com).
+
+## Disclaimer
+This project was created as a school project with the aspiration of helping other young Pythonistas enforce and learn python coding practices.
