@@ -2,7 +2,7 @@
     <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaCYmiY_KJ1tkmjCSz2Bd9rRYeJndKewbYFOZlhsBjtQpZs9-ENPKvttgX10ihZFM1yxFg9cI7Dc59jwlgcNWiiuYBekaw=w1366-h635" alt="pep8plus logo" width="200" height="200">
 </p>
 
-<h3 align="center">pep8plus</h3>
+<h2 align="center">pep8plus</h2>
 
 <p align="center">
   Faster, easier, online Python syntax checker for educational institutions.
