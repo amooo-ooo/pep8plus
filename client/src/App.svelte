@@ -1,4 +1,4 @@
-<script lang="js">
+<script lang="ts">
 	import CodeMirror from "svelte-codemirror-editor";
 	import { python } from "@codemirror/lang-python";
 	import { githubDark, githubLight } from "@uiw/codemirror-theme-github";
