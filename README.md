@@ -8,7 +8,7 @@
   Faster, easier, online Python syntax checker for educational institutions.
 </p>
 
-# pep8plus
+# pep8plus (BETA)
 
 pep8plus is an online tool built for educational institutions to help students enforce and maintain Python programming standards. Powered by Ruff, Flake8 and Pylint, pep8plus is built on the principle of customisability, ease of use and user experience. The purpose of this project is to provide educators with a transparent, customisable and easy solution to helping their students enforce Python conventions. 
 
