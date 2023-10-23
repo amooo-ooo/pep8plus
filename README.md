@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaCYmiY_KJ1tkmjCSz2Bd9rRYeJndKewbYFOZlhsBjtQpZs9-ENPKvttgX10ihZFM1yxFg9cI7Dc59jwlgcNWiiuYBekaw=w1366-h635" alt="pep8plus logo" width="200" height="200">
+    <img src="https://lh3.google.com/u/0/d/1uYIPHCdrerFcXgYbPJXJwWhwcNRanipA=w1366-h635-iv1" alt="pep8plus logo" width="200" height="200">
 </p>
 
 <h2 align="center">pep8plus</h2>
