@@ -1,0 +1,228 @@
+.highlight {
+    background-color: var(--active-highlight) !important;
+}
+
+.indicator {
+    background-color: var(--active-indicator) !important;
+}
+
+#lint-select {
+    height: 30px;
+    margin: auto 0;
+    background-color: var(--active-buttons);
+    border: var(--active-outline) 1px solid;
+    color: var(--active-text);
+    border-radius: 6px;
+}
+
+p {
+    margin: 0 auto;
+}
+
+.unselected:hover {
+    background-color: var(--active-buttons-hover);
+}
+
+.icon {
+    width: 16px; height: 16px;
+    color: var(--active-text);
+    display: inline-block;
+}
+
+#editor-comment {
+    display: inline-flex;
+  margin: auto;
+}
+
+#editor-comment>svg {
+    margin: auto 1%;
+}
+
+.text-stack {
+    border: 1px solid var(--active-outline);
+    margin: auto auto auto 1.4%;
+    width: fit-content;
+    display: flex;
+    border-radius: 6px;
+}
+
+.button-stack, #settings-button {
+    width: fit-content;
+    margin: auto 1.8%;
+    border-radius: 6px;
+    display: flex;
+}
+
+#settings-button>button {
+    border-radius: 6px;
+}
+
+.button-stack {
+    background-color: var(--active-buttons);
+}
+
+.text-stack>h3 {
+    color: var(--active-text);
+    padding: 5.5px 9.5px;
+}
+
+.button-stack>button, #settings-button>button {
+    color: var(--active-text);
+    padding: 3.5px 5.5px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid var(--active-outline);
+    transition: background-color 50ms ease-in-out, border 50ms ease-in-out;
+}
+
+.button-stack>button:hover {
+    background-color: var(--active-outline);
+    border-color: var(--active-text-description);
+}
+
+.button-stack>button:last-child {
+    border-left: 0px;
+    border-radius: 0 6px 6px 0;
+}
+.button-stack>button:last-child:hover {
+    border-left: 1px solid var(--active-text-description);
+}
+
+.button-stack>button:first-child {
+    border-right: 0px;
+    border-radius: 6px 0 0 6px;
+}
+.button-stack>button:first-child:hover {
+    border-right: 1px solid var(--active-text-description);
+}
+
+.text-stack>h3:not(:last-child) {
+    border-right: 1px solid var(--active-outline);
+}
+
+/* Both Code Editor Panel and Settings/ Errors Panel */
+
+div#editor-header,
+div#settings-header {
+    border: 1px solid var(--active-outline);
+    background-color: var(--active-second);
+    border-bottom: 0;
+    border-radius: 0.5rem 0.5rem 0 0;
+    height: 47px;
+}
+
+
+
+div#settings-panel {
+    height: 60vh;
+}
+
+div#editor-header, div#settings-header {
+    display: inline-flex;
+    width: 100%;
+}
+
+div#error-display,
+#settings-display {
+    border: 1px solid var(--active-outline);
+    border-radius: 0 0 0.5rem 0.5rem;
+    height: inherit;
+    overflow-y: auto;
+}
+
+/* Settings Panel */
+
+.category-title {
+    color: var(--active-text);
+    background-color: var(--active-second);
+    font-family: 'Segoe UI', sans-serif;
+    border: solid var(--active-outline);
+    border-width: 1px 0px;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 550;
+}
+
+div.group {
+    margin: 6px 0;
+}
+
+/* Select linter */
+
+#lint-mode {
+    width: fit-content;
+    margin: auto 1.25%;
+    background-color: var(--active-buttons);
+    border-radius: 6px;
+}
+
+.unselected {
+    background-color: transparent;
+    color: var(--active-text);
+    padding: 8px 14px;
+    border: transparent;
+    cursor: pointer;
+}
+
+.selected {
+    color: var(--active-text);
+    padding: 8px 14px;
+    border: 1px solid var(--active-outline);
+    background-color: var(--active-main);
+    border-radius: 0.2rem;
+    margin: -2px -4px;
+}
+
+/* Buttons */
+
+.category-toggle,
+#submit-button,
+#create-link {
+    background-color: var(--active-main);
+    color: var(--active-text);
+    border: 1px solid var(--active-outline);
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.category-toggle:hover,
+#submit-button:hover,
+#create-link:hover {
+    background-color: var(--active-buttons-hover);
+}
+
+#submit-button {
+    margin: 10px 0;
+}
+
+/* Error Panel */
+
+.error-row {
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--active-text);
+    font-size: 14px;
+    display: flex;
+    padding: 1.5%;
+    margin: 0 1.5%;
+    background-color: transparent;
+}
+
+.error-row:hover {
+    border-radius: 4px;
+    background-color: var(--active-buttons-hover);
+    cursor: pointer;
+}
+
+#settings-display {
+    background-color: var(--active-main);
+    height: inherit;
+    overflow: auto;
+}
+
+#create-link {
+    position: fixed;
+    margin: 10.3vh 0;
+    bottom: 0;
+    right: 0;
+}

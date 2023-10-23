@@ -1,0 +1,493 @@
+{
+    "mccabe": {
+        "C901": {
+            "description": "",
+            "name": "Function is too complex",
+            "value": true
+        }
+    },
+    "pycodestyle": {
+        "E101": {
+            "description": "",
+            "name": "Indentation contains mixed spaces and tabs",
+            "value": true
+        },
+        "E111": {
+            "description": "",
+            "name": "Indentation is not a multiple of four",
+            "value": true
+        },
+        "E112": {
+            "description": "",
+            "name": "Expected an indented block",
+            "value": true
+        },
+        "E113": {
+            "description": "",
+            "name": "Unexpected indentation",
+            "value": true
+        },
+        "E114": {
+            "description": "",
+            "name": "Indentation is not a multiple of four (comment)",
+            "value": true
+        },
+        "E115": {
+            "description": "",
+            "name": "Expected an indented block (comment)",
+            "value": true
+        },
+        "E116": {
+            "description": "",
+            "name": "Unexpected indentation (comment)",
+            "value": true
+        },
+        "E117": {
+            "description": "",
+            "name": "Over-indented",
+            "value": true
+        },
+        "E121": {
+            "description": "",
+            "name": "Continuation line under-indented for hanging indent",
+            "value": true
+        },
+        "E122": {
+            "description": "",
+            "name": "Continuation line missing indentation or outdented",
+            "value": true
+        },
+        "E123": {
+            "description": "",
+            "name": "Closing bracket does not match indentation of opening bracket's line",
+            "value": true
+        },
+        "E124": {
+            "description": "",
+            "name": "Closing bracket does not match visual indentation",
+            "value": true
+        },
+        "E125": {
+            "description": "",
+            "name": "Continuation line with same indent as next logical line",
+            "value": true
+        },
+        "E126": {
+            "description": "",
+            "name": "Continuation line over-indented for hanging indent",
+            "value": true
+        },
+        "E127": {
+            "description": "",
+            "name": "Continuation line over-indented for visual indent",
+            "value": true
+        },
+        "E128": {
+            "description": "",
+            "name": "Continuation line under-indented for visual indent",
+            "value": true
+        },
+        "E129": {
+            "description": "",
+            "name": "Visually indented line with same indent as next logical line",
+            "value": true
+        },
+        "E131": {
+            "description": "",
+            "name": "Continuation line unaligned for hanging indent",
+            "value": true
+        },
+        "E133": {
+            "description": "",
+            "name": "Closing bracket is missing indentation",
+            "value": true
+        },
+        "E201": {
+            "description": "",
+            "name": "Whitespace after '('",
+            "value": true
+        },
+        "E202": {
+            "description": "",
+            "name": "Whitespace before ')'",
+            "value": true
+        },
+        "E203": {
+            "description": "",
+            "name": "Whitespace before ':'",
+            "value": true
+        },
+        "E211": {
+            "description": "",
+            "name": "Whitespace before '('",
+            "value": true
+        },
+        "E221": {
+            "description": "",
+            "name": "Multiple spaces before operator",
+            "value": true
+        },
+        "E222": {
+            "description": "",
+            "name": "Multiple spaces after operator",
+            "value": true
+        },
+        "E223": {
+            "description": "",
+            "name": "Tab before operator",
+            "value": true
+        },
+        "E224": {
+            "description": "",
+            "name": "Tab after operator",
+            "value": true
+        },
+        "E225": {
+            "description": "",
+            "name": "Missing whitespace around operator",
+            "value": true
+        },
+        "E226": {
+            "description": "",
+            "name": "Missing whitespace around arithmetic operator",
+            "value": true
+        },
+        "E227": {
+            "description": "",
+            "name": "Missing whitespace around bitwise or shift operator",
+            "value": true
+        },
+        "E228": {
+            "description": "",
+            "name": "Missing whitespace around modulo operator",
+            "value": true
+        },
+        "E231": {
+            "description": "",
+            "name": "Missing whitespace after ',', ';', or ':'",
+            "value": true
+        },
+        "E241": {
+            "description": "",
+            "name": "Multiple spaces after ','",
+            "value": true
+        },
+        "E242": {
+            "description": "",
+            "name": "Tab after ','",
+            "value": true
+        },
+        "E251": {
+            "description": "",
+            "name": "Unexpected spaces around keyword / parameter equals",
+            "value": true
+        },
+        "E261": {
+            "description": "",
+            "name": "At least two spaces before inline comment",
+            "value": true
+        },
+        "E262": {
+            "description": "",
+            "name": "Inline comment should start with '# '",
+            "value": true
+        },
+        "E265": {
+            "description": "",
+            "name": "Block comment should start with '# '",
+            "value": true
+        },
+        "E266": {
+            "description": "",
+            "name": "Too many leading '#' for block comment",
+            "value": true
+        },
+        "E271": {
+            "description": "",
+            "name": "Multiple spaces after keyword",
+            "value": true
+        },
+        "E272": {
+            "description": "",
+            "name": "Multiple spaces before keyword",
+            "value": true
+        },
+        "E273": {
+            "description": "",
+            "name": "Tab after keyword",
+            "value": true
+        },
+        "E274": {
+            "description": "",
+            "name": "Tab before keyword",
+            "value": true
+        },
+        "E275": {
+            "description": "",
+            "name": "Missing whitespace after keyword",
+            "value": true
+        },
+        "E301": {
+            "description": "",
+            "name": "Expected 1 blank line, found 0",
+            "value": true
+        },
+        "E302": {
+            "description": "",
+            "name": "Expected 2 blank lines, found 0",
+            "value": true
+        },
+        "E303": {
+            "description": "",
+            "name": "Too many blank lines (3)",
+            "value": true
+        },
+        "E304": {
+            "description": "",
+            "name": "Blank lines found after function decorator",
+            "value": true
+        },
+        "E305": {
+            "description": "",
+            "name": "Expected 2 blank lines after end of function or class",
+            "value": true
+        },
+        "E306": {
+            "description": "",
+            "name": "Expected 1 blank line before a nested definition",
+            "value": true
+        },
+        "E401": {
+            "description": "",
+            "name": "Multiple imports on one line",
+            "value": true
+        },
+        "E402": {
+            "description": "",
+            "name": "Module level import not at top of file",
+            "value": true
+        },
+        "E501": {
+            "description": "",
+            "name": "Line too long (82 > 79 characters)",
+            "value": true
+        },
+        "E502": {
+            "description": "",
+            "name": "The backslash is redundant between brackets",
+            "value": true
+        },
+        "E701": {
+            "description": "",
+            "name": "Multiple statements on one line (colon)",
+            "value": true
+        },
+        "E702": {
+            "description": "",
+            "name": "Multiple statements on one line (semicolon)",
+            "value": true
+        },
+        "E703": {
+            "description": "",
+            "name": "Statement ends with a semicolon",
+            "value": true
+        },
+        "E704": {
+            "description": "",
+            "name": "Multiple statements on one line (def)",
+            "value": true
+        },
+        "E711": {
+            "description": "",
+            "name": "Comparison to None should be 'cond is None:'",
+            "value": true
+        },
+        "E712": {
+            "description": "",
+            "name": "Comparison to true should be 'if cond is true:' or 'if cond:'",
+            "value": true
+        },
+        "E713": {
+            "description": "",
+            "name": "Test for membership should be 'not in'",
+            "value": true
+        },
+        "E714": {
+            "description": "",
+            "name": "Test for object identity should be 'is not'",
+            "value": true
+        },
+        "E721": {
+            "description": "",
+            "name": "Do not compare types, use 'isinstance()'",
+            "value": true
+        },
+        "E722": {
+            "description": "",
+            "name": "Do not use bare except, specify exception instead",
+            "value": true
+        },
+        "E731": {
+            "description": "",
+            "name": "Do not assign a lambda expression, use a def",
+            "value": true
+        },
+        "E741": {
+            "description": "",
+            "name": "Do not use variables named 'I', 'O', or 'l'",
+            "value": true
+        },
+        "E742": {
+            "description": "",
+            "name": "Do not define classes named 'I', 'O', or 'l'",
+            "value": true
+        },
+        "E743": {
+            "description": "",
+            "name": "Do not define functions named 'I', 'O', or 'l'",
+            "value": true
+        },
+        "E901": {
+            "description": "",
+            "name": "SyntaxError or IndentationError",
+            "value": true
+        },
+        "E902": {
+            "description": "",
+            "name": "IOError",
+            "value": true
+        },
+        "E999": {
+            "description": "",
+            "name": "SyntaxError",
+            "value": true
+        },
+        "W191": {
+            "description": "",
+            "name": "Indentation contains tabs",
+            "value": true
+        },
+        "W291": {
+            "description": "",
+            "name": "Trailing whitespace",
+            "value": true
+        },
+        "W292": {
+            "description": "",
+            "name": "No newline at end of file",
+            "value": true
+        },
+        "W293": {
+            "description": "",
+            "name": "Blank line contains whitespace",
+            "value": true
+        },
+        "W391": {
+            "description": "",
+            "name": "Blank line at end of file",
+            "value": true
+        },
+        "W503": {
+            "description": "",
+            "name": "Line break occurred before a binary operator",
+            "value": true
+        },
+        "W504": {
+            "description": "",
+            "name": "Line break occurred after a binary operator",
+            "value": true
+        },
+        "W601": {
+            "description": "",
+            "name": ".has_key() is deprecated, use 'in'",
+            "value": true
+        },
+        "W602": {
+            "description": "",
+            "name": "Deprecated form of raising exception",
+            "value": true
+        },
+        "W603": {
+            "description": "",
+            "name": "'<>' is deprecated, use '!='",
+            "value": true
+        },
+        "W604": {
+            "description": "",
+            "name": "Backticks are deprecated, use 'repr()'",
+            "value": true
+        },
+        "W605": {
+            "description": "",
+            "name": "Invalid escape sequence 'x'",
+            "value": true
+        }
+    },
+    "pyflakes": {
+        "F401": {
+            "description": "",
+            "name": "Module imported but unused",
+            "value": true
+        },
+        "F402": {
+            "description": "",
+            "name": "Import module from line n shadowed by loop variable",
+            "value": true
+        },
+        "F403": {
+            "description": "",
+            "name": "'from module import *' used; unable to detect undefined names",
+            "value": true
+        },
+        "F404": {
+            "description": "",
+            "name": "Future import(s) name after other statements",
+            "value": true
+        },
+        "F405": {
+            "description": "",
+            "name": "Name may be undefined, or defined from star imports: module",
+            "value": true
+        },
+        "F811": {
+            "description": "",
+            "name": "Redefinition of unused name from line n",
+            "value": true
+        },
+        "F812": {
+            "description": "",
+            "name": "List comprehension redefines name from line n",
+            "value": true
+        },
+        "F821": {
+            "description": "",
+            "name": "Undefined name name",
+            "value": true
+        },
+        "F822": {
+            "description": "",
+            "name": "Undefined name name in __all__",
+            "value": true
+        },
+        "F823": {
+            "description": "",
+            "name": "Local variable name ... referenced before assignment",
+            "value": true
+        },
+        "F831": {
+            "description": "",
+            "name": "Duplicate argument name in function definition",
+            "value": true
+        },
+        "F841": {
+            "description": "",
+            "name": "Local variable name is assigned to but never used",
+            "value": true
+        },
+        "F901": {
+            "description": "",
+            "name": "raise NotImplemented should be raise NotImplementedError",
+            "value": true
+        }
+    }
+}
