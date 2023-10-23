@@ -11,19 +11,14 @@ CORS(app)
 CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_-'
 
 # Path for our main Svelte page
-
-
 @app.route("/")
 def base():
     return send_from_directory('client/public', 'index.html')
 
 # Path for all the static files (compiled JS/CSS, etc.)
-
-
 @app.route("/<path:path>")
 def home(path):
     return send_from_directory('client/public', path)
-
 
 @app.route('/check', methods=['POST'])
 def process_data():
@@ -37,7 +32,6 @@ def process_data():
 
     return jsonify(errors), 200
 
-
 @app.route('/encode', methods=['POST'])
 def construct():
     data = request.get_json(force=True)
@@ -48,7 +42,6 @@ def construct():
                              disabled=data['disabled'],
                              chars=CHARS), }
     return jsonify(errors), 200
-
 
 @app.route('/decode', methods=['POST'])
 def deconstruct():
@@ -62,6 +55,5 @@ def deconstruct():
 
     return jsonify(errors), 200
 
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
