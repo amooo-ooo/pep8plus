@@ -332,7 +332,7 @@
 				theme={themes[theme].editor}
 				styles={{
 					"&": {
-						height: "32rem",
+						height: "80vh",
 						border: "1px solid var(--active-outline)",
 						borderRadius: "0 0 0.5rem 0.5rem",
 						overflow: "auto",

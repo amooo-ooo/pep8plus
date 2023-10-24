@@ -24,6 +24,7 @@ def wrap(output: str, linter: str = 'flake8'):
         return {'errors':info}
 
 def lint(code:str, disable: list = None, linter: str = 'flake8') -> dict:
+    start = time.time()
     linter = linter.lower()
     with tempfile.NamedTemporaryFile(mode='w', delete=False) as temp:
         temp.write(code)
@@ -41,5 +42,7 @@ def lint(code:str, disable: list = None, linter: str = 'flake8') -> dict:
     result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     output = wrap(result.stdout.decode('utf-8'), linter)
     os.remove(temp_filename)
+
+    print(start - time.time())
 
     return output
