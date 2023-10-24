@@ -30,15 +30,15 @@ and more!
 # Categories
 Convention rules are given tags which are colour coded based on their severity.
 
-| Colour        | Severity          | Description                                                          | 
-| ------------- | ----------------- | -------------------------------------------------------------------- |
-| `red`         | `error`           | There is an error or some sort of issue with the code.               |
-| `light red`   | `syntax-error`    | High priority convention error is found within the code.             |
-| `yellow`      | `severe-warning`  | Medium priority convention error is found within the code.           | 
-| `orange`      | `warning`         | Low priority convention error is found within the code.              |
-| `purple`      | `complex`         | Complex convention errors. (For more experienced developers)         |
-| `dark purple` | `super-complex`   | More complex convention errors. (For more experienced developers)    |
-| `cyan`        | `neutral`         | Neutral convention issues with syntax.                               |
+| Colour        | Severity          | Description                                                               | 
+| ------------- | ----------------- | ------------------------------------------------------------------------- |
+| `red`         | `error`           | There is an error or some sort of issue with the code.                    |
+| `light red`   | `syntax-error`    | High priority convention error is found within the code.                  |
+| `yellow`      | `severe-warning`  | High priority warning found in code's syntax.                             |
+| `orange`      | `warning`         | Warning found in code's syntax.                                           |
+| `purple`      | `complex`         | Complex convention errors. (For more experienced developers)              |
+| `dark purple` | `super-complex`   | More complex convention errors. (For more experienced developers)         |
+| `cyan`        | `neutral`         | Neutral convention issues with syntax.                                    |
 
 # Quick Start
 ```shell
