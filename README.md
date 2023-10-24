@@ -20,11 +20,9 @@ Here are a few major features of pep8plus:
 pep8plus offers three different popular linters: Ruff, Pylint and Flake8. With over 1000 built-in convention guides and rules combined, all convention settings are able to be easily activated and deactivated to share with students.
 - Shareability:
 pep8plus allows educators to easily share customised convention settings to their students by generating a custom link.
-- Open-source
+- Open-source:
 pep8plus gives the opportunity for institutions to locally host the project and implement their own plugins.
-- CodeMirror
-pep8plus integrates with CodeMirror which allows features such as auto indentation.
-- Customised Themes
+- Customised Themes:
 pep8plus by default supports dark mode and light mode however it's dynamic programming allows locally hosted checkers to easily implement their own themes.
 
 and more!
@@ -42,7 +40,24 @@ Each convention rule is colour coded to their severity.
 | `dark purple` | `super-complex`   | Harder complex issues. (For more experienced developers)             |
 | `cyan`        | `neutral`         | Low priority opiniated, neutral issues.                              |
 
-## Get Started
+# Quick Start
+```shell
+git clone https://github.com/amooo-ooo/pep8plus
+```
+
+## Setup
+Setup dependencies by running the following on terminal: 
+```shell
+pip install -r requirements.txt
+cd client
+npm install
+```
+
+## Hosting
+Simply run `python server.py` to host the project:
+```shell
+python server.py
+```
 
 ## Support
 pep8plus was created as a school project with the aspiration of helping other young Pythonistas enforce and learn python coding practices. I appriciate any 
