@@ -10,9 +10,12 @@
 
 # pep8plus
 
-pep8plus is an opensource online tool built for educational institutions to help students enforce and maintain Python programming standards. Powered by Ruff, Flake8 and Pylint, pep8plus is built on the principle of customisability, ease of use and user experience. The purpose of this project is to provide educators with a transparent, customisable and easy solution to helping their students enforce Python conventions. 
+pep8plus is an opensource online tool built for educational institutions to help students enforce and maintain Python programming standards. Powered by Ruff, Flake8 and Pylint, pep8plus is built on the principle of customisability, ease of use and user experience. 
 
 ## Features
+
+> **Warning**
+> This project is still in its early stages. Hence, bugs and ironically, questionable programming practices may be present.
 
 Here are a few major features of pep8plus: 
 
@@ -33,9 +36,9 @@ Convention rules are given tags which are colour coded based on their severity.
 | Colour        | Severity          | Description                                                               | 
 | ------------- | ----------------- | ------------------------------------------------------------------------- |
 | `red`         | `error`           | There is an error or some sort of issue with the code.                    |
-| `light red`   | `syntax-error`    | High priority convention error is found within the code.                  |
+| `light red`   | `syntax-error`    | Convention error is found within the code.                                |
 | `yellow`      | `severe-warning`  | High priority warning with code's syntax.                                 |
-| `orange`      | `warning`         | Warning with code's syntax.                                               |
+| `orange`      | `warning`         | Warning with code's syntax                                                |
 | `purple`      | `complex`         | Complex convention issues. (For more experienced developers)              |
 | `dark purple` | `super-complex`   | More complex convention issues. (For more experienced developers)         |
 | `cyan`        | `neutral`         | Neutral convention issues with syntax.                                    |
@@ -60,7 +63,7 @@ python server.py
 ```
 
 ## Support
-pep8plus was created as a school project with the aspiration of helping other young Pythonistas enforce and learn python coding practices. 
+pep8plus was created as a school project with the aspiration of helping other young Pythonistas enforce and learn python coding practices. The purpose of this project is to provide educators with a transparent, customisable and easy solution to helping their students enforce Python conventions. 
 
 ## Contact
 You can contact me at [amor.budiyanto@gmail.com](mailto:amor.budiyanto@gmail.com).
