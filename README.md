@@ -1,7 +1,6 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/amooo-ooo/pep8plus/main/client/public/favicon.png" alt="pep8plus logo" width="180" height="180">
+    <img src="https://raw.githubusercontent.com/amooo-ooo/pep8plus/main/example.png" alt="pep8plus logo" width="630">
 </p>
-
 <h2 align="center">pep8plus</h2>
 
 <p align="center">
