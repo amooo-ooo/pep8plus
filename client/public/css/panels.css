@@ -6,32 +6,20 @@
     background-color: var(--active-indicator) !important;
 }
 
-#lint-select {
-    height: 30px;
-    margin: auto 0;
-    background-color: var(--active-buttons);
-    border: var(--active-outline) 1px solid;
-    color: var(--active-text);
-    border-radius: 6px;
-}
-
-p {
-    margin: 0 auto;
-}
-
 .unselected:hover {
     background-color: var(--active-buttons-hover);
 }
 
 .icon {
-    width: 16px; height: 16px;
+    width: 16px;
+    height: 16px;
     color: var(--active-text);
     display: inline-block;
 }
 
 #editor-comment {
     display: inline-flex;
-  margin: auto;
+    margin: auto;
 }
 
 #editor-comment>svg {
@@ -46,7 +34,8 @@ p {
     border-radius: 6px;
 }
 
-.button-stack, #settings-button {
+.button-stack,
+#settings-button {
     width: fit-content;
     margin: auto 1.8%;
     border-radius: 6px;
@@ -66,7 +55,8 @@ p {
     padding: 5.5px 9.5px;
 }
 
-.button-stack>button, #settings-button>button {
+.button-stack>button,
+#settings-button>button {
     color: var(--active-text);
     padding: 3.5px 5.5px;
     cursor: pointer;
@@ -84,6 +74,7 @@ p {
     border-left: 0px;
     border-radius: 0 6px 6px 0;
 }
+
 .button-stack>button:last-child:hover {
     border-left: 1px solid var(--active-text-description);
 }
@@ -92,6 +83,7 @@ p {
     border-right: 0px;
     border-radius: 6px 0 0 6px;
 }
+
 .button-stack>button:first-child:hover {
     border-right: 1px solid var(--active-text-description);
 }
@@ -117,7 +109,8 @@ div#settings-panel {
     height: 60vh;
 }
 
-div#editor-header, div#settings-header {
+div#editor-header,
+div#settings-header {
     display: inline-flex;
     width: 100%;
 }
@@ -131,21 +124,6 @@ div#error-display,
 }
 
 /* Settings Panel */
-
-.category-title {
-    color: var(--active-text);
-    background-color: var(--active-second);
-    font-family: 'Segoe UI', sans-serif;
-    border: solid var(--active-outline);
-    border-width: 1px 0px;
-    padding: 8px;
-    font-size: 14px;
-    font-weight: 550;
-}
-
-div.group {
-    margin: 6px 0;
-}
 
 /* Select linter */
 
@@ -186,14 +164,27 @@ div.group {
     cursor: pointer;
 }
 
+#submit-button {
+    position: absolute;
+    bottom: 0; right: 0;
+    margin: 8px 10px;
+    padding: 6px 10px;
+    display: inline-flex;
+    gap: 6px;
+}
+
+#submit-button > svg {
+    width: 10px;
+}
+
+#submit-button > p {
+    margin: 0;
+}
+
 .category-toggle:hover,
 #submit-button:hover,
 #create-link:hover {
     background-color: var(--active-buttons-hover);
-}
-
-#submit-button {
-    margin: 10px 0;
 }
 
 /* Error Panel */
@@ -202,9 +193,9 @@ div.group {
     font-family: 'Segoe UI', sans-serif;
     color: var(--active-text);
     font-size: 14px;
-    display: flex;
-    padding: 1.5%;
-    margin: 0 1.5%;
+    display: grid;
+    grid-template-columns: 13% 65% auto;
+    padding: 1.5% 1.5% 0 0;
     background-color: transparent;
 }
 
