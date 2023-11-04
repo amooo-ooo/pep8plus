@@ -702,6 +702,7 @@
                             "&": {
                                 height: "82vh",
                                 overflow: "auto",
+                                backgroundColor: "var(--active-main) !important"
                             },
                             ".cm-gutters": {
                                 backgroundColor: "var(--active-main)",
@@ -711,20 +712,7 @@
                             ".cm-foldGutter": { width: "1	vw" },
                             ".cm-wrap": { height: "100%" },
                             ".cm-scroller": { overflow: "auto" },
-                            ".cm-activeLine": {
-                                backgroundColor:
-                                    "var(--active-line-select) !important",
-                            },
-                            ".cm-activeLineGutter": {
-                                backgroundColor:
-                                    "var(--active-line-select) !important",
-                            },
-                            ".cm-line": {
-                                backgroundColor: "var(--active-main)",
-                            },
-                            ".cm-content": {
-                                backgroundColor: "var(--active-main)",
-                            },
+                            
                         }}
                     />
                     <button id="submit-button" on:click={submit}>
