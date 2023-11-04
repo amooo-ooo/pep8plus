@@ -1130,6 +1130,7 @@
                     height: 2.8vw;
                     background-color: $bg-colour;
                     margin: auto;
+                    border-radius: 4px;
                 }
                 display: flex;
                 width: 4vw;
