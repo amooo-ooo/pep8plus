@@ -2,7 +2,6 @@
     import CodeMirror from "svelte-codemirror-editor";
     import { python } from "@codemirror/lang-python";
     import { githubDark, githubLight } from "@uiw/codemirror-theme-github";
-    import 'codemirror/lib/codemirror.css';
 
     let linters = ["Ruff", "Flake8", "Pylint"];
     let errors = [];
@@ -350,8 +349,9 @@
     <div id="body">
         <div id="menubar">
             <div id="app">
-                
-                <button name="settings" on:click={() => (show_info = !show_info)}
+                <button
+                    name="settings"
+                    on:click={() => (show_info = !show_info)}
                     ><svg
                         viewBox="0 0 192 192"
                         xmlns="http://www.w3.org/2000/svg"
@@ -689,6 +689,24 @@
                                 /></svg
                             ></button
                         >
+                        <button on:click={() => tabs[active_tab]["name"] = prompt('Rename file:') + ".py"}>
+                            <svg class="icon"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                ><g id="SVGRepo_bgCarrier" stroke-width="0" /><g
+                                    id="SVGRepo_tracerCarrier"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                /><g id="SVGRepo_iconCarrier"
+                                    ><path
+                                        d="M20.005 5.995h-1v2h1v8h-1v2h1c1.103 0 2-.897 2-2v-8c0-1.102-.898-2-2-2zm-14 4H15v4H6.005z"
+                                    /><path
+                                        d="M17.005 17.995V4H20V2h-8v2h3.005v1.995h-11c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2h11V20H12v2h8v-2h-2.995v-2.005zm-13-2v-8h11v8h-11z"
+                                    /></g
+                                ></svg
+                            >
+                        </button>
                     </div>
                 </header>
                 <div class="display">
@@ -702,7 +720,8 @@
                             "&": {
                                 height: "82vh",
                                 overflow: "auto",
-                                backgroundColor: "var(--active-main) !important"
+                                backgroundColor:
+                                    "var(--active-main) !important",
                             },
                             ".cm-gutters": {
                                 backgroundColor: "var(--active-main)",
@@ -712,7 +731,6 @@
                             ".cm-foldGutter": { width: "1	vw" },
                             ".cm-wrap": { height: "100%" },
                             ".cm-scroller": { overflow: "auto" },
-                            
                         }}
                     />
                     <button id="submit-button" on:click={submit}>
@@ -1262,9 +1280,5 @@
                 }
             }
         }
-    }
-
-    :global(.CodeMirror-selected) {
-        background-color: #ff0000 !important; /* Change this to your desired color */
     }
 </style>
