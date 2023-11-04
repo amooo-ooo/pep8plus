@@ -20,13 +20,11 @@ pep8plus is an open-source online tool built for educational institutions to hel
 Here are a few major features of pep8plus: 
 
 - Customisation:
-pep8plus offers three different popular linters: Ruff, Pylint and Flake8. With over 1000 built-in convention guides and rules combined, all convention settings are able to be easily activated and deactivated to share with students.
+pep8plus offers three different popular linters: Ruff, Pylint and Flake8. With over 800 built-in convention guides and rules combined, all convention settings are able to be easily activated and deactivated to share with students.
 - Shareability:
 Easily share customised convention settings with students by generating a custom link.
 - Open-source:
 pep8plus gives the opportunity for institutions to host the project and implement their own conventions and plugins.
-- Customised Themes:
-pep8plus by default supports dark mode and light mode however it's dynamic programming allows locally hosted checkers to easily implement their own themes.
 
 and more!
 
