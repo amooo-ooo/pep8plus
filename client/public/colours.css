@@ -1,0 +1,9 @@
+:root {
+    --warning: #ffa657;
+    --severe-warning: #ffb618;
+    --syntax-error: #ff7b72;
+    --error: #eb514c;
+    --complex: #d2a8ff;
+    --super-complex: #524669;
+    --neutral: #79c0ff;
+  }

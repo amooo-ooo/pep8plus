@@ -33,13 +33,13 @@ Convention rules are given tags which are colour-coded based on their severity.
 
 | Colour        | Severity          | Description                                                               | 
 | ------------- | ----------------- | ------------------------------------------------------------------------- |
-| `red`         | `error`           | There is an error or some sort of issue with the code.                    |
-| `light red`   | `syntax-error`    | Convention error is found within the code.                                |
-| `yellow`      | `severe-warning`  | High priority warning with code's syntax.                                 |
-| `orange`      | `warning`         | Warning with code's syntax                                                |
-| `purple`      | `complex`         | Complex convention issues. (For more experienced developers)              |
-| `dark purple` | `super-complex`   | More complex convention issues. (For more experienced developers)         |
-| `cyan`        | `neutral`         | Neutral convention issues with syntax.                                    |
+| `#EB514C`         | `error`           | There is an error or some sort of issue with the code.                    |
+| `#FF7B72`   | `syntax-error`    | Convention error is found within the code.                                |
+| `#FFB618`      | `severe-warning`  | High priority warning with code's syntax.                                 |
+| `#FFA657`      | `warning`         | Warning with code's syntax                                                |
+| `#D2A8ff`      | `complex`         | Complex convention issues. (For more experienced developers)              |
+| `#524669` | `super-complex`   | More complex convention issues. (For more experienced developers)         |
+| `#79C0FF`        | `neutral`         | Neutral convention issues with syntax.                                    |
 
 # Quick Start
 ```shell

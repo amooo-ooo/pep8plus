@@ -1,0 +1,111 @@
+.e > div { background-color: var(--syntax-error);}
+.e > p { color: var(--syntax-error); }
+
+.b > div { background-color: var(--syntax-error);}
+.b > p { color: var(--syntax-error); }
+
+.f > div { background-color: var(--error);}
+.f > p { color: var(--error); }
+
+.t > div { background-color: var(--error);}
+.t > p { color: var(--error); }
+
+.i > div { background-color: var(--complex);}
+.i > p { color: var(--complex); }
+
+.c > div { background-color: var(--complex);}
+.c > p { color: var(--complex); }
+
+.n > div { background-color: var(--warning);}
+.n > p { color: var(--warning); }
+
+.d > div { background-color: var(--severe-warning);}
+.d > p { color: var(--severe-warning); }
+
+.u > div { background-color: var(--syntax-error);}
+.u > p { color: var(--syntax-error); }
+
+.y > div { background-color: var(--syntax-error);}
+.y > p { color: var(--syntax-error); }
+
+.a > div { background-color: var(--warning);}
+.a > p { color: var(--warning); }
+
+.s > div { background-color: var(--complex);}
+.s > p { color: var(--complex); }
+
+.t > div { background-color: var(--complex);}
+.t > p { color: var(--complex); }
+
+.g > div { background-color: var(--complex);}
+.g > p { color: var(--complex); }
+
+.p > div { background-color: var(--complex);}
+.p > p { color: var(--complex); }
+
+.l > div { background-color: var(--complex);}
+.l > p { color: var(--complex); }
+
+.f > div { background-color: var(--warning);}
+.f > p { color: var(--warning); }
+
+.c > div { background-color: var(--warning);}
+.c > p { color: var(--warning); }
+
+.d > div { background-color: var(--warning);}
+.d > p { color: var(--warning); }
+
+.q > div { background-color: var(--neutral);}
+.q > p { color: var(--neutral); }
+
+.r > div { background-color: var(--warning);}
+.r > p { color: var(--warning); }
+
+.w > div { background-color: var(--warning);}
+.w > p { color: var(--warning); }
+
+.error-code > div {
+    height: 100%; width: 100%;
+    opacity: 0.1;
+    border-radius:5px;  
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.error-code > p {
+    font-size: smaller;
+
+    font-weight: 550;
+    padding: 1.5px 4px;
+    margin: 0;
+}
+
+.error-code {
+    width: fit-content;
+    position: relative;
+    height: 20px;
+    margin: auto 0;
+}
+
+.error-text {
+    margin-left: 4px;
+}
+
+.error-location, #file-info {
+    font-size: smaller;
+    font-family: "Consolas", monospace;
+    font-weight: 400;
+    padding: 1px 3px;
+    border-radius: 2px;
+}
+
+#file-info {
+    color: var(--active-text-description);
+    margin: auto auto auto 0;
+}
+
+.error-location {
+    color: var(--active-text);
+    background-color: var(--active-buttons-hover);
+}

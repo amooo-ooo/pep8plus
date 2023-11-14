@@ -6,8 +6,8 @@ $text-colour: #d3d7dc;
 $textsc-colour: #6b6d6f;
 
 body {
-  margin: 0;
-  overflow: hidden;
+    margin: 0;
+    overflow: hidden;
 }
 
 ::selection {
@@ -30,6 +30,16 @@ body {
     }
 }
 
+.error-row {
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--active-text);
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: 13% 65% auto;
+    padding: 1.5% 1.5% 0 0;
+    background-color: transparent;
+  }
+
 .workspace-section {
     height: 6vh;
     display: flex;
@@ -47,6 +57,7 @@ body {
     display: inline-flex;
     width: 100%;
     padding: 6px 4px;
+
     p {
         margin: auto 0;
     }
@@ -57,6 +68,7 @@ body {
     border: none;
     background-color: transparent;
     padding: 0;
+
     svg {
         color: $br-colour;
         width: 22px;
@@ -64,11 +76,11 @@ body {
     }
 }
 
-.rev-right > svg {
+.rev-right>svg {
     rotate: 0deg;
 }
 
-.rev-down > svg {
+.rev-down>svg {
     rotate: 90deg;
 }
 
@@ -318,6 +330,7 @@ button:hover {
     margin-right: 5px;
     padding-top: 2px;
     z-index: 10;
+
     svg {
         width: 1.5vw;
         margin: auto;
@@ -354,6 +367,7 @@ main {
         #title {
             background-color: $bg-colour;
         }
+
         #logo {
             img {
                 width: 2.8vw;
@@ -362,6 +376,7 @@ main {
                 margin: auto;
                 border-radius: 4px;
             }
+
             display: flex;
             width: 4vw;
             height: 4vw;
@@ -402,6 +417,7 @@ main {
         width: 100%;
         display: inline-flex;
         gap: 1px;
+
         #menubar {
             width: 4vw;
             height: 100%;
@@ -507,18 +523,19 @@ main {
 
 #submit-button {
     position: absolute;
-    bottom: 0; right: 0;
+    bottom: 0;
+    right: 0;
     margin: 8px 10px;
     padding: 6px 10px;
     display: inline-flex;
     gap: 6px;
 }
 
-#submit-button > svg {
+#submit-button>svg {
     width: 10px;
 }
 
-#submit-button > p {
+#submit-button>p {
     margin: 0;
 }
 
@@ -529,8 +546,18 @@ main {
 }
 
 .icon {
-  width: 16px;
-  height: 16px;
-  color: var(--active-text);
-  display: inline-block;
+    width: 16px;
+    height: 16px;
+    color: var(--active-text);
+    display: inline-block;
+}
+
+.error-row:hover {
+    cursor: pointer;
+}
+
+.error-row {
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--active-text);
+    font-size: 14px;
 }
