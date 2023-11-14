@@ -239,7 +239,7 @@
         },
         "E303": {
             "description": "",
-            "name": "Too many blank lines (3)",
+            "name": "Too many blank lines",
             "value": true
         },
         "E304": {
@@ -269,7 +269,7 @@
         },
         "E501": {
             "description": "",
-            "name": "Line too long (82 > 79 characters)",
+            "name": "Line too long (more than 79 characters)",
             "value": true
         },
         "E502": {
@@ -461,12 +461,12 @@
         },
         "F821": {
             "description": "",
-            "name": "Undefined name name",
+            "name": "Undefined name",
             "value": true
         },
         "F822": {
             "description": "",
-            "name": "Undefined name name in __all__",
+            "name": "Undefined name in __all__",
             "value": true
         },
         "F823": {

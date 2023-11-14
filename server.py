@@ -4,21 +4,16 @@ from flask_cors import CORS
 from src.url import encode, decode
 from src.linter import lint
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='client/dist', static_url_path="/")
 CORS(app)
 
 # Global default values
 CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_-'
 
-# Path for our main Svelte page
-@app.route("/")
-def base():
-    return send_from_directory('client/public', 'index.html')
-
-# Path for all the static files (compiled JS/CSS, etc.)
-@app.route("/<path:path>")
-def home(path):
-    return send_from_directory('client/public', path)
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def catch_all(path):
+    return app.send_static_file("index.html")
 
 @app.route('/check', methods=['POST'])
 def process_data():
