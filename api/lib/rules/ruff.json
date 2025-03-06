@@ -437,6 +437,240 @@
 		"value": true,
 		"category": "Ruff-specific rules"
 	},
+    "RUF018": {
+        "description": "Avoid assignment expressions in assert statements",
+		"name": "assignment-in-assert",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF019": {
+        "description": "Unnecessary key check before dictionary access",
+		"name": "unnecessary-key-check",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF020": {
+        "description": "{never_like} | T is equivalent to T",
+		"name": "never-union",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF021": {
+        "description": "Parenthesize a and b expressions when chaining and and or together, to make the precedence clear",
+		"name": "parenthesize-chained-operators",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF022": {
+        "description": "__all__ is not sorted",
+		"name": "unsorted-dunder-all",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF023": {
+        "description": "{}.__slots__ is not sorted",
+		"name": "unsorted-dunder-slots",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF024": {
+        "description": "Do not pass mutable objects as values to dict.fromkeys",
+		"name": "mutable-fromkeys-value",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF026": {
+        "description": "default_factory is a positional-only argument to defaultdict",
+		"name": "default-factory-kwarg",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF027": {
+        "description": "Possible f-string without an f prefix",
+		"name": "missing-f-string-syntax",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF028": {
+        "description": "This suppression comment is invalid because {}",
+		"name": "invalid-formatter-suppression-comment",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF029": {
+        "description": "Function {name} is declared async, but doesn't await or use async features.",
+		"name": "unused-async",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF030": {
+        "description": "print() call in assert statement is likely unintentional",
+		"name": "assert-with-print-message",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF031": {
+        "description": "Use parentheses for tuples in subscripts",
+		"name": "incorrectly-parenthesized-tuple-in-subscript",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF032": {
+        "description": "Decimal() called with float literal argument",
+		"name": "decimal-from-float-literal",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF033": {
+        "description": "__post_init__ method with argument defaults",
+		"name": "post-init-default",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF034": {
+        "description": "Useless if-else condition",
+		"name": "useless-if-else",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF035": {
+        "description": "Unsafe use of {name} detected",
+		"name": "unsafe-markup-use",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF036": {
+        "description": "None not at the end of the type annotation.",
+		"name": "none-not-at-end-of-union",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF037": {
+        "description": "Unnecessary empty iterable within a deque call",
+		"name": "unnecessary-empty-iterable-within-deque-call",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF038": {
+        "description": "Literal[True, False, ...] can be replaced with Literal[...] | bool",
+		"name": "redundant-bool-literal",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF039": {
+        "description": "First argument to {call} is not raw string",
+		"name": "unraw-re-pattern",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF040": {
+        "description": "Non-string literal used as assert message",
+		"name": "invalid-assert-message-literal-argument",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF041": {
+        "description": "Unnecessary nested Literal",
+		"name": "unnecessary-nested-literal",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF043": {
+        "description": "Pattern passed to match= contains metacharacters but is neither escaped nor raw",
+		"name": "pytest-raises-ambiguous-pattern",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF045": {
+        "description": "Assignment without annotation found in dataclass body",
+		"name": "unraw-re-pattern",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF046": {
+        "description": "Value being cast to int is already an integer",
+		"name": "unnecessary-cast-to-int",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF047": {
+        "description": "Empty else clause",
+		"name": "needless-else",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF048": {
+        "description": "__version__ may contain non-integral-like elements",
+		"name": "map-int-version-parsing",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF049": {
+        "description": "An enum class should not be decorated with @dataclass",
+		"name": "dataclass-enum",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF051": {
+        "description": "Use pop instead of key in dict followed by del dict[key]",
+		"name": "if-key-in-dict-del",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF052": {
+        "description": "Local dummy variable {} is accessed",
+		"name": "used-dummy-variable",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF053": {
+        "description": "Class with type parameter list inherits from Generic",
+		"name": "class-with-mixed-type-vars",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF054": {
+        "description": "Indented form feed",
+		"name": "indented-form-feed",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF055": {
+        "description": "Plain string pattern passed to re function",
+		"name": "unnecessary-regular-expression",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF056": {
+        "description": "Avoid providing a falsy fallback to dict.get() in boolean test positions. The default fallback None is already falsy.",
+		"name": "falsy-dict-get-fallback",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF057": {
+        "description": "Value being rounded is already an integer",
+		"name": "unnecessary-round",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF058": {
+        "description": "itertools.starmap called on zip iterable",
+		"name": "starmap-zip",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF100": {
+        "description": "Unused noqa directive",
+		"name": "unused-noqa",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
+    "RUF101": {
+        "description": "{original} is a redirect to {target}",
+		"name": "redirected-noqa",
+		"value": true,
+		"category": "Ruff-specific rules" 
+    },
 	"RUF200": {
 		"description": "Failed to parse pyproject.toml:.",
 		"name": "invalid-pyproject-toml",
