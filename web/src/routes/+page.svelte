@@ -14,7 +14,7 @@
 	let theme = 'light_mode';
 
 	let selected_error = 0;
-	const api = 'http://127.0.0.1:5000';
+	const api = import.meta.env.DEV ? 'http://127.0.0.1:5000' : 'https://pep8plus.pythonanywhere.com';
 	const linters = ['pylint', 'flake8', 'ruff'];
 	let url;
 	let linter;

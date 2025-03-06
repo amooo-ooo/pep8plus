@@ -2,7 +2,7 @@
 select = ["ALL"]
 
 [tool.poetry]
-name = "pep8plus-api"
+name = "api"
 version = "0.0.1"
 description = ""
 authors = ["amoooooo <amor.budiyanto2006@gmail.com>"]
