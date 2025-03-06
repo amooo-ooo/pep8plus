@@ -43,7 +43,7 @@
 
 		if (linter == 'all') {
 			linter = 'flake8';
-			loadSettings('all');
+			loadSettings();
 		} else {
 			loadSettings(url.get(linter));
 		}
@@ -220,7 +220,6 @@
 			categorisedDisabled[category].items.push(code);
 			settings[code].value = false;
 			disabled = [...new Set(disabled)];
-			console.log(disabled);
 		} else {
 			// Remove the ID from the array
 			const index = disabled.indexOf(code);
@@ -234,7 +233,6 @@
 			}
 			settings[code].value = true;
 		}
-		console.log(disabled);
 	}
 
 	function superToggle(cat_type, category) {
@@ -249,7 +247,6 @@
 			});
 			categorisedDisabled[category].items = [...new Set(categorisedDisabled[category].items)];
 		}
-		console.log(categorisedDisabled[category]);
 	}
 
 	function autofix() {
@@ -347,7 +344,7 @@
 		return typeof result !== 'undefined' ? result : default_value;
 	}
 
-	function loadSettings(settings_code = '') {
+	function loadSettings(settings_code = "") {
 		fetch(`${api}/decode`, {
 			method: 'POST',
 			body: JSON.stringify({
@@ -367,7 +364,6 @@
 			})
 			.then(function (data) {
 				settings = data;
-				console.log(settings)
 				const categoryCounts = {};
 				Object.entries(settings).forEach(([code, item]) => {
 					const { category } = item;
@@ -388,7 +384,6 @@
 					};
 				});
 
-				console.log(categorisedDisabled);
 
 				ruleCount();
 				createLink();
@@ -417,7 +412,6 @@
 				return res.json();
 			})
 			.then(function (data) {
-				console.log(data['link']);
 				link = window.location.origin + '?' + linter + '=' + data['link'];
 			}) // This will log the JSON response to the console
 			.catch(function (error) {
@@ -550,7 +544,7 @@
 						<p>
 							Linter: <select
 								bind:value={linter}
-								on:change={() => loadSettings('all')}
+								on:change={() => loadSettings()}
 								id="lint-select"
 							>
 								{#each linters as item (item)}
