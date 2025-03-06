@@ -25,10 +25,12 @@ DISABLE_KEYS = {
     'pylint': '--disable'
 }
 LINTER_REGEX = {
-    'flake8': r"^stdin:(\d+):(\d+):\s+([A-Z]\d{3})\s+(.*)$",
+    'flake8': r"^\S+:(\d+):(\d+):\s+([A-Z]\d{3})\s+(.*)$",
     'ruff': r"^\S+:(\d+):(\d+):\s+([A-Z]+\d+)\s+(.+)$",
     'pylint': r"^\S+:(\d+):(\d+):\s+([A-Z]\d+)\s+(.+)$"
 }
+IS_WINDOWS = sys.platform == "nt"
+PYTHON = sys.executable if IS_WINDOWS else "python"
 
 
 def load_settings(linter: str) -> dict:
@@ -48,8 +50,7 @@ def encode(disabled: list, linter: str = 'flake8') -> str:
     disabled = set(disabled)
     settings = SETTINGS[linter]
 
-    binary = ''.join(
-        '1' if code in disabled else '0' for code in settings)  # O(n)
+    binary = ''.join('1' if code in disabled else '0' for code in settings)  # TODO: O(n): optimise
     encoded = base64.urlsafe_b64encode(
         int(binary, 2).to_bytes((len(binary) + 7) // 8, 'big')).decode()
 
@@ -80,10 +81,10 @@ def wrap(output: str, linter: str = 'flake8') -> dict[str]:
 
 def lint(code: str, disable: list = None, linter: str = 'flake8') -> dict[str]:
     linter = linter.lower()
-    command = [sys.executable, "-m", linter]
+    command = [PYTHON, "-m", linter]
 
     if linter == "ruff":
-        command.append("check")
+        command.extend(["check"])
 
     command.append("-")
 
@@ -92,7 +93,8 @@ def lint(code: str, disable: list = None, linter: str = 'flake8') -> dict[str]:
 
     process = subprocess.Popen(command,
                                stdin=subprocess.PIPE,
-                               stdout=subprocess.PIPE)
+                               stdout=subprocess.PIPE,
+                               stderr=subprocess.STDOUT)
 
     output = process.communicate(code.encode())[0].decode()
     return wrap(output, linter)
@@ -104,7 +106,8 @@ def fix(code: str) -> dict[str, str]:
                                 "--aggressive",
                                 "-"],
                                stdin=subprocess.PIPE,
-                               stdout=subprocess.PIPE)
+                               stdout=subprocess.PIPE,
+                               stderr=subprocess.STDOUT)
     output = process.communicate(code.encode())[0].decode()
 
     return {"code": output}
