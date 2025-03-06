@@ -1,1 +1,584 @@
-{"C901": {"name": "complex-structure", "description": "Function is too complex.", "category": "mccabe", "value": true}, "E101": {"name": "mixed-spaces-and-tabs", "description": "Indentation contains mixed spaces and tabs.", "category": "pycodestyle", "value": true}, "E111": {"name": "indent-not-multiple-four", "description": "Indentation is not a multiple of four.", "category": "pycodestyle", "value": true}, "E112": {"name": "no-indented-block", "description": "Expected an indented block.", "category": "pycodestyle", "value": true}, "E113": {"name": "unexpected-indentation", "description": "Unexpected indentation.", "category": "pycodestyle", "value": true}, "E114": {"name": "indentation-with-invalid-multiple-comment", "description": "Indentation is not a multiple of four (comment).", "category": "pycodestyle", "value": true}, "E115": {"name": "expected-indentation-comment", "description": "Expected an indented block (comment).", "category": "pycodestyle", "value": true}, "E116": {"name": "unexpected-indentation-comment", "description": "Unexpected indentation (comment).", "category": "pycodestyle", "value": true}, "E117": {"name": "over-indented", "description": "Over-indented.", "category": "pycodestyle", "value": true}, "E121": {"name": "underindented-line", "description": "Continuation line under-indented for hanging indent.", "category": "pycodestyle", "value": true}, "E122": {"name": "out-miss-indented-line", "description": "Continuation line missing indentation or outdented.", "category": "pycodestyle", "value": true}, "E123": {"name": "bad-bracket-indentation", "description": "Closing bracket does not match indentation of opening bracket's line.", "category": "pycodestyle", "value": true}, "E124": {"name": "bad-visual-bracket-indentation", "description": "Closing bracket does not match visual indentation.", "category": "pycodestyle", "value": true}, "E125": {"name": "bad-indentation-next-line", "description": "Continuation line with same indent as next logical line.", "category": "pycodestyle", "value": true}, "E126": {"name": "over-indented-next-line", "description": "Continuation line over-indented for hanging indent.", "category": "pycodestyle", "value": true}, "E127": {"name": "visual-over-indented-next-line", "description": "Continuation line over-indented for visual indent.", "category": "pycodestyle", "value": true}, "E128": {"name": "visual-under-indented-next-line", "description": "Continuation line under-indented for visual indent.", "category": "pycodestyle", "value": true}, "E129": {"name": "visual-bad-indented-next-line", "description": "Visually indented line with same indent as next logical line.", "category": "pycodestyle", "value": true}, "E131": {"name": "unaligned-indented-next-line", "description": "Continuation line unaligned for hanging indent.", "category": "pycodestyle", "value": true}, "E133": {"name": "bracket-missing-indentation", "description": "Closing bracket is missing indentation.", "category": "pycodestyle", "value": true}, "E201": {"name": "whitespace-after-open-bracket", "description": "Whitespace after '('.", "category": "pycodestyle", "value": true}, "E202": {"name": "whitespace-before-close-bracket", "description": "Whitespace before ')'.", "category": "pycodestyle", "value": true}, "E203": {"name": "whitespace-before-punctuation", "description": "Whitespace before ':'.", "category": "pycodestyle", "value": true}, "E211": {"name": "whitespace-before-open-bracket", "description": "Whitespace before '('.", "category": "pycodestyle", "value": true}, "E221": {"name": "multiple-spaces-before-operator", "description": "Multiple spaces before operator.", "category": "pycodestyle", "value": true}, "E222": {"name": "multiple-spaces-after-operator", "description": "Multiple spaces after operator.", "category": "pycodestyle", "value": true}, "E223": {"name": "tab-before-operator", "description": "Tab before operator.", "category": "pycodestyle", "value": true}, "E224": {"name": "tab-after-operator", "description": "Tab after operator.", "category": "pycodestyle", "value": true}, "E225": {"name": "missing-whitespace-around-operator", "description": "Missing whitespace around operator.", "category": "pycodestyle", "value": true}, "E226": {"name": "missing-whitespace-around-arithmetic-operator", "description": "Missing whitespace around arithmetic operator.", "category": "pycodestyle", "value": true}, "E227": {"name": "missing-whitespace-around-bitwise-or-shift-operator", "description": "Missing whitespace around bitwise or shift operator.", "category": "pycodestyle", "value": true}, "E228": {"name": "missing-whitespace-modulo-operator", "description": "Missing whitespace around modulo operator.", "category": "pycodestyle", "value": true}, "E231": {"name": "missing-whitespace", "description": "Missing whitespace after ',', ';', or ':'.", "category": "pycodestyle", "value": true}, "E241": {"name": "multiple-spaces-after-comma", "description": "Multiple spaces after ','.", "category": "pycodestyle", "value": true}, "E242": {"name": "tab-after-comma", "description": "Tab after ','.", "category": "pycodestyle", "value": true}, "E251": {"name": "unexpected-spaces-around-keyword", "description": "Unexpected spaces around keyword / parameter equals.", "category": "pycodestyle", "value": true}, "E261": {"name": "two-spaces-before-inline-comment", "description": "At least two spaces before inline comment.", "category": "pycodestyle", "value": true}, "E262": {"name": "no-space-after-inline-comment", "description": "Inline comment should start with '# '.", "category": "pycodestyle", "value": true}, "E265": {"name": "block-comment-hashtags", "description": "Block comment should start with '# '.", "category": "pycodestyle", "value": true}, "E266": {"name": "multiple-leading-hashes-for-block-comment", "description": "Too many leading '#' for block comment.", "category": "pycodestyle", "value": true}, "E271": {"name": "multiple-spaces-after-keyword", "description": "Multiple spaces after keyword.", "category": "pycodestyle", "value": true}, "E272": {"name": "multiple-spaces-before-keyword", "description": "Multiple spaces before keyword.", "category": "pycodestyle", "value": true}, "E273": {"name": "tab-after-keyword", "description": "Tab after keyword.", "category": "pycodestyle", "value": true}, "E274": {"name": "tab-before-keyword", "description": "Tab before keyword.", "category": "pycodestyle", "value": true}, "E275": {"name": "missing-whitespace-after-keyword", "description": "Missing whitespace after keyword.", "category": "pycodestyle", "value": true}, "E301": {"name": "expected-one-blank-line", "description": "Expected 1 blank line, found 0.", "category": "pycodestyle", "value": true}, "E302": {"name": "expected-two-blank-lines", "description": "Expected 2 blank lines, found 0.", "category": "pycodestyle", "value": true}, "E303": {"name": "too-many-blank-lines", "description": "Too many blank lines.", "category": "pycodestyle", "value": true}, "E304": {"name": "blank-lines-after-decorator", "description": "Blank lines found after function decorator.", "category": "pycodestyle", "value": true}, "E305": {"name": "two-blank-lines-after-functions-or-class", "description": "Expected 2 blank lines after end of function or class.", "category": "pycodestyle", "value": true}, "E306": {"name": "blank-line-before-nested-def", "description": "Expected 1 blank line before a nested definition.", "category": "pycodestyle", "value": true}, "E401": {"name": "multiple-imports-on-one-line", "description": "Multiple imports on one line.", "category": "pycodestyle", "value": true}, "E402": {"name": "module-import-top-of-file", "description": "Module level import not at top of file.", "category": "pycodestyle", "value": true}, "E501": {"name": "line-too-long", "description": "Line too long (more than 79 characters).", "category": "pycodestyle", "value": true}, "E502": {"name": "redundant-backslash-between-brackets", "description": "The backslash is redundant between brackets.", "category": "pycodestyle", "value": true}, "E701": {"name": "multiple-statements-on-one-line-colon", "description": "Multiple statements on one line (colon).", "category": "pycodestyle", "value": true}, "E702": {"name": "multiple-statements-on-one-line-semicolon", "description": "Multiple statements on one line (semicolon).", "category": "pycodestyle", "value": true}, "E703": {"name": "statement-ends-semicolon", "description": "Statement ends with a semicolon.", "category": "pycodestyle", "value": true}, "E704": {"name": "multiple-statements-on-one-line-def", "description": "Multiple statements on one line (def).", "category": "pycodestyle", "value": true}, "E711": {"name": "none-comparison", "description": "Comparison to None should be 'cond is None:'.", "category": "pycodestyle", "value": true}, "E712": {"name": "if-true", "description": "Comparison to true should be 'if cond is true:' or 'if cond:'.", "category": "pycodestyle", "value": true}, "E713": {"name": "not-in-test", "description": "Test for membership should be 'not in'.", "category": "pycodestyle", "value": true}, "E714": {"name": "is-not", "description": "Test for object identity should be 'is not'.", "category": "pycodestyle", "value": true}, "E721": {"name": "type-comparison", "description": "Do not compare types, use 'isinstance()'.", "category": "pycodestyle", "value": true}, "E722": {"name": "specify-exception", "description": "Do not use bare except, specify exception instead.", "category": "pycodestyle", "value": true}, "E731": {"name": "lambda-assignment", "description": "Do not assign a lambda expression, use a def.", "category": "pycodestyle", "value": true}, "E741": {"name": "bad-variable-names", "description": "Do not use variables named 'I', 'O', or 'l'.", "category": "pycodestyle", "value": true}, "E742": {"name": "ambiguous-class-name", "description": "Do not define classes named 'I', 'O', or 'l'.", "category": "pycodestyle", "value": true}, "E743": {"name": "bad-function-names", "description": "Do not define functions named 'I', 'O', or 'l'.", "category": "pycodestyle", "value": true}, "E901": {"name": "syntax-or-indentation-error", "description": "SyntaxError or IndentationError.", "category": "pycodestyle", "value": true}, "E902": {"name": "io-error", "description": "IOError.", "category": "pycodestyle", "value": true}, "E999": {"name": "syntax-error", "description": "SyntaxError.", "category": "pycodestyle", "value": true}, "W191": {"name": "tab-indentation", "description": "Indentation contains tabs.", "category": "pycodestyle", "value": true}, "W291": {"name": "trailing-whitespace", "description": "Trailing whitespace.", "category": "pycodestyle", "value": true}, "W292": {"name": "missing-newline-at-end-of-file", "description": "No newline at end of file.", "category": "pycodestyle", "value": true}, "W293": {"name": "blank-line-contains-whitespace", "description": "Blank line contains whitespace.", "category": "pycodestyle", "value": true}, "W391": {"name": "blank-line-end-of-file", "description": "Blank line at end of file.", "category": "pycodestyle", "value": true}, "W503": {"name": "line-breaks-before-binary-operator", "description": "Line break occurred before a binary operator.", "category": "pycodestyle", "value": true}, "W504": {"name": "line-breaks-after-binary-operator", "description": "Line break occurred after a binary operator.", "category": "pycodestyle", "value": true}, "W601": {"name": "deprecated-has-key", "description": ".has_key() is deprecated, use 'in'.", "category": "pycodestyle", "value": true}, "W602": {"name": "deprecated-exception-raise", "description": "Deprecated form of raising exception.", "category": "pycodestyle", "value": true}, "W603": {"name": "deprecated-not-equal", "description": "'<>' is deprecated, use '!='.", "category": "pycodestyle", "value": true}, "W604": {"name": "deprecated-backticks", "description": "Backticks are deprecated, use 'repr()'.", "category": "pycodestyle", "value": true}, "W605": {"name": "invalid-escape-sequence-x", "description": "Invalid escape sequence 'x'.", "category": "pycodestyle", "value": true}, "F401": {"name": "unused-import", "description": "Module imported but unused.", "category": "pyflakes", "value": true}, "F402": {"name": "module-import-loop-variable", "description": "Import module from line n shadowed by loop variable.", "category": "pyflakes", "value": true}, "F403": {"name": "undefined-local-with-import-star", "description": "'from module import *' used; unable to detect undefined names.", "category": "pyflakes", "value": true}, "F404": {"name": "future-import", "description": "Future import(s) name after other statements.", "category": "pyflakes", "value": true}, "F405": {"name": "undefined-local-with-import-star-usage", "description": "Name may be undefined, or defined from star imports: module.", "category": "pyflakes", "value": true}, "F811": {"name": "redefined-while-unused", "description": "Redefinition of unused name from line n.", "category": "pyflakes", "value": true}, "F812": {"name": "list-comprehension-redefines", "description": "List comprehension redefines name from line n.", "category": "pyflakes", "value": true}, "F821": {"name": "undefined-name", "description": "Undefined name.", "category": "pyflakes", "value": true}, "F822": {"name": "undefined-export", "description": "Undefined name in __all__.", "category": "pyflakes", "value": true}, "F823": {"name": "local-variable-referenced-before-assignment", "description": "Local variable name ... referenced before assignment.", "category": "pyflakes", "value": true}, "F831": {"name": "duplicate-argument-function-definition", "description": "Duplicate argument name in function definition.", "category": "pyflakes", "value": true}, "F841": {"name": "unused-variable", "description": "Local variable name is assigned to but never used.", "category": "pyflakes", "value": true}, "F901": {"name": "raise-not-implemented", "description": "Raise NotImplemented should be raise NotImplementedError.", "category": "pyflakes", "value": true}}
+{
+	"C901": {
+		"name": "complex-structure",
+		"description": "Function is too complex.",
+		"category": "mccabe",
+		"value": true
+	},
+	"E101": {
+		"name": "mixed-spaces-and-tabs",
+		"description": "Indentation contains mixed spaces and tabs.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E111": {
+		"name": "indent-not-multiple-four",
+		"description": "Indentation is not a multiple of four.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E112": {
+		"name": "no-indented-block",
+		"description": "Expected an indented block.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E113": {
+		"name": "unexpected-indentation",
+		"description": "Unexpected indentation.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E114": {
+		"name": "indentation-with-invalid-multiple-comment",
+		"description": "Indentation is not a multiple of four (comment).",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E115": {
+		"name": "expected-indentation-comment",
+		"description": "Expected an indented block (comment).",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E116": {
+		"name": "unexpected-indentation-comment",
+		"description": "Unexpected indentation (comment).",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E117": {
+		"name": "over-indented",
+		"description": "Over-indented.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E121": {
+		"name": "underindented-line",
+		"description": "Continuation line under-indented for hanging indent.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E122": {
+		"name": "out-miss-indented-line",
+		"description": "Continuation line missing indentation or outdented.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E123": {
+		"name": "bad-bracket-indentation",
+		"description": "Closing bracket does not match indentation of opening bracket's line.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E124": {
+		"name": "bad-visual-bracket-indentation",
+		"description": "Closing bracket does not match visual indentation.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E125": {
+		"name": "bad-indentation-next-line",
+		"description": "Continuation line with same indent as next logical line.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E126": {
+		"name": "over-indented-next-line",
+		"description": "Continuation line over-indented for hanging indent.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E127": {
+		"name": "visual-over-indented-next-line",
+		"description": "Continuation line over-indented for visual indent.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E128": {
+		"name": "visual-under-indented-next-line",
+		"description": "Continuation line under-indented for visual indent.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E129": {
+		"name": "visual-bad-indented-next-line",
+		"description": "Visually indented line with same indent as next logical line.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E131": {
+		"name": "unaligned-indented-next-line",
+		"description": "Continuation line unaligned for hanging indent.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E133": {
+		"name": "bracket-missing-indentation",
+		"description": "Closing bracket is missing indentation.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E201": {
+		"name": "whitespace-after-open-bracket",
+		"description": "Whitespace after '('.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E202": {
+		"name": "whitespace-before-close-bracket",
+		"description": "Whitespace before ')'.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E203": {
+		"name": "whitespace-before-punctuation",
+		"description": "Whitespace before ':'.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E211": {
+		"name": "whitespace-before-open-bracket",
+		"description": "Whitespace before '('.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E221": {
+		"name": "multiple-spaces-before-operator",
+		"description": "Multiple spaces before operator.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E222": {
+		"name": "multiple-spaces-after-operator",
+		"description": "Multiple spaces after operator.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E223": {
+		"name": "tab-before-operator",
+		"description": "Tab before operator.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E224": {
+		"name": "tab-after-operator",
+		"description": "Tab after operator.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E225": {
+		"name": "missing-whitespace-around-operator",
+		"description": "Missing whitespace around operator.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E226": {
+		"name": "missing-whitespace-around-arithmetic-operator",
+		"description": "Missing whitespace around arithmetic operator.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E227": {
+		"name": "missing-whitespace-around-bitwise-or-shift-operator",
+		"description": "Missing whitespace around bitwise or shift operator.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E228": {
+		"name": "missing-whitespace-modulo-operator",
+		"description": "Missing whitespace around modulo operator.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E231": {
+		"name": "missing-whitespace",
+		"description": "Missing whitespace after ',', ';', or ':'.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E241": {
+		"name": "multiple-spaces-after-comma",
+		"description": "Multiple spaces after ','.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E242": {
+		"name": "tab-after-comma",
+		"description": "Tab after ','.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E251": {
+		"name": "unexpected-spaces-around-keyword",
+		"description": "Unexpected spaces around keyword / parameter equals.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E261": {
+		"name": "two-spaces-before-inline-comment",
+		"description": "At least two spaces before inline comment.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E262": {
+		"name": "no-space-after-inline-comment",
+		"description": "Inline comment should start with '# '.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E265": {
+		"name": "block-comment-hashtags",
+		"description": "Block comment should start with '# '.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E266": {
+		"name": "multiple-leading-hashes-for-block-comment",
+		"description": "Too many leading '#' for block comment.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E271": {
+		"name": "multiple-spaces-after-keyword",
+		"description": "Multiple spaces after keyword.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E272": {
+		"name": "multiple-spaces-before-keyword",
+		"description": "Multiple spaces before keyword.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E273": {
+		"name": "tab-after-keyword",
+		"description": "Tab after keyword.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E274": {
+		"name": "tab-before-keyword",
+		"description": "Tab before keyword.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E275": {
+		"name": "missing-whitespace-after-keyword",
+		"description": "Missing whitespace after keyword.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E301": {
+		"name": "expected-one-blank-line",
+		"description": "Expected 1 blank line, found 0.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E302": {
+		"name": "expected-two-blank-lines",
+		"description": "Expected 2 blank lines, found 0.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E303": {
+		"name": "too-many-blank-lines",
+		"description": "Too many blank lines.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E304": {
+		"name": "blank-lines-after-decorator",
+		"description": "Blank lines found after function decorator.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E305": {
+		"name": "two-blank-lines-after-functions-or-class",
+		"description": "Expected 2 blank lines after end of function or class.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E306": {
+		"name": "blank-line-before-nested-def",
+		"description": "Expected 1 blank line before a nested definition.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E401": {
+		"name": "multiple-imports-on-one-line",
+		"description": "Multiple imports on one line.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E402": {
+		"name": "module-import-top-of-file",
+		"description": "Module level import not at top of file.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E501": {
+		"name": "line-too-long",
+		"description": "Line too long (more than 79 characters).",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E502": {
+		"name": "redundant-backslash-between-brackets",
+		"description": "The backslash is redundant between brackets.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E701": {
+		"name": "multiple-statements-on-one-line-colon",
+		"description": "Multiple statements on one line (colon).",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E702": {
+		"name": "multiple-statements-on-one-line-semicolon",
+		"description": "Multiple statements on one line (semicolon).",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E703": {
+		"name": "statement-ends-semicolon",
+		"description": "Statement ends with a semicolon.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E704": {
+		"name": "multiple-statements-on-one-line-def",
+		"description": "Multiple statements on one line (def).",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E711": {
+		"name": "none-comparison",
+		"description": "Comparison to None should be 'cond is None:'.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E712": {
+		"name": "if-true",
+		"description": "Comparison to true should be 'if cond is true:' or 'if cond:'.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E713": {
+		"name": "not-in-test",
+		"description": "Test for membership should be 'not in'.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E714": {
+		"name": "is-not",
+		"description": "Test for object identity should be 'is not'.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E721": {
+		"name": "type-comparison",
+		"description": "Do not compare types, use 'isinstance()'.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E722": {
+		"name": "specify-exception",
+		"description": "Do not use bare except, specify exception instead.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E731": {
+		"name": "lambda-assignment",
+		"description": "Do not assign a lambda expression, use a def.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E741": {
+		"name": "bad-variable-names",
+		"description": "Do not use variables named 'I', 'O', or 'l'.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E742": {
+		"name": "ambiguous-class-name",
+		"description": "Do not define classes named 'I', 'O', or 'l'.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E743": {
+		"name": "bad-function-names",
+		"description": "Do not define functions named 'I', 'O', or 'l'.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E901": {
+		"name": "syntax-or-indentation-error",
+		"description": "SyntaxError or IndentationError.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E902": {
+		"name": "io-error",
+		"description": "IOError.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"E999": {
+		"name": "syntax-error",
+		"description": "SyntaxError.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"W191": {
+		"name": "tab-indentation",
+		"description": "Indentation contains tabs.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"W291": {
+		"name": "trailing-whitespace",
+		"description": "Trailing whitespace.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"W292": {
+		"name": "missing-newline-at-end-of-file",
+		"description": "No newline at end of file.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"W293": {
+		"name": "blank-line-contains-whitespace",
+		"description": "Blank line contains whitespace.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"W391": {
+		"name": "blank-line-end-of-file",
+		"description": "Blank line at end of file.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"W503": {
+		"name": "line-breaks-before-binary-operator",
+		"description": "Line break occurred before a binary operator.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"W504": {
+		"name": "line-breaks-after-binary-operator",
+		"description": "Line break occurred after a binary operator.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"W601": {
+		"name": "deprecated-has-key",
+		"description": ".has_key() is deprecated, use 'in'.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"W602": {
+		"name": "deprecated-exception-raise",
+		"description": "Deprecated form of raising exception.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"W603": {
+		"name": "deprecated-not-equal",
+		"description": "'<>' is deprecated, use '!='.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"W604": {
+		"name": "deprecated-backticks",
+		"description": "Backticks are deprecated, use 'repr()'.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"W605": {
+		"name": "invalid-escape-sequence-x",
+		"description": "Invalid escape sequence 'x'.",
+		"category": "pycodestyle",
+		"value": true
+	},
+	"F401": {
+		"name": "unused-import",
+		"description": "Module imported but unused.",
+		"category": "pyflakes",
+		"value": true
+	},
+	"F402": {
+		"name": "module-import-loop-variable",
+		"description": "Import module from line n shadowed by loop variable.",
+		"category": "pyflakes",
+		"value": true
+	},
+	"F403": {
+		"name": "undefined-local-with-import-star",
+		"description": "'from module import *' used; unable to detect undefined names.",
+		"category": "pyflakes",
+		"value": true
+	},
+	"F404": {
+		"name": "future-import",
+		"description": "Future import(s) name after other statements.",
+		"category": "pyflakes",
+		"value": true
+	},
+	"F405": {
+		"name": "undefined-local-with-import-star-usage",
+		"description": "Name may be undefined, or defined from star imports: module.",
+		"category": "pyflakes",
+		"value": true
+	},
+	"F811": {
+		"name": "redefined-while-unused",
+		"description": "Redefinition of unused name from line n.",
+		"category": "pyflakes",
+		"value": true
+	},
+	"F812": {
+		"name": "list-comprehension-redefines",
+		"description": "List comprehension redefines name from line n.",
+		"category": "pyflakes",
+		"value": true
+	},
+	"F821": {
+		"name": "undefined-name",
+		"description": "Undefined name.",
+		"category": "pyflakes",
+		"value": true
+	},
+	"F822": {
+		"name": "undefined-export",
+		"description": "Undefined name in __all__.",
+		"category": "pyflakes",
+		"value": true
+	},
+	"F823": {
+		"name": "local-variable-referenced-before-assignment",
+		"description": "Local variable name ... referenced before assignment.",
+		"category": "pyflakes",
+		"value": true
+	},
+	"F831": {
+		"name": "duplicate-argument-function-definition",
+		"description": "Duplicate argument name in function definition.",
+		"category": "pyflakes",
+		"value": true
+	},
+	"F841": {
+		"name": "unused-variable",
+		"description": "Local variable name is assigned to but never used.",
+		"category": "pyflakes",
+		"value": true
+	},
+	"F901": {
+		"name": "raise-not-implemented",
+		"description": "Raise NotImplemented should be raise NotImplementedError.",
+		"category": "pyflakes",
+		"value": true
+	}
+}

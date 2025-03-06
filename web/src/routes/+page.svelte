@@ -347,7 +347,7 @@
 		return typeof result !== 'undefined' ? result : default_value;
 	}
 
-	function loadSettings(settings_code = 'all') {
+	function loadSettings(settings_code = '') {
 		fetch(`${api}/decode`, {
 			method: 'POST',
 			body: JSON.stringify({
@@ -367,6 +367,7 @@
 			})
 			.then(function (data) {
 				settings = data;
+				console.log(settings)
 				const categoryCounts = {};
 				Object.entries(settings).forEach(([code, item]) => {
 					const { category } = item;

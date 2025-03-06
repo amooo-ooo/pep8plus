@@ -1,1 +1,2432 @@
-{"AIR001": {"description": "Task variable name should match the task_id: \"{task_id}\".", "name": "airflow-variable-name-task-id-mismatch", "value": true, "category": "Airflow"}, "NPY001": {"description": "Type alias np.{type_name} is deprecated, replace with builtin type.", "name": "numpy-deprecated-type-alias", "value": true, "category": "NumPy-specific rules"}, "NPY003": {"description": "Np.{existing} is deprecated; use np.{replacement} instead.", "name": "numpy-deprecated-function", "value": true, "category": "NumPy-specific rules"}, "PERF101": {"description": "Do not cast an iterable to list before iterating over it.", "name": "unnecessary-list-cast", "value": true, "category": "Perflint"}, "PERF203": {"description": "Try-except within a loop incurs performance overhead.", "name": "try-except-in-loop", "value": true, "category": "Perflint"}, "PERF402": {"description": "Use list or list.copy to create a copy of a list.", "name": "manual-list-copy", "value": true, "category": "Perflint"}, "F401": {"description": "{name} imported but unused; consider using importlib.util.find_spec to test for availability.", "name": "unused-import", "value": true, "category": "Pyflakes"}, "F403": {"description": "From {name} import * used; unable to detect undefined names.", "name": "undefined-local-with-import-star", "value": true, "category": "Pyflakes"}, "F405": {"description": "{name} may be undefined, or defined from star imports.", "name": "undefined-local-with-import-star-usage", "value": true, "category": "Pyflakes"}, "F407": {"description": "Future feature {name} is not defined.", "name": "future-feature-not-defined", "value": true, "category": "Pyflakes"}, "F502": {"description": "%-format string expected mapping but got sequence.", "name": "percent-format-expected-mapping", "value": true, "category": "Pyflakes"}, "F504": {"description": "%-format string has unused named argument(s):.", "name": "percent-format-extra-named-arguments", "value": true, "category": "Pyflakes"}, "F506": {"description": "%-format string has mixed positional and named placeholders.", "name": "percent-format-mixed-positional-and-named", "value": true, "category": "Pyflakes"}, "F508": {"description": "%-format string * specifier requires sequence.", "name": "percent-format-star-requires-sequence", "value": true, "category": "Pyflakes"}, "F521": {"description": ".format call has invalid format string:.", "name": "string-dot-format-invalid-format", "value": true, "category": "Pyflakes"}, "F523": {"description": ".format call has unused arguments at position(s):.", "name": "string-dot-format-extra-positional-arguments", "value": true, "category": "Pyflakes"}, "F525": {"description": ".format string mixes automatic and manual numbering.", "name": "string-dot-format-mixing-automatic", "value": true, "category": "Pyflakes"}, "F601": {"description": "Dictionary key literal {name} repeated.", "name": "multi-value-repeated-key-literal", "value": true, "category": "Pyflakes"}, "F621": {"description": "Too many expressions in star-unpacking assignment.", "name": "expressions-in-star-assignment", "value": true, "category": "Pyflakes"}, "F631": {"description": "Assert test is a non-empty tuple, which is always True.", "name": "assert-tuple", "value": true, "category": "Pyflakes"}, "F633": {"description": "Use of >> is invalid with print function.", "name": "invalid-print-syntax", "value": true, "category": "Pyflakes"}, "F701": {"description": "Break outside loop.", "name": "break-outside-loop", "value": true, "category": "Pyflakes"}, "F704": {"description": "{keyword} statement outside of a function.", "name": "yield-outside-function", "value": true, "category": "Pyflakes"}, "F707": {"description": "An except block as not the last exception handler.", "name": "default-except-not-last", "value": true, "category": "Pyflakes"}, "F811": {"description": "Redefinition of unused {name} from line.", "name": "redefined-while-unused", "value": true, "category": "Pyflakes"}, "F822": {"description": "Undefined name {name} in __all__.", "name": "undefined-export", "value": true, "category": "Pyflakes"}, "F841": {"description": "Local variable {name} is assigned to but never used.", "name": "unused-variable", "value": true, "category": "Pyflakes"}, "F901": {"description": "Raise NotImplemented should be raise NotImplementedError.", "name": "raise-not-implemented", "value": true, "category": "Pyflakes"}, "FA102": {"description": "Missing from __future__ import annotations, but uses.", "name": "future-required-type-annotation", "value": true, "category": "Pyflakes"}, "FBT002": {"description": "Boolean default positional argument in function definition.", "name": "boolean-default-value-positional-argument", "value": true, "category": "Pyflakes"}, "FIX002": {"description": "Line contains TODO, consider resolving the issue.", "name": "line-contains-todo", "value": true, "category": "Pyflakes"}, "FURB113": {"description": "Use {suggestion} instead of repeatedly calling {name}.append().", "name": "repeated-append", "value": true, "category": "Pyflakes"}, "FURB145": {"description": "Prefer copy method over slicing.", "name": "slice-copy", "value": true, "category": "Pyflakes"}, "PLC0105": {"description": "{kind} name \"{param_name}\" does not reflect its {variance}; consider renaming it to \"{replacement_name}\".", "name": "type-name-incorrect-variance", "value": true, "category": "Pylint"}, "PLC0132": {"description": "{kind} name {param_name} does not match assigned variable name {var_name}.", "name": "type-param-name-mismatch", "value": true, "category": "Pylint"}, "PLC0208": {"description": "Use a sequence type instead of a set when iterating over values.", "name": "iteration-over-set", "value": true, "category": "Pylint"}, "PLC1901": {"description": "{existing} can be simplified to {replacement} as an empty string is falsey.", "name": "compare-to-empty-string", "value": true, "category": "Pylint"}, "PLE0100": {"description": "__init__ method is a generator.", "name": "yield-in-init", "value": true, "category": "Pylint"}, "PLE0116": {"description": "Continue not supported inside finally clause.", "name": "continue-in-finally", "value": true, "category": "Pylint"}, "PLE0118": {"description": "Name {name} is used prior to global declaration on line.", "name": "load-before-global-declaration", "value": true, "category": "Pylint"}, "PLE0302": {"description": "The special method {} expects {}, {} {} given.", "name": "unexpected-special-method-signature", "value": true, "category": "Pylint"}, "PLE0604": {"description": "Invalid object in __all__, must contain only strings.", "name": "invalid-all-object", "value": true, "category": "Pylint"}, "PLE1142": {"description": "Await should be used within an async function.", "name": "await-outside-async", "value": true, "category": "Pylint"}, "PLE1206": {"description": "Not enough arguments for logging format string.", "name": "logging-too-few-args", "value": true, "category": "Pylint"}, "PLE1307": {"description": "Format type does not match argument type.", "name": "bad-string-format-type", "value": true, "category": "Pylint"}, "PLE1507": {"description": "Invalid type for initial os.getenv argument; expected str.", "name": "invalid-envvar-value", "value": true, "category": "Pylint"}, "PLE2502": {"description": "Contains control characters that can permit obfuscated code.", "name": "bidirectional-unicode", "value": true, "category": "Pylint"}, "PLE2512": {"description": "Invalid unescaped character SUB, use \"\\x1A\" instead.", "name": "invalid-character-sub", "value": true, "category": "Pylint"}, "PLE2514": {"description": "Invalid unescaped character NUL, use \"\\0\" instead.", "name": "invalid-character-nul", "value": true, "category": "Pylint"}, "PLR0124": {"description": "Name compared with itself, consider replacing {actual}.", "name": "comparison-with-itself", "value": true, "category": "Pylint"}, "PLR0206": {"description": "Cannot have defined parameters for properties.", "name": "property-with-parameters", "value": true, "category": "Pylint"}, "PLR0904": {"description": "Too many public methods ({methods} > {max_methods}).", "name": "too-many-public-methods", "value": true, "category": "Pylint"}, "PLR0912": {"description": "Too many branches ({branches} > {max_branches}).", "name": "too-many-branches", "value": true, "category": "Pylint"}, "PLR0915": {"description": "Too many statements ({statements} > {max_statements}).", "name": "too-many-statements", "value": true, "category": "Pylint"}, "PLR1711": {"description": "Useless return statement at end of function.", "name": "useless-return", "value": true, "category": "Pylint"}, "PLR1722": {"description": "Use sys.exit() instead of {name}.", "name": "sys-exit-alias", "value": true, "category": "Pylint"}, "PLR5501": {"description": "Use elif instead of else then if, to reduce indentation.", "name": "collapsible-else-if", "value": true, "category": "Pylint"}, "PLW0120": {"description": "Else clause on loop without a break statement; remove the else and de-indent all the code inside it.", "name": "useless-else-on-loop", "value": true, "category": "Pylint"}, "PLW0129": {"description": "Asserting on an empty string literal will never pass.", "name": "assert-on-string-literal", "value": true, "category": "Pylint"}, "PLW0406": {"description": "Module {name} imports itself.", "name": "import-self", "value": true, "category": "Pylint"}, "PLW0603": {"description": "Using the global statement to update {name} is discouraged.", "name": "global-statement", "value": true, "category": "Pylint"}, "PLW1508": {"description": "Invalid type for environment variable default; expected str or None.", "name": "invalid-envvar-default", "value": true, "category": "Pylint"}, "PLW1510": {"description": "Subprocess.run without explicit check argument.", "name": "subprocess-run-without-check", "value": true, "category": "Pylint"}, "PLW2901": {"description": "Outer {outer_kind} variable {name} overwritten by inner {inner_kind} target.", "name": "redefined-loop-name", "value": true, "category": "Pylint"}, "PLW3301": {"description": "Nested {func} calls can be flattened.", "name": "nested-min-max", "value": true, "category": "Pylint"}, "RUF001": {"description": "String contains ambiguous {}. Did you mean {}?.", "name": "ambiguous-unicode-character-string", "value": true, "category": "Ruff-specific rules"}, "RUF003": {"description": "Comment contains ambiguous {}. Did you mean {}?.", "name": "ambiguous-unicode-character-comment", "value": true, "category": "Ruff-specific rules"}, "RUF006": {"description": "Store a reference to the return value of asyncio.{method}.", "name": "asyncio-dangling-task", "value": true, "category": "Ruff-specific rules"}, "RUF008": {"description": "Do not use mutable default values for dataclass attributes.", "name": "mutable-dataclass-default", "value": true, "category": "Ruff-specific rules"}, "RUF010": {"description": "Use explicit conversion flag.", "name": "explicit-f-string-type-conversion", "value": true, "category": "Ruff-specific rules"}, "RUF012": {"description": "Mutable class attributes should be annotated with typing.ClassVar.", "name": "mutable-class-default", "value": true, "category": "Ruff-specific rules"}, "RUF015": {"description": "Prefer next({iterable}) over single element slice.", "name": "unnecessary-iterable-allocation-for-first-element", "value": true, "category": "Ruff-specific rules"}, "RUF017": {"description": "Avoid quadratic list summation.", "name": "quadratic-list-summation", "value": true, "category": "Ruff-specific rules"}, "RUF200": {"description": "Failed to parse pyproject.toml:.", "name": "invalid-pyproject-toml", "value": true, "category": "Ruff-specific rules"}, "ERA001": {"description": "Found commented-out code.", "name": "commented-out-code", "value": true, "category": "eradicate"}, "YTT101": {"description": "Sys.version[:3] referenced (python3.10), use sys.version_info.", "name": "sys-version-slice3", "value": true, "category": "flake8-2020"}, "YTT103": {"description": "Sys.version compared to string (python3.10), use sys.version_info.", "name": "sys-version-cmp-str3", "value": true, "category": "flake8-2020"}, "YTT202": {"description": "Six.PY3 referenced (python4), use not six.PY2.", "name": "six-py3", "value": true, "category": "flake8-2020"}, "YTT204": {"description": "Sys.version_info.minor compared to integer (python4), compare sys.version_info to tuple.", "name": "sys-version-info-minor-cmp-int", "value": true, "category": "flake8-2020"}, "YTT302": {"description": "Sys.version compared to string (python10), use sys.version_info.", "name": "sys-version-cmp-str10", "value": true, "category": "flake8-2020"}, "ANN001": {"description": "Missing type annotation for function argument {name}.", "name": "missing-type-function-argument", "value": true, "category": "flake8-annotations"}, "ANN003": {"description": "Missing type annotation for **{name}.", "name": "missing-type-kwargs", "value": true, "category": "flake8-annotations"}, "ANN102": {"description": "Missing type annotation for {name} in classmethod.", "name": "missing-type-cls", "value": true, "category": "flake8-annotations"}, "ANN202": {"description": "Missing return type annotation for private function {name}.", "name": "missing-return-type-private-function", "value": true, "category": "flake8-annotations"}, "ANN205": {"description": "Missing return type annotation for staticmethod {name}.", "name": "missing-return-type-static-method", "value": true, "category": "flake8-annotations"}, "ANN401": {"description": "Dynamically typed expressions (typing.Any) are disallowed in {name}.", "name": "any-type", "value": true, "category": "flake8-annotations"}, "ASYNC100": {"description": "Async functions should not call blocking HTTP methods.", "name": "blocking-http-call-in-async-function", "value": true, "category": "flake8-async"}, "ASYNC102": {"description": "Async functions should not call synchronous os methods.", "name": "blocking-os-call-in-async-function", "value": true, "category": "flake8-async"}, "S101": {"description": "Use of assert detected.", "name": "assert", "value": true, "category": "flake8-bandit"}, "S103": {"description": "Os.chmod setting a permissive mask {mask:#o} on file or directory.", "name": "bad-file-permissions", "value": true, "category": "flake8-bandit"}, "S105": {"description": "Possible hardcoded password assigned to: \"{}\".", "name": "hardcoded-password-string", "value": true, "category": "flake8-bandit"}, "S107": {"description": "Possible hardcoded password assigned to function default: \"{}\".", "name": "hardcoded-password-default", "value": true, "category": "flake8-bandit"}, "S110": {"description": "Try-except-pass detected, consider logging the exception.", "name": "try-except-pass", "value": true, "category": "flake8-bandit"}, "S113": {"description": "Probable use of requests call without timeout.", "name": "request-without-timeout", "value": true, "category": "flake8-bandit"}, "S301": {"description": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.", "name": "suspicious-pickle-usage", "value": true, "category": "flake8-bandit"}, "S303": {"description": "Use of insecure MD2, MD4, MD5, or SHA1 hash function.", "name": "suspicious-insecure-hash-usage", "value": true, "category": "flake8-bandit"}, "S305": {"description": "Use of insecure cipher mode, replace with a known secure cipher such as AES.", "name": "suspicious-insecure-cipher-mode-usage", "value": true, "category": "flake8-bandit"}, "S307": {"description": "Use of possibly insecure function; consider using ast.literal_eval.", "name": "suspicious-eval-usage", "value": true, "category": "flake8-bandit"}, "S310": {"description": "Audit URL open for permitted schemes. Allowing use of file: or custom schemes is often unexpected.", "name": "suspicious-url-open-usage", "value": true, "category": "flake8-bandit"}, "S312": {"description": "Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.", "name": "suspicious-telnet-usage", "value": true, "category": "flake8-bandit"}, "S314": {"description": "Using xml to parse untrusted data is known to be vulnerable to XML attacks; use defusedxml equivalents.", "name": "suspicious-xml-element-tree-usage", "value": true, "category": "flake8-bandit"}, "S316": {"description": "Using xml to parse untrusted data is known to be vulnerable to XML attacks; use defusedxml equivalents.", "name": "suspicious-xml-expat-builder-usage", "value": true, "category": "flake8-bandit"}, "S318": {"description": "Using xml to parse untrusted data is known to be vulnerable to XML attacks; use defusedxml equivalents.", "name": "suspicious-xml-mini-dom-usage", "value": true, "category": "flake8-bandit"}, "S320": {"description": "Using lxml to parse untrusted data is known to be vulnerable to XML attacks.", "name": "suspicious-xmle-tree-usage", "value": true, "category": "flake8-bandit"}, "S323": {"description": "Python allows using an insecure context via the _create_unverified_context that reverts to the previous behavior that does not validate certificates or perform hostname checks.", "name": "suspicious-unverified-context-usage", "value": true, "category": "flake8-bandit"}, "S501": {"description": "Probable use of {string} call with verify=False disabling SSL certificate checks.", "name": "request-with-no-cert-validation", "value": true, "category": "flake8-bandit"}, "S506": {"description": "Probable use of unsafe loader {name} with yaml.load. Allows instantiation of arbitrary objects. Consider yaml.safe_load.", "name": "unsafe-yaml-load", "value": true, "category": "flake8-bandit"}, "S508": {"description": "The use of SNMPv1 and SNMPv2 is insecure. Use SNMPv3 if able.", "name": "snmp-insecure-version", "value": true, "category": "flake8-bandit"}, "S601": {"description": "Possible shell injection via Paramiko call; check inputs are properly sanitized.", "name": "paramiko-call", "value": true, "category": "flake8-bandit"}, "S603": {"description": "Subprocess call: check for execution of untrusted input.", "name": "subprocess-without-shell-equals-true", "value": true, "category": "flake8-bandit"}, "S605": {"description": "Starting a process with a shell: seems safe, but may be changed in the future; consider rewriting without shell.", "name": "start-process-with-a-shell", "value": true, "category": "flake8-bandit"}, "S607": {"description": "Starting a process with a partial executable path.", "name": "start-process-with-partial-path", "value": true, "category": "flake8-bandit"}, "S609": {"description": "Possible wildcard injection in call due to * usage.", "name": "unix-command-wildcard-injection", "value": true, "category": "flake8-bandit"}, "S701": {"description": "Using jinja2 templates with autoescape=False is dangerous and can lead to XSS. Ensure autoescape=True or use the select_autoescape function.", "name": "jinja2-autoescape-false", "value": true, "category": "flake8-bandit"}, "SIM105": {"description": "Use contextlib.suppress({exception}) instead of try-except-pass.", "name": "suppressible-exception", "value": true, "category": "flake8-bandit"}, "SIM110": {"description": "Use {replacement} instead of for loop.", "name": "reimplemented-builtin", "value": true, "category": "flake8-bandit"}, "SIM116": {"description": "Use a dictionary instead of consecutive if statements.", "name": "if-else-block-instead-of-dict-lookup", "value": true, "category": "flake8-bandit"}, "SIM202": {"description": "Use {left} == {right} instead of not {left} != {right}.", "name": "negate-not-equal-op", "value": true, "category": "flake8-bandit"}, "SIM212": {"description": "Use {expr_else} if {expr_else} else {expr_body} instead of {expr_body} if not {expr_else} else {expr_else}.", "name": "if-expr-with-twisted-arms", "value": true, "category": "flake8-bandit"}, "SIM223": {"description": "Use {expr} instead of {replaced}.", "name": "expr-and-false", "value": true, "category": "flake8-bandit"}, "SLOT001": {"description": "Subclasses of tuple should define __slots__.", "name": "no-slots-in-tuple-subclass", "value": true, "category": "flake8-bandit"}, "BLE001": {"description": "Do not catch blind exception: {name}.", "name": "blind-except", "value": true, "category": "flake8-blind-except"}, "FBT001": {"description": "Boolean-typed positional argument in function definition.", "name": "boolean-type-hint-positional-argument", "value": true, "category": "flake8-boolean-trap"}, "FBT003": {"description": "Boolean positional value in function call.", "name": "boolean-positional-value-in-call", "value": true, "category": "flake8-boolean-trap"}, "B002": {"description": "Python does not support the unary prefix increment operator (++).", "name": "unary-prefix-increment-decrement", "value": true, "category": "flake8-bugbear"}, "B004": {"description": "Using hasattr(x, \"__call__\") to test if x is callable is unreliable. Use callable(x) for consistent results.", "name": "unreliable-callable-check", "value": true, "category": "flake8-bugbear"}, "B006": {"description": "Do not use mutable data structures for argument defaults.", "name": "mutable-argument-default", "value": true, "category": "flake8-bugbear"}, "B008": {"description": "Do not perform function call {name} in argument defaults.", "name": "function-call-in-default-argument", "value": true, "category": "flake8-bugbear"}, "B010": {"description": "Do not call setattr with a constant attribute value. It is not any safer than normal property access.", "name": "set-attr-with-constant", "value": true, "category": "flake8-bugbear"}, "B012": {"description": "{name} inside finally blocks cause exceptions to be silenced.", "name": "jump-statement-in-finally", "value": true, "category": "flake8-bugbear"}, "B014": {"description": "Exception handler with duplicate exception: {name}.", "name": "duplicate-handler-exception", "value": true, "category": "flake8-bugbear"}, "B016": {"description": "Cannot raise a literal. Did you intend to return it or raise an Exception?.", "name": "raise-literal", "value": true, "category": "flake8-bugbear"}, "B018": {"description": "Found useless expression. Either assign it to a variable or remove it.", "name": "useless-expression", "value": true, "category": "flake8-bugbear"}, "B020": {"description": "Loop control variable {name} overrides iterable it iterates.", "name": "loop-variable-overrides-iterator", "value": true, "category": "flake8-bugbear"}, "B022": {"description": "No arguments passed to contextlib.suppress. No exceptions will be suppressed and therefore this context manager is redundant.", "name": "useless-contextlib-suppress", "value": true, "category": "flake8-bugbear"}, "B024": {"description": "{name} is an abstract base class, but it has no abstract methods.", "name": "abstract-base-class-without-abstract-method", "value": true, "category": "flake8-bugbear"}, "B026": {"description": "Star-arg unpacking after a keyword argument is strongly discouraged.", "name": "star-arg-unpacking-after-keyword-arg", "value": true, "category": "flake8-bugbear"}, "B028": {"description": "No explicit stacklevel keyword argument found.", "name": "no-explicit-stacklevel", "value": true, "category": "flake8-bugbear"}, "B030": {"description": "Except handlers should only be exception classes or tuples of exception classes.", "name": "except-with-non-exception-classes", "value": true, "category": "flake8-bugbear"}, "B032": {"description": "Possible unintentional type annotation (using :). Did you mean to assign (using =)?.", "name": "unintentional-type-annotation", "value": true, "category": "flake8-bugbear"}, "B034": {"description": "{method} should pass {param_name} and flags as keyword arguments to avoid confusion due to unintuitive argument positions.", "name": "re-sub-positional-args", "value": true, "category": "flake8-bugbear"}, "B905": {"description": "Zip() without an explicit strict= parameter.", "name": "zip-without-explicit-strict", "value": true, "category": "flake8-bugbear"}, "A001": {"description": "Variable {name} is shadowing a Python builtin.", "name": "builtin-variable-shadowing", "value": true, "category": "flake8-builtins"}, "A003": {"description": "Class attribute {name} is shadowing a Python builtin.", "name": "builtin-attribute-shadowing", "value": true, "category": "flake8-builtins"}, "ANN002": {"description": "Missing type annotation for *{name}.", "name": "missing-type-args", "value": true, "category": "flake8-builtins"}, "ANN201": {"description": "Missing return type annotation for public function {name}.", "name": "missing-return-type-undocumented-public-function", "value": true, "category": "flake8-builtins"}, "ANN206": {"description": "Missing return type annotation for classmethod {name}.", "name": "missing-return-type-class-method", "value": true, "category": "flake8-builtins"}, "ARG002": {"description": "Unused method argument: {name}.", "name": "unused-method-argument", "value": true, "category": "flake8-builtins"}, "COM812": {"description": "Trailing comma missing.", "name": "missing-trailing-comma", "value": true, "category": "flake8-commas"}, "COM819": {"description": "Trailing comma prohibited.", "name": "prohibited-trailing-comma", "value": true, "category": "flake8-commas"}, "C400": {"description": "Unnecessary generator (rewrite as a list comprehension).", "name": "unnecessary-generator-list", "value": true, "category": "flake8-comprehensions"}, "C402": {"description": "Unnecessary generator (rewrite as a dict comprehension).", "name": "unnecessary-generator-dict", "value": true, "category": "flake8-comprehensions"}, "C404": {"description": "Unnecessary list comprehension (rewrite as a dict comprehension).", "name": "unnecessary-list-comprehension-dict", "value": true, "category": "flake8-comprehensions"}, "C406": {"description": "Unnecessary {obj_type} literal (rewrite as a dict literal).", "name": "unnecessary-literal-dict", "value": true, "category": "flake8-comprehensions"}, "C409": {"description": "Unnecessary {literal} literal passed to tuple() (rewrite as a tuple literal).", "name": "unnecessary-literal-within-tuple-call", "value": true, "category": "flake8-comprehensions"}, "C411": {"description": "Unnecessary list call (remove the outer call to list()).", "name": "unnecessary-list-call", "value": true, "category": "flake8-comprehensions"}, "C414": {"description": "Unnecessary {inner} call within {outer}().", "name": "unnecessary-double-cast-or-process", "value": true, "category": "flake8-comprehensions"}, "C416": {"description": "Unnecessary {obj_type} comprehension (rewrite using {obj_type}()).", "name": "unnecessary-comprehension", "value": true, "category": "flake8-comprehensions"}, "C418": {"description": "Unnecessary dict {kind} passed to dict() (remove the outer call to dict()).", "name": "unnecessary-literal-within-dict-call", "value": true, "category": "flake8-comprehensions"}, "CPY001": {"description": "Missing copyright notice at top of file.", "name": "missing-copyright-notice", "value": true, "category": "flake8-copyright"}, "DTZ001": {"description": "The use of datetime.datetime() without tzinfo argument is not allowed.", "name": "call-datetime-without-tzinfo", "value": true, "category": "flake8-datetimez"}, "DTZ003": {"description": "The use of datetime.datetime.utcnow() is not allowed, use datetime.datetime.now(tz=) instead.", "name": "call-datetime-utcnow", "value": true, "category": "flake8-datetimez"}, "DTZ005": {"description": "The use of datetime.datetime.now() without tz argument is not allowed.", "name": "call-datetime-now-without-tzinfo", "value": true, "category": "flake8-datetimez"}, "DTZ007": {"description": "The use of datetime.datetime.strptime() without %z must be followed by .replace(tzinfo=) or .astimezone().", "name": "call-datetime-strptime-without-zone", "value": true, "category": "flake8-datetimez"}, "DTZ012": {"description": "The use of datetime.date.fromtimestamp() is not allowed, use datetime.datetime.fromtimestamp(ts, tz=).date() instead.", "name": "call-date-fromtimestamp", "value": true, "category": "flake8-datetimez"}, "T100": {"description": "Trace found: {name} used.", "name": "debugger", "value": true, "category": "flake8-debugger"}, "DJ001": {"description": "Avoid using null=True on string-based fields such as.", "name": "django-nullable-model-string-field", "value": true, "category": "flake8-django"}, "DJ006": {"description": "Do not use exclude with ModelForm, use fields instead.", "name": "django-exclude-with-model-form", "value": true, "category": "flake8-django"}, "DJ008": {"description": "Model does not define __str__ method.", "name": "django-model-without-dunder-str", "value": true, "category": "flake8-django"}, "DJ013": {"description": "@receiver decorator must be on top of all the other decorators.", "name": "django-non-leading-receiver-decorator", "value": true, "category": "flake8-django"}, "EM101": {"description": "Exception must not use a string literal, assign to variable first.", "name": "raw-string-in-exception", "value": true, "category": "flake8-errmsg"}, "EM103": {"description": "Exception must not use a .format() string directly, assign to variable first.", "name": "dot-format-in-exception", "value": true, "category": "flake8-errmsg"}, "EXE001": {"description": "Shebang is present but file is not executable.", "name": "shebang-not-executable", "value": true, "category": "flake8-executable"}, "EXE003": {"description": "Shebang should contain python.", "name": "shebang-missing-python", "value": true, "category": "flake8-executable"}, "EXE005": {"description": "Shebang should be at the beginning of the file.", "name": "shebang-not-first-line", "value": true, "category": "flake8-executable"}, "FIX001": {"description": "Line contains FIXME, consider resolving the issue.", "name": "line-contains-fixme", "value": true, "category": "flake8-fixme"}, "FIX003": {"description": "Line contains XXX, consider resolving the issue.", "name": "line-contains-xxx", "value": true, "category": "flake8-fixme"}, "FA100": {"description": "Missing from __future__ import annotations, but uses {name}.", "name": "future-rewritable-type-annotation", "value": true, "category": "flake8-future-annotations"}, "INT001": {"description": "F-string is resolved before function call; consider _(\"string %s\") % arg.", "name": "f-string-in-get-text-func-call", "value": true, "category": "flake8-gettext"}, "INT003": {"description": "Printf-style format is resolved before function call; consider _(\"string %s\") % arg.", "name": "printf-in-get-text-func-call", "value": true, "category": "flake8-gettext"}, "ISC001": {"description": "Implicitly concatenated string literals on one line.", "name": "single-line-implicit-string-concatenation", "value": true, "category": "flake8-implicit-str-concat"}, "ISC003": {"description": "Explicitly concatenated string should be implicitly concatenated.", "name": "explicit-string-concatenation", "value": true, "category": "flake8-implicit-str-concat"}, "ICN001": {"description": "{name} should be imported as {asname}.", "name": "unconventional-import-alias", "value": true, "category": "flake8-import-conventions"}, "ICN003": {"description": "Members of {name} should not be imported explicitly.", "name": "banned-import-from", "value": true, "category": "flake8-import-conventions"}, "LOG001": {"description": "Use logging.getLogger() to instantiate loggers.", "name": "direct-logger-instantiation", "value": true, "category": "flake8-logging"}, "LOG007": {"description": "Use of logging.exception with falsy exc_info.", "name": "exception-without-exc-info", "value": true, "category": "flake8-logging"}, "G001": {"description": "Logging statement uses str.format.", "name": "logging-string-format", "value": true, "category": "flake8-logging-format"}, "G003": {"description": "Logging statement uses +.", "name": "logging-string-concat", "value": true, "category": "flake8-logging-format"}, "G010": {"description": "Logging statement uses warn instead of warning.", "name": "logging-warn", "value": true, "category": "flake8-logging-format"}, "G201": {"description": "Logging .exception(...) should be used instead of .error(..., exc_info=True).", "name": "logging-exc-info", "value": true, "category": "flake8-logging-format"}, "INP001": {"description": "File {filename} is part of an implicit namespace package. Add an __init__.py.", "name": "implicit-namespace-package", "value": true, "category": "flake8-no-pep420"}, "PIE790": {"description": "Unnecessary pass statement.", "name": "unnecessary-pass", "value": true, "category": "flake8-pie"}, "PIE796": {"description": "Enum contains duplicate value: {value}.", "name": "non-unique-enums", "value": true, "category": "flake8-pie"}, "PIE804": {"description": "Unnecessary dict kwargs.", "name": "unnecessary-dict-kwargs", "value": true, "category": "flake8-pie"}, "PIE808": {"description": "Unnecessary start argument in range.", "name": "unnecessary-range-start", "value": true, "category": "flake8-pie"}, "T201": {"description": "Print found.", "name": "print", "value": true, "category": "flake8-print"}, "PYI001": {"description": "Name of private {kind} must start with _.", "name": "unprefixed-type-param", "value": true, "category": "flake8-pyi"}, "PYI003": {"description": "Unrecognized sys.version_info check.", "name": "unrecognized-version-info-check", "value": true, "category": "flake8-pyi"}, "PYI005": {"description": "Version comparison must be against a length-{expected_length} tuple.", "name": "wrong-tuple-length-version-comparison", "value": true, "category": "flake8-pyi"}, "PYI007": {"description": "Unrecognized sys.platform check.", "name": "unrecognized-platform-check", "value": true, "category": "flake8-pyi"}, "PYI009": {"description": "Empty body should contain ..., not pass.", "name": "pass-statement-stub-body", "value": true, "category": "flake8-pyi"}, "PYI011": {"description": "Only simple default values allowed for typed arguments.", "name": "typed-argument-default-in-stub", "value": true, "category": "flake8-pyi"}, "PYI013": {"description": "Non-empty class body must not contain ...", "name": "ellipsis-in-non-empty-class-body", "value": true, "category": "flake8-pyi"}, "PYI015": {"description": "Only simple default values allowed for assignments.", "name": "assignment-default-in-stub", "value": true, "category": "flake8-pyi"}, "PYI017": {"description": "Stubs should not contain assignments to attributes or multiple targets.", "name": "complex-assignment-in-stub", "value": true, "category": "flake8-pyi"}, "PYI019": {"description": "Methods like {method_name} should return typing.Self instead of a custom TypeVar.", "name": "custom-type-var-return-type", "value": true, "category": "flake8-pyi"}, "PYI021": {"description": "Docstrings should not be included in stubs.", "name": "docstring-in-stub", "value": true, "category": "flake8-pyi"}, "PYI025": {"description": "Use from collections.abc import Set as AbstractSet to avoid confusion with the set builtin.", "name": "unaliased-collections-abc-set-import", "value": true, "category": "flake8-pyi"}, "PYI029": {"description": "Defining {name} in a stub is almost always redundant.", "name": "str-or-repr-defined-in-stub", "value": true, "category": "flake8-pyi"}, "PYI032": {"description": "Prefer object to Any for the second parameter to {method_name}.", "name": "any-eq-ne-annotation", "value": true, "category": "flake8-pyi"}, "PYI034": {"description": "__new__ methods usually return self at runtime.", "name": "non-self-return-type", "value": true, "category": "flake8-pyi"}, "PYI036": {"description": "Star-args in {method_name} should be annotated with object.", "name": "bad-exit-annotation", "value": true, "category": "flake8-pyi"}, "PYI042": {"description": "Type alias {name} should be CamelCase.", "name": "snake-case-type-alias", "value": true, "category": "flake8-pyi"}, "PYI044": {"description": "From __future__ import annotations has no effect in stub files, since type checkers automatically treat stubs as having those semantics.", "name": "future-annotations-in-stub", "value": true, "category": "flake8-pyi"}, "PYI046": {"description": "Private protocol {name} is never used.", "name": "unused-private-protocol", "value": true, "category": "flake8-pyi"}, "PYI048": {"description": "Function body must contain exactly one statement.", "name": "stub-body-multiple-statements", "value": true, "category": "flake8-pyi"}, "PYI050": {"description": "Prefer {module}.Never over NoReturn for argument annotations.", "name": "no-return-argument-annotation-in-stub", "value": true, "category": "flake8-pyi"}, "PYI052": {"description": "Need type annotation for {name}.", "name": "unannotated-assignment-in-stub", "value": true, "category": "flake8-pyi"}, "PYI054": {"description": "Numeric literals with a string representation longer than ten characters are not permitted.", "name": "numeric-literal-too-long", "value": true, "category": "flake8-pyi"}, "PYI056": {"description": "Calling .{name}() on __all__ may not be supported by all type checkers (use += instead).", "name": "unsupported-method-call-on-all", "value": true, "category": "flake8-pyi"}, "PT001": {"description": "Use @pytest.fixture{expected} over @pytest.fixture{actual}.", "name": "pytest-fixture-incorrect-parentheses-style", "value": true, "category": "flake8-pytest-style"}, "PT003": {"description": "Scope='function' is implied in @pytest.fixture().", "name": "pytest-extraneous-scope-function", "value": true, "category": "flake8-pytest-style"}, "PT005": {"description": "Fixture {function} returns a value, remove leading underscore.", "name": "pytest-incorrect-fixture-name-underscore", "value": true, "category": "flake8-pytest-style"}, "PT007": {"description": "Wrong values type in @pytest.mark.parametrize expected {values} of {row}.", "name": "pytest-parametrize-values-wrong-type", "value": true, "category": "flake8-pytest-style"}, "PT009": {"description": "Use a regular assert instead of unittest-style {assertion}.", "name": "pytest-unittest-assertion", "value": true, "category": "flake8-pytest-style"}, "PT011": {"description": "Pytest.raises({exception}) is too broad, set the match parameter or use a more specific exception.", "name": "pytest-raises-too-broad", "value": true, "category": "flake8-pytest-style"}, "PT013": {"description": "Found incorrect import of pytest, use simple import pytest instead.", "name": "pytest-incorrect-pytest-import", "value": true, "category": "flake8-pytest-style"}, "PT015": {"description": "Assertion always fails, replace with pytest.fail().", "name": "pytest-assert-always-false", "value": true, "category": "flake8-pytest-style"}, "PT017": {"description": "Found assertion on exception {name} in except block, use pytest.raises() instead.", "name": "pytest-assert-in-except", "value": true, "category": "flake8-pytest-style"}, "PT019": {"description": "Fixture {name} without value is injected as parameter, use @pytest.mark.usefixtures instead.", "name": "pytest-fixture-param-without-value", "value": true, "category": "flake8-pytest-style"}, "PT021": {"description": "Use yield instead of request.addfinalizer.", "name": "pytest-fixture-finalizer-callback", "value": true, "category": "flake8-pytest-style"}, "PT023": {"description": "Use @pytest.mark.{mark_name}{expected_parens} over @pytest.mark.{mark_name}{actual_parens}.", "name": "pytest-incorrect-mark-parentheses-style", "value": true, "category": "flake8-pytest-style"}, "PT025": {"description": "Pytest.mark.usefixtures has no effect on fixtures.", "name": "pytest-erroneous-use-fixtures-on-fixture", "value": true, "category": "flake8-pytest-style"}, "PT027": {"description": "Use pytest.raises instead of unittest-style {assertion}.", "name": "pytest-unittest-raises-assertion", "value": true, "category": "flake8-pytest-style"}, "PTH101": {"description": "Os.chmod() should be replaced by Path.chmod().", "name": "os-chmod", "value": true, "category": "flake8-pytest-style"}, "PTH105": {"description": "Os.replace() should be replaced by Path.replace().", "name": "os-replace", "value": true, "category": "flake8-pytest-style"}, "PTH109": {"description": "Os.getcwd() should be replaced by Path.cwd().", "name": "os-getcwd", "value": true, "category": "flake8-pytest-style"}, "PTH113": {"description": "Os.path.isfile() should be replaced by Path.is_file().", "name": "os-path-isfile", "value": true, "category": "flake8-pytest-style"}, "PTH117": {"description": "Os.path.isabs() should be replaced by Path.is_absolute().", "name": "os-path-isabs", "value": true, "category": "flake8-pytest-style"}, "PTH121": {"description": "Os.path.samefile() should be replaced by Path.samefile().", "name": "os-path-samefile", "value": true, "category": "flake8-pytest-style"}, "PTH122": {"description": "Os.path.splitext() should be replaced by Path.suffix, Path.stem, and Path.parent.", "name": "os-path-splitext", "value": true, "category": "flake8-use-pathlib"}, "PTH123": {"description": "Open() should be replaced by Path.open().", "name": "builtin-open", "value": true, "category": "flake8-pytest-style"}, "PTH201": {"description": "Do not pass the current directory explicitly to Path.", "name": "path-constructor-current-directory", "value": true, "category": "flake8-pytest-style"}, "PTH205": {"description": "Os.path.getctime should be replaced by Path.stat().st_ctime.", "name": "os-path-getctime", "value": true, "category": "flake8-pytest-style"}, "Q000": {"description": "Single quotes found but double quotes preferred.", "name": "bad-quotes-inline-string", "value": true, "category": "flake8-quotes"}, "Q002": {"description": "Single quote docstring found but double quotes preferred.", "name": "bad-quotes-docstring", "value": true, "category": "flake8-quotes"}, "RSE102": {"description": "Unnecessary parentheses on raised exception.", "name": "unnecessary-paren-on-raise-exception", "value": true, "category": "flake8-raise"}, "RET501": {"description": "Do not explicitly return None in function if it is the only possible return value.", "name": "unnecessary-return-none", "value": true, "category": "flake8-return"}, "RET503": {"description": "Missing explicit return at the end of function able to return non-None value.", "name": "implicit-return", "value": true, "category": "flake8-return"}, "RET505": {"description": "Unnecessary {branch} after return statement.", "name": "superfluous-else-return", "value": true, "category": "flake8-return"}, "RET507": {"description": "Unnecessary {branch} after continue statement.", "name": "superfluous-else-continue", "value": true, "category": "flake8-return"}, "SLF001": {"description": "Private member accessed: {access}.", "name": "private-member-access", "value": true, "category": "flake8-self"}, "SIM101": {"description": "Multiple isinstance calls for {name}, merge into a single call.", "name": "duplicate-isinstance-call", "value": true, "category": "flake8-simplify"}, "SIM103": {"description": "Return the condition {condition} directly.", "name": "needless-bool", "value": true, "category": "flake8-simplify"}, "SIM107": {"description": "Don't use return in try-except and finally.", "name": "return-in-try-except-finally", "value": true, "category": "flake8-simplify"}, "SIM109": {"description": "Use {replacement} instead of multiple equality comparisons.", "name": "compare-with-tuple", "value": true, "category": "flake8-simplify"}, "SIM112": {"description": "Use capitalized environment variable {expected} instead of {actual}.", "name": "uncapitalized-environment-variables", "value": true, "category": "flake8-simplify"}, "SIM115": {"description": "Use context handler for opening files.", "name": "open-file-with-context-handler", "value": true, "category": "flake8-simplify"}, "SIM117": {"description": "Use a single with statement with multiple contexts instead of nested with statements.", "name": "multiple-with-statements", "value": true, "category": "flake8-simplify"}, "SIM201": {"description": "Use {left} != {right} instead of not {left} == {right}.", "name": "negate-equal-op", "value": true, "category": "flake8-simplify"}, "SIM208": {"description": "Use {expr} instead of not (not {expr}).", "name": "double-negation", "value": true, "category": "flake8-simplify"}, "SIM211": {"description": "Use not ... instead of False if ... else True.", "name": "if-expr-with-false-true", "value": true, "category": "flake8-simplify"}, "SIM220": {"description": "Use False instead of {name} and not {name}.", "name": "expr-and-not-expr", "value": true, "category": "flake8-simplify"}, "SIM222": {"description": "Use {expr} instead of {replaced}.", "name": "expr-or-true", "value": true, "category": "flake8-simplify"}, "SIM300": {"description": "Yoda conditions are discouraged, use {suggestion} instead.", "name": "yoda-conditions", "value": true, "category": "flake8-simplify"}, "SIM910": {"description": "Use {expected} instead of {actual}.", "name": "dict-get-with-none-default", "value": true, "category": "flake8-simplify"}, "SLOT000": {"description": "Subclasses of str should define __slots__.", "name": "no-slots-in-str-subclass", "value": true, "category": "flake8-slots"}, "SLOT002": {"description": "Subclasses of collections.namedtuple() should define __slots__.", "name": "no-slots-in-namedtuple-subclass", "value": true, "category": "flake8-slots"}, "TID251": {"description": "{name} is banned:.", "name": "banned-api", "value": true, "category": "flake8-tidy-imports"}, "TID253": {"description": "{name} is banned at the module level.", "name": "banned-module-level-imports", "value": true, "category": "flake8-tidy-imports"}, "TD001": {"description": "Invalid TODO tag: {tag}.", "name": "invalid-todo-tag", "value": true, "category": "flake8-todos"}, "TD003": {"description": "Missing issue link on the line following this TODO.", "name": "missing-todo-link", "value": true, "category": "flake8-todos"}, "TD005": {"description": "Missing issue description after TODO.", "name": "missing-todo-description", "value": true, "category": "flake8-todos"}, "TD007": {"description": "Missing space after colon in TODO.", "name": "missing-space-after-todo-colon", "value": true, "category": "flake8-todos"}, "TCH001": {"description": "Move application import {} into a type-checking block.", "name": "typing-only-first-party-import", "value": true, "category": "flake8-type-checking"}, "TCH003": {"description": "Move standard library import {} into a type-checking block.", "name": "typing-only-standard-library-import", "value": true, "category": "flake8-type-checking"}, "TCH005": {"description": "Found empty type-checking block.", "name": "empty-type-checking-block", "value": true, "category": "flake8-type-checking"}, "ARG001": {"description": "Unused function argument: {name}.", "name": "unused-function-argument", "value": true, "category": "flake8-unused-arguments"}, "ARG003": {"description": "Unused class method argument: {name}.", "name": "unused-class-method-argument", "value": true, "category": "flake8-unused-arguments"}, "ARG005": {"description": "Unused lambda argument: {name}.", "name": "unused-lambda-argument", "value": true, "category": "flake8-unused-arguments"}, "PTH100": {"description": "Os.path.abspath() should be replaced by Path.resolve().", "name": "os-path-abspath", "value": true, "category": "flake8-use-pathlib"}, "PTH102": {"description": "Os.mkdir() should be replaced by Path.mkdir().", "name": "os-mkdir", "value": true, "category": "flake8-use-pathlib"}, "PTH104": {"description": "Os.rename() should be replaced by Path.rename().", "name": "os-rename", "value": true, "category": "flake8-use-pathlib"}, "PTH106": {"description": "Os.rmdir() should be replaced by Path.rmdir().", "name": "os-rmdir", "value": true, "category": "flake8-use-pathlib"}, "PTH108": {"description": "Os.unlink() should be replaced by Path.unlink().", "name": "os-unlink", "value": true, "category": "flake8-use-pathlib"}, "PTH110": {"description": "Os.path.exists() should be replaced by Path.exists().", "name": "os-path-exists", "value": true, "category": "flake8-use-pathlib"}, "PTH112": {"description": "Os.path.isdir() should be replaced by Path.is_dir().", "name": "os-path-isdir", "value": true, "category": "flake8-use-pathlib"}, "PTH114": {"description": "Os.path.islink() should be replaced by Path.is_symlink().", "name": "os-path-islink", "value": true, "category": "flake8-use-pathlib"}, "PTH116": {"description": "Os.stat() should be replaced by Path.stat(), Path.owner(), or Path.group().", "name": "os-stat", "value": true, "category": "flake8-use-pathlib"}, "PTH118": {"description": "Os.{module}.join() should be replaced by Path with / operator.", "name": "os-path-join", "value": true, "category": "flake8-use-pathlib"}, "PTH120": {"description": "Os.path.dirname() should be replaced by Path.parent.", "name": "os-path-dirname", "value": true, "category": "flake8-use-pathlib"}, "PTH124": {"description": "Py.path is in maintenance mode, use pathlib instead.", "name": "py-path", "value": true, "category": "flake8-use-pathlib"}, "PTH202": {"description": "Os.path.getsize should be replaced by Path.stat().st_size.", "name": "os-path-getsize", "value": true, "category": "flake8-use-pathlib"}, "PTH204": {"description": "Os.path.getmtime should be replaced by Path.stat().st_mtime.", "name": "os-path-getmtime", "value": true, "category": "flake8-use-pathlib"}, "PTH206": {"description": "Replace .split(os.sep) with Path.parts.", "name": "os-sep-split", "value": true, "category": "flake8-use-pathlib"}, "FLY002": {"description": "Consider {expression} instead of string join.", "name": "static-join-to-f-string", "value": true, "category": "flynt"}, "I001": {"description": "Import block is un-sorted or un-formatted.", "name": "unsorted-imports", "value": true, "category": "isort"}, "INT002": {"description": "Format method argument is resolved before function call; consider _(\"string %s\") % arg.", "name": "format-in-get-text-func-call", "value": true, "category": "isort"}, "ISC002": {"description": "Implicitly concatenated string literals over multiple lines.", "name": "multi-line-implicit-string-concatenation", "value": true, "category": "isort"}, "C901": {"description": "{name} is too complex ({complexity} > {max_complexity}).", "name": "complex-structure", "value": true, "category": "mccabe"}, "PD002": {"description": "Inplace=True should be avoided; it has inconsistent behavior.", "name": "pandas-use-of-inplace-argument", "value": true, "category": "pandas-vet"}, "PD004": {"description": ".notna is preferred to .notnull; functionality is equivalent.", "name": "pandas-use-of-dot-not-null", "value": true, "category": "pandas-vet"}, "PD008": {"description": "Use .loc instead of .at. If speed is important, use NumPy.", "name": "pandas-use-of-dot-at", "value": true, "category": "pandas-vet"}, "PD010": {"description": ".pivot_table is preferred to .pivot or .unstack; provides same functionality.", "name": "pandas-use-of-dot-pivot-or-unstack", "value": true, "category": "pandas-vet"}, "PD012": {"description": "Use .read_csv instead of .read_table to read CSV files.", "name": "pandas-use-of-dot-read-table", "value": true, "category": "pandas-vet"}, "PD015": {"description": "Use .merge method instead of pd.merge function. They have equivalent functionality.", "name": "pandas-use-of-pd-merge", "value": true, "category": "pandas-vet"}, "PD901": {"description": "Df is a bad variable name. Be kinder to your future self.", "name": "pandas-df-variable-name", "value": true, "category": "pandas-vet"}, "N801": {"description": "Class name {name} should use CapWords convention.", "name": "invalid-class-name", "value": true, "category": "pep8-naming"}, "N803": {"description": "Argument name {name} should be lowercase.", "name": "invalid-argument-name", "value": true, "category": "pep8-naming"}, "N805": {"description": "First argument of a method should be named self.", "name": "invalid-first-argument-name-for-method", "value": true, "category": "pep8-naming"}, "N807": {"description": "Function name should not start and end with __.", "name": "dunder-function-name", "value": true, "category": "pep8-naming"}, "N812": {"description": "Lowercase {name} imported as non-lowercase {asname}.", "name": "lowercase-imported-as-non-lowercase", "value": true, "category": "pep8-naming"}, "N814": {"description": "Camelcase {name} imported as constant {asname}.", "name": "camelcase-imported-as-constant", "value": true, "category": "pep8-naming"}, "N816": {"description": "Variable {name} in global scope should not be mixedCase.", "name": "mixed-case-variable-in-global-scope", "value": true, "category": "pep8-naming"}, "N818": {"description": "Exception name {name} should be named with an Error suffix.", "name": "error-suffix-on-exception-name", "value": true, "category": "pep8-naming"}, "NPY002": {"description": "Replace legacy np.random.{method_name} call with np.random.Generator.", "name": "numpy-legacy-random", "value": true, "category": "pep8-naming"}, "E101": {"description": "Indentation contains mixed spaces and tabs.", "name": "mixed-spaces-and-tabs", "value": true, "category": "pycodestyle"}, "E112": {"description": "Expected an indented block.", "name": "no-indented-block", "value": true, "category": "pycodestyle"}, "E114": {"description": "Indentation is not a multiple of {indent_size} (comment).", "name": "indentation-with-invalid-multiple-comment", "value": true, "category": "pycodestyle"}, "E116": {"description": "Unexpected indentation (comment).", "name": "unexpected-indentation-comment", "value": true, "category": "pycodestyle"}, "E201": {"description": "Whitespace after '{symbol}'.", "name": "whitespace-after-open-bracket", "value": true, "category": "pycodestyle"}, "E203": {"description": "Whitespace before '{symbol}'.", "name": "whitespace-before-punctuation", "value": true, "category": "pycodestyle"}, "E221": {"description": "Multiple spaces before operator.", "name": "multiple-spaces-before-operator", "value": true, "category": "pycodestyle"}, "E223": {"description": "Tab before operator.", "name": "tab-before-operator", "value": true, "category": "pycodestyle"}, "E225": {"description": "Missing whitespace around operator.", "name": "missing-whitespace-around-operator", "value": true, "category": "pycodestyle"}, "E227": {"description": "Missing whitespace around bitwise or shift operator.", "name": "missing-whitespace-around-bitwise-or-shift-operator", "value": true, "category": "pycodestyle"}, "E231": {"description": "Missing whitespace after '{token}'.", "name": "missing-whitespace", "value": true, "category": "pycodestyle"}, "E242": {"description": "Tab after comma.", "name": "tab-after-comma", "value": true, "category": "pycodestyle"}, "E252": {"description": "Missing whitespace around parameter equals.", "name": "missing-whitespace-around-parameter-equals", "value": true, "category": "pycodestyle"}, "E262": {"description": "Inline comment should start with #.", "name": "no-space-after-inline-comment", "value": true, "category": "pycodestyle"}, "E266": {"description": "Too many leading # before block comment.", "name": "multiple-leading-hashes-for-block-comment", "value": true, "category": "pycodestyle"}, "E272": {"description": "Multiple spaces before keyword.", "name": "multiple-spaces-before-keyword", "value": true, "category": "pycodestyle"}, "E274": {"description": "Tab before keyword.", "name": "tab-before-keyword", "value": true, "category": "pycodestyle"}, "E401": {"description": "Multiple imports on one line.", "name": "multiple-imports-on-one-line", "value": true, "category": "pycodestyle"}, "E501": {"description": "Line too long ({width} > {limit} characters).", "name": "line-too-long", "value": true, "category": "pycodestyle"}, "E702": {"description": "Multiple statements on one line (semicolon).", "name": "multiple-statements-on-one-line-semicolon", "value": true, "category": "pycodestyle"}, "E711": {"description": "Comparison to None should be cond is None.", "name": "none-comparison", "value": true, "category": "pycodestyle"}, "E713": {"description": "Test for membership should be not in.", "name": "not-in-test", "value": true, "category": "pycodestyle"}, "E721": {"description": "Do not compare types, use isinstance().", "name": "type-comparison", "value": true, "category": "pycodestyle"}, "E731": {"description": "Do not assign a lambda expression, use a def.", "name": "lambda-assignment", "value": true, "category": "pycodestyle"}, "E742": {"description": "Ambiguous class name: {name}.", "name": "ambiguous-class-name", "value": true, "category": "pycodestyle"}, "E902": {"description": "{message}.", "name": "io-error", "value": true, "category": "pycodestyle"}, "EM102": {"description": "Exception must not use an f-string literal, assign to variable first.", "name": "f-string-in-exception", "value": true, "category": "pycodestyle"}, "EXE004": {"description": "Avoid whitespace before shebang.", "name": "shebang-leading-whitespace", "value": true, "category": "pycodestyle"}, "W191": {"description": "Indentation contains tabs.", "name": "tab-indentation", "value": true, "category": "pycodestyle"}, "W292": {"description": "No newline at end of file.", "name": "missing-newline-at-end-of-file", "value": true, "category": "pycodestyle"}, "W505": {"description": "Doc line too long ({width} > {limit} characters).", "name": "doc-line-too-long", "value": true, "category": "pycodestyle"}, "D100": {"description": "Missing docstring in public module.", "name": "undocumented-public-module", "value": true, "category": "pydocstyle"}, "D102": {"description": "Missing docstring in public method.", "name": "undocumented-public-method", "value": true, "category": "pydocstyle"}, "D104": {"description": "Missing docstring in public package.", "name": "undocumented-public-package", "value": true, "category": "pydocstyle"}, "D106": {"description": "Missing docstring in public nested class.", "name": "undocumented-public-nested-class", "value": true, "category": "pydocstyle"}, "D200": {"description": "One-line docstring should fit on one line.", "name": "fits-on-one-line", "value": true, "category": "pydocstyle"}, "D202": {"description": "No blank lines allowed after function docstring (found {num_lines}).", "name": "no-blank-line-after-function", "value": true, "category": "pydocstyle"}, "D204": {"description": "1 blank line required after class docstring.", "name": "one-blank-line-after-class", "value": true, "category": "pydocstyle"}, "D206": {"description": "Docstring should be indented with spaces, not tabs.", "name": "indent-with-spaces", "value": true, "category": "pydocstyle"}, "D208": {"description": "Docstring is over-indented.", "name": "over-indentation", "value": true, "category": "pydocstyle"}, "D210": {"description": "No whitespaces allowed surrounding docstring text.", "name": "surrounding-whitespace", "value": true, "category": "pydocstyle"}, "D212": {"description": "Multi-line docstring summary should start at the first line.", "name": "multi-line-summary-first-line", "value": true, "category": "pydocstyle"}, "D214": {"description": "Section is over-indented (\"{name}\").", "name": "section-not-over-indented", "value": true, "category": "pydocstyle"}, "D300": {"description": "Use triple double quotes \"\"\".", "name": "triple-single-quotes", "value": true, "category": "pydocstyle"}, "D400": {"description": "First line should end with a period.", "name": "ends-in-period", "value": true, "category": "pydocstyle"}, "D402": {"description": "First line should not be the function's signature.", "name": "no-signature", "value": true, "category": "pydocstyle"}, "D404": {"description": "First word of the docstring should not be \"This\".", "name": "docstring-starts-with-this", "value": true, "category": "pydocstyle"}, "D406": {"description": "Section name should end with a newline (\"{name}\").", "name": "new-line-after-section-name", "value": true, "category": "pydocstyle"}, "D408": {"description": "Section underline should be in the line following the section's name (\"{name}\").", "name": "section-underline-after-name", "value": true, "category": "pydocstyle"}, "D410": {"description": "Missing blank line after section (\"{name}\").", "name": "no-blank-line-after-section", "value": true, "category": "pydocstyle"}, "D412": {"description": "No blank lines allowed between a section header and its content (\"{name}\").", "name": "blank-lines-between-header-and-content", "value": true, "category": "pydocstyle"}, "D414": {"description": "Section has no content (\"{name}\").", "name": "empty-docstring-section", "value": true, "category": "pydocstyle"}, "D416": {"description": "Section name should end with a colon (\"{name}\").", "name": "section-name-ends-in-colon", "value": true, "category": "pydocstyle"}, "D418": {"description": "Function decorated with @overload shouldn't contain a docstring.", "name": "overload-with-docstring", "value": true, "category": "pydocstyle"}, "DJ003": {"description": "Avoid passing locals() as context to a render function.", "name": "django-locals-in-render-function", "value": true, "category": "pydocstyle"}, "DJ012": {"description": "Order of model's inner classes, methods, and fields does not follow the Django Style Guide: {element_type} should come before.", "name": "django-unordered-body-content-in-model", "value": true, "category": "pydocstyle"}, "DTZ002": {"description": "The use of datetime.datetime.today() is not allowed, use datetime.datetime.now(tz=) instead.", "name": "call-datetime-today", "value": true, "category": "pydocstyle"}, "DTZ006": {"description": "The use of datetime.datetime.fromtimestamp() without tz argument is not allowed.", "name": "call-datetime-fromtimestamp", "value": true, "category": "pydocstyle"}, "PGH001": {"description": "No builtin eval() allowed.", "name": "eval", "value": true, "category": "pygrep-hooks"}, "PGH003": {"description": "Use specific rule codes when ignoring type issues.", "name": "blanket-type-ignore", "value": true, "category": "pygrep-hooks"}, "PGH005": {"description": "Mock method should be called: {name}.", "name": "invalid-mock-access", "value": true, "category": "pygrep-hooks"}, "UP001": {"description": "__metaclass__ = type is implied.", "name": "useless-metaclass-type", "value": true, "category": "pyupgrade"}, "UP004": {"description": "Class {name} inherits from object.", "name": "useless-object-inheritance", "value": true, "category": "pyupgrade"}, "UP006": {"description": "Use {to} instead of {from} for type annotation.", "name": "non-pep585-annotation", "value": true, "category": "pyupgrade"}, "UP008": {"description": "Use super() instead of super(__class__, self).", "name": "super-call-with-parameters", "value": true, "category": "pyupgrade"}, "UP010": {"description": "Unnecessary __future__ import {import} for target Python version.", "name": "unnecessary-future-import", "value": true, "category": "pyupgrade"}, "UP012": {"description": "Unnecessary call to encode as UTF-8.", "name": "unnecessary-encode-utf8", "value": true, "category": "pyupgrade"}, "UP014": {"description": "Convert {name} from NamedTuple functional to class syntax.", "name": "convert-named-tuple-functional-to-class", "value": true, "category": "pyupgrade"}, "UP017": {"description": "Use datetime.UTC alias.", "name": "datetime-timezone-utc", "value": true, "category": "pyupgrade"}, "UP019": {"description": "Typing.Text is deprecated, use str.", "name": "typing-text-str-alias", "value": true, "category": "pyupgrade"}, "UP021": {"description": "Universal_newlines is deprecated, use text.", "name": "replace-universal-newlines", "value": true, "category": "pyupgrade"}, "UP023": {"description": "CElementTree is deprecated, use ElementTree.", "name": "deprecated-c-element-tree", "value": true, "category": "pyupgrade"}, "UP025": {"description": "Remove unicode literals from strings.", "name": "unicode-kind-prefix", "value": true, "category": "pyupgrade"}, "UP027": {"description": "Replace unpacked list comprehension with a generator expression.", "name": "unpacked-list-comprehension", "value": true, "category": "pyupgrade"}, "UP029": {"description": "Unnecessary builtin import: {import}.", "name": "unnecessary-builtin-import", "value": true, "category": "pyupgrade"}, "UP031": {"description": "Use format specifiers instead of percent format.", "name": "printf-string-formatting", "value": true, "category": "pyupgrade"}, "UP033": {"description": "Use @functools.cache instead of @functools.lru_cache(maxsize=None).", "name": "lru-cache-with-maxsize-none", "value": true, "category": "pyupgrade"}, "UP035": {"description": "Import from {target} instead:.", "name": "deprecated-import", "value": true, "category": "pyupgrade"}, "UP037": {"description": "Remove quotes from type annotation.", "name": "quoted-annotation", "value": true, "category": "pyupgrade"}, "UP039": {"description": "Unnecessary parentheses after class definition.", "name": "unnecessary-class-parentheses", "value": true, "category": "pyupgrade"}, "FURB105": {"description": "Unnecessary empty string passed to print.", "name": "print-empty-string", "value": true, "category": "refurb"}, "FURB131": {"description": "Prefer clear over deleting a full slice.", "name": "delete-full-slice", "value": true, "category": "refurb"}, "FURB140": {"description": "Use itertools.starmap instead of the generator.", "name": "reimplemented-starmap", "value": true, "category": "refurb"}, "FURB148": {"description": "Enumerate value is unused, use for x in range(len(y)) instead.", "name": "unnecessary-enumerate", "value": true, "category": "refurb"}, "TRY002": {"description": "Create your own exception.", "name": "raise-vanilla-class", "value": true, "category": "tryceratops"}, "TRY004": {"description": "Prefer TypeError exception for invalid type.", "name": "type-check-without-type-error", "value": true, "category": "tryceratops"}, "TRY201": {"description": "Use raise without specifying exception name.", "name": "verbose-raise", "value": true, "category": "tryceratops"}, "TRY301": {"description": "Abstract raise to an inner function.", "name": "raise-within-try", "value": true, "category": "tryceratops"}, "TRY400": {"description": "Use logging.exception instead of logging.error.", "name": "error-instead-of-exception", "value": true, "category": "tryceratops"}}
+{
+	"AIR001": {
+		"description": "Task variable name should match the task_id: \"{task_id}\".",
+		"name": "airflow-variable-name-task-id-mismatch",
+		"value": true,
+		"category": "Airflow"
+	},
+	"NPY001": {
+		"description": "Type alias np.{type_name} is deprecated, replace with builtin type.",
+		"name": "numpy-deprecated-type-alias",
+		"value": true,
+		"category": "NumPy-specific rules"
+	},
+	"NPY003": {
+		"description": "Np.{existing} is deprecated; use np.{replacement} instead.",
+		"name": "numpy-deprecated-function",
+		"value": true,
+		"category": "NumPy-specific rules"
+	},
+	"PERF101": {
+		"description": "Do not cast an iterable to list before iterating over it.",
+		"name": "unnecessary-list-cast",
+		"value": true,
+		"category": "Perflint"
+	},
+	"PERF203": {
+		"description": "Try-except within a loop incurs performance overhead.",
+		"name": "try-except-in-loop",
+		"value": true,
+		"category": "Perflint"
+	},
+	"PERF402": {
+		"description": "Use list or list.copy to create a copy of a list.",
+		"name": "manual-list-copy",
+		"value": true,
+		"category": "Perflint"
+	},
+	"F401": {
+		"description": "{name} imported but unused; consider using importlib.util.find_spec to test for availability.",
+		"name": "unused-import",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F403": {
+		"description": "From {name} import * used; unable to detect undefined names.",
+		"name": "undefined-local-with-import-star",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F405": {
+		"description": "{name} may be undefined, or defined from star imports.",
+		"name": "undefined-local-with-import-star-usage",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F407": {
+		"description": "Future feature {name} is not defined.",
+		"name": "future-feature-not-defined",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F502": {
+		"description": "%-format string expected mapping but got sequence.",
+		"name": "percent-format-expected-mapping",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F504": {
+		"description": "%-format string has unused named argument(s):.",
+		"name": "percent-format-extra-named-arguments",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F506": {
+		"description": "%-format string has mixed positional and named placeholders.",
+		"name": "percent-format-mixed-positional-and-named",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F508": {
+		"description": "%-format string * specifier requires sequence.",
+		"name": "percent-format-star-requires-sequence",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F521": {
+		"description": ".format call has invalid format string:.",
+		"name": "string-dot-format-invalid-format",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F523": {
+		"description": ".format call has unused arguments at position(s):.",
+		"name": "string-dot-format-extra-positional-arguments",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F525": {
+		"description": ".format string mixes automatic and manual numbering.",
+		"name": "string-dot-format-mixing-automatic",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F601": {
+		"description": "Dictionary key literal {name} repeated.",
+		"name": "multi-value-repeated-key-literal",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F621": {
+		"description": "Too many expressions in star-unpacking assignment.",
+		"name": "expressions-in-star-assignment",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F631": {
+		"description": "Assert test is a non-empty tuple, which is always True.",
+		"name": "assert-tuple",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F633": {
+		"description": "Use of >> is invalid with print function.",
+		"name": "invalid-print-syntax",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F701": {
+		"description": "Break outside loop.",
+		"name": "break-outside-loop",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F704": {
+		"description": "{keyword} statement outside of a function.",
+		"name": "yield-outside-function",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F707": {
+		"description": "An except block as not the last exception handler.",
+		"name": "default-except-not-last",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F811": {
+		"description": "Redefinition of unused {name} from line.",
+		"name": "redefined-while-unused",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F822": {
+		"description": "Undefined name {name} in __all__.",
+		"name": "undefined-export",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F841": {
+		"description": "Local variable {name} is assigned to but never used.",
+		"name": "unused-variable",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"F901": {
+		"description": "Raise NotImplemented should be raise NotImplementedError.",
+		"name": "raise-not-implemented",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"FA102": {
+		"description": "Missing from __future__ import annotations, but uses.",
+		"name": "future-required-type-annotation",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"FBT002": {
+		"description": "Boolean default positional argument in function definition.",
+		"name": "boolean-default-value-positional-argument",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"FIX002": {
+		"description": "Line contains TODO, consider resolving the issue.",
+		"name": "line-contains-todo",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"FURB113": {
+		"description": "Use {suggestion} instead of repeatedly calling {name}.append().",
+		"name": "repeated-append",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"FURB145": {
+		"description": "Prefer copy method over slicing.",
+		"name": "slice-copy",
+		"value": true,
+		"category": "Pyflakes"
+	},
+	"PLC0105": {
+		"description": "{kind} name \"{param_name}\" does not reflect its {variance}; consider renaming it to \"{replacement_name}\".",
+		"name": "type-name-incorrect-variance",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLC0132": {
+		"description": "{kind} name {param_name} does not match assigned variable name {var_name}.",
+		"name": "type-param-name-mismatch",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLC0208": {
+		"description": "Use a sequence type instead of a set when iterating over values.",
+		"name": "iteration-over-set",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLC1901": {
+		"description": "{existing} can be simplified to {replacement} as an empty string is falsey.",
+		"name": "compare-to-empty-string",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLE0100": {
+		"description": "__init__ method is a generator.",
+		"name": "yield-in-init",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLE0116": {
+		"description": "Continue not supported inside finally clause.",
+		"name": "continue-in-finally",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLE0118": {
+		"description": "Name {name} is used prior to global declaration on line.",
+		"name": "load-before-global-declaration",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLE0302": {
+		"description": "The special method {} expects {}, {} {} given.",
+		"name": "unexpected-special-method-signature",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLE0604": {
+		"description": "Invalid object in __all__, must contain only strings.",
+		"name": "invalid-all-object",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLE1142": {
+		"description": "Await should be used within an async function.",
+		"name": "await-outside-async",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLE1206": {
+		"description": "Not enough arguments for logging format string.",
+		"name": "logging-too-few-args",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLE1307": {
+		"description": "Format type does not match argument type.",
+		"name": "bad-string-format-type",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLE1507": {
+		"description": "Invalid type for initial os.getenv argument; expected str.",
+		"name": "invalid-envvar-value",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLE2502": {
+		"description": "Contains control characters that can permit obfuscated code.",
+		"name": "bidirectional-unicode",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLE2512": {
+		"description": "Invalid unescaped character SUB, use \"\\x1A\" instead.",
+		"name": "invalid-character-sub",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLE2514": {
+		"description": "Invalid unescaped character NUL, use \"\\0\" instead.",
+		"name": "invalid-character-nul",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLR0124": {
+		"description": "Name compared with itself, consider replacing {actual}.",
+		"name": "comparison-with-itself",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLR0206": {
+		"description": "Cannot have defined parameters for properties.",
+		"name": "property-with-parameters",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLR0904": {
+		"description": "Too many public methods ({methods} > {max_methods}).",
+		"name": "too-many-public-methods",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLR0912": {
+		"description": "Too many branches ({branches} > {max_branches}).",
+		"name": "too-many-branches",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLR0915": {
+		"description": "Too many statements ({statements} > {max_statements}).",
+		"name": "too-many-statements",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLR1711": {
+		"description": "Useless return statement at end of function.",
+		"name": "useless-return",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLR1722": {
+		"description": "Use sys.exit() instead of {name}.",
+		"name": "sys-exit-alias",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLR5501": {
+		"description": "Use elif instead of else then if, to reduce indentation.",
+		"name": "collapsible-else-if",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLW0120": {
+		"description": "Else clause on loop without a break statement; remove the else and de-indent all the code inside it.",
+		"name": "useless-else-on-loop",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLW0129": {
+		"description": "Asserting on an empty string literal will never pass.",
+		"name": "assert-on-string-literal",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLW0406": {
+		"description": "Module {name} imports itself.",
+		"name": "import-self",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLW0603": {
+		"description": "Using the global statement to update {name} is discouraged.",
+		"name": "global-statement",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLW1508": {
+		"description": "Invalid type for environment variable default; expected str or None.",
+		"name": "invalid-envvar-default",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLW1510": {
+		"description": "Subprocess.run without explicit check argument.",
+		"name": "subprocess-run-without-check",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLW2901": {
+		"description": "Outer {outer_kind} variable {name} overwritten by inner {inner_kind} target.",
+		"name": "redefined-loop-name",
+		"value": true,
+		"category": "Pylint"
+	},
+	"PLW3301": {
+		"description": "Nested {func} calls can be flattened.",
+		"name": "nested-min-max",
+		"value": true,
+		"category": "Pylint"
+	},
+	"RUF001": {
+		"description": "String contains ambiguous {}. Did you mean {}?.",
+		"name": "ambiguous-unicode-character-string",
+		"value": true,
+		"category": "Ruff-specific rules"
+	},
+	"RUF003": {
+		"description": "Comment contains ambiguous {}. Did you mean {}?.",
+		"name": "ambiguous-unicode-character-comment",
+		"value": true,
+		"category": "Ruff-specific rules"
+	},
+	"RUF006": {
+		"description": "Store a reference to the return value of asyncio.{method}.",
+		"name": "asyncio-dangling-task",
+		"value": true,
+		"category": "Ruff-specific rules"
+	},
+	"RUF008": {
+		"description": "Do not use mutable default values for dataclass attributes.",
+		"name": "mutable-dataclass-default",
+		"value": true,
+		"category": "Ruff-specific rules"
+	},
+	"RUF010": {
+		"description": "Use explicit conversion flag.",
+		"name": "explicit-f-string-type-conversion",
+		"value": true,
+		"category": "Ruff-specific rules"
+	},
+	"RUF012": {
+		"description": "Mutable class attributes should be annotated with typing.ClassVar.",
+		"name": "mutable-class-default",
+		"value": true,
+		"category": "Ruff-specific rules"
+	},
+	"RUF015": {
+		"description": "Prefer next({iterable}) over single element slice.",
+		"name": "unnecessary-iterable-allocation-for-first-element",
+		"value": true,
+		"category": "Ruff-specific rules"
+	},
+	"RUF017": {
+		"description": "Avoid quadratic list summation.",
+		"name": "quadratic-list-summation",
+		"value": true,
+		"category": "Ruff-specific rules"
+	},
+	"RUF200": {
+		"description": "Failed to parse pyproject.toml:.",
+		"name": "invalid-pyproject-toml",
+		"value": true,
+		"category": "Ruff-specific rules"
+	},
+	"ERA001": {
+		"description": "Found commented-out code.",
+		"name": "commented-out-code",
+		"value": true,
+		"category": "eradicate"
+	},
+	"YTT101": {
+		"description": "Sys.version[:3] referenced (python3.10), use sys.version_info.",
+		"name": "sys-version-slice3",
+		"value": true,
+		"category": "flake8-2020"
+	},
+	"YTT103": {
+		"description": "Sys.version compared to string (python3.10), use sys.version_info.",
+		"name": "sys-version-cmp-str3",
+		"value": true,
+		"category": "flake8-2020"
+	},
+	"YTT202": {
+		"description": "Six.PY3 referenced (python4), use not six.PY2.",
+		"name": "six-py3",
+		"value": true,
+		"category": "flake8-2020"
+	},
+	"YTT204": {
+		"description": "Sys.version_info.minor compared to integer (python4), compare sys.version_info to tuple.",
+		"name": "sys-version-info-minor-cmp-int",
+		"value": true,
+		"category": "flake8-2020"
+	},
+	"YTT302": {
+		"description": "Sys.version compared to string (python10), use sys.version_info.",
+		"name": "sys-version-cmp-str10",
+		"value": true,
+		"category": "flake8-2020"
+	},
+	"ANN001": {
+		"description": "Missing type annotation for function argument {name}.",
+		"name": "missing-type-function-argument",
+		"value": true,
+		"category": "flake8-annotations"
+	},
+	"ANN003": {
+		"description": "Missing type annotation for **{name}.",
+		"name": "missing-type-kwargs",
+		"value": true,
+		"category": "flake8-annotations"
+	},
+	"ANN102": {
+		"description": "Missing type annotation for {name} in classmethod.",
+		"name": "missing-type-cls",
+		"value": true,
+		"category": "flake8-annotations"
+	},
+	"ANN202": {
+		"description": "Missing return type annotation for private function {name}.",
+		"name": "missing-return-type-private-function",
+		"value": true,
+		"category": "flake8-annotations"
+	},
+	"ANN205": {
+		"description": "Missing return type annotation for staticmethod {name}.",
+		"name": "missing-return-type-static-method",
+		"value": true,
+		"category": "flake8-annotations"
+	},
+	"ANN401": {
+		"description": "Dynamically typed expressions (typing.Any) are disallowed in {name}.",
+		"name": "any-type",
+		"value": true,
+		"category": "flake8-annotations"
+	},
+	"ASYNC100": {
+		"description": "Async functions should not call blocking HTTP methods.",
+		"name": "blocking-http-call-in-async-function",
+		"value": true,
+		"category": "flake8-async"
+	},
+	"ASYNC102": {
+		"description": "Async functions should not call synchronous os methods.",
+		"name": "blocking-os-call-in-async-function",
+		"value": true,
+		"category": "flake8-async"
+	},
+	"S101": {
+		"description": "Use of assert detected.",
+		"name": "assert",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S103": {
+		"description": "Os.chmod setting a permissive mask {mask:#o} on file or directory.",
+		"name": "bad-file-permissions",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S105": {
+		"description": "Possible hardcoded password assigned to: \"{}\".",
+		"name": "hardcoded-password-string",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S107": {
+		"description": "Possible hardcoded password assigned to function default: \"{}\".",
+		"name": "hardcoded-password-default",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S110": {
+		"description": "Try-except-pass detected, consider logging the exception.",
+		"name": "try-except-pass",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S113": {
+		"description": "Probable use of requests call without timeout.",
+		"name": "request-without-timeout",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S301": {
+		"description": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+		"name": "suspicious-pickle-usage",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S303": {
+		"description": "Use of insecure MD2, MD4, MD5, or SHA1 hash function.",
+		"name": "suspicious-insecure-hash-usage",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S305": {
+		"description": "Use of insecure cipher mode, replace with a known secure cipher such as AES.",
+		"name": "suspicious-insecure-cipher-mode-usage",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S307": {
+		"description": "Use of possibly insecure function; consider using ast.literal_eval.",
+		"name": "suspicious-eval-usage",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S310": {
+		"description": "Audit URL open for permitted schemes. Allowing use of file: or custom schemes is often unexpected.",
+		"name": "suspicious-url-open-usage",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S312": {
+		"description": "Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.",
+		"name": "suspicious-telnet-usage",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S314": {
+		"description": "Using xml to parse untrusted data is known to be vulnerable to XML attacks; use defusedxml equivalents.",
+		"name": "suspicious-xml-element-tree-usage",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S316": {
+		"description": "Using xml to parse untrusted data is known to be vulnerable to XML attacks; use defusedxml equivalents.",
+		"name": "suspicious-xml-expat-builder-usage",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S318": {
+		"description": "Using xml to parse untrusted data is known to be vulnerable to XML attacks; use defusedxml equivalents.",
+		"name": "suspicious-xml-mini-dom-usage",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S320": {
+		"description": "Using lxml to parse untrusted data is known to be vulnerable to XML attacks.",
+		"name": "suspicious-xmle-tree-usage",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S323": {
+		"description": "Python allows using an insecure context via the _create_unverified_context that reverts to the previous behavior that does not validate certificates or perform hostname checks.",
+		"name": "suspicious-unverified-context-usage",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S501": {
+		"description": "Probable use of {string} call with verify=False disabling SSL certificate checks.",
+		"name": "request-with-no-cert-validation",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S506": {
+		"description": "Probable use of unsafe loader {name} with yaml.load. Allows instantiation of arbitrary objects. Consider yaml.safe_load.",
+		"name": "unsafe-yaml-load",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S508": {
+		"description": "The use of SNMPv1 and SNMPv2 is insecure. Use SNMPv3 if able.",
+		"name": "snmp-insecure-version",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S601": {
+		"description": "Possible shell injection via Paramiko call; check inputs are properly sanitized.",
+		"name": "paramiko-call",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S603": {
+		"description": "Subprocess call: check for execution of untrusted input.",
+		"name": "subprocess-without-shell-equals-true",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S605": {
+		"description": "Starting a process with a shell: seems safe, but may be changed in the future; consider rewriting without shell.",
+		"name": "start-process-with-a-shell",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S607": {
+		"description": "Starting a process with a partial executable path.",
+		"name": "start-process-with-partial-path",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S609": {
+		"description": "Possible wildcard injection in call due to * usage.",
+		"name": "unix-command-wildcard-injection",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"S701": {
+		"description": "Using jinja2 templates with autoescape=False is dangerous and can lead to XSS. Ensure autoescape=True or use the select_autoescape function.",
+		"name": "jinja2-autoescape-false",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"SIM105": {
+		"description": "Use contextlib.suppress({exception}) instead of try-except-pass.",
+		"name": "suppressible-exception",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"SIM110": {
+		"description": "Use {replacement} instead of for loop.",
+		"name": "reimplemented-builtin",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"SIM116": {
+		"description": "Use a dictionary instead of consecutive if statements.",
+		"name": "if-else-block-instead-of-dict-lookup",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"SIM202": {
+		"description": "Use {left} == {right} instead of not {left} != {right}.",
+		"name": "negate-not-equal-op",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"SIM212": {
+		"description": "Use {expr_else} if {expr_else} else {expr_body} instead of {expr_body} if not {expr_else} else {expr_else}.",
+		"name": "if-expr-with-twisted-arms",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"SIM223": {
+		"description": "Use {expr} instead of {replaced}.",
+		"name": "expr-and-false",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"SLOT001": {
+		"description": "Subclasses of tuple should define __slots__.",
+		"name": "no-slots-in-tuple-subclass",
+		"value": true,
+		"category": "flake8-bandit"
+	},
+	"BLE001": {
+		"description": "Do not catch blind exception: {name}.",
+		"name": "blind-except",
+		"value": true,
+		"category": "flake8-blind-except"
+	},
+	"FBT001": {
+		"description": "Boolean-typed positional argument in function definition.",
+		"name": "boolean-type-hint-positional-argument",
+		"value": true,
+		"category": "flake8-boolean-trap"
+	},
+	"FBT003": {
+		"description": "Boolean positional value in function call.",
+		"name": "boolean-positional-value-in-call",
+		"value": true,
+		"category": "flake8-boolean-trap"
+	},
+	"B002": {
+		"description": "Python does not support the unary prefix increment operator (++).",
+		"name": "unary-prefix-increment-decrement",
+		"value": true,
+		"category": "flake8-bugbear"
+	},
+	"B004": {
+		"description": "Using hasattr(x, \"__call__\") to test if x is callable is unreliable. Use callable(x) for consistent results.",
+		"name": "unreliable-callable-check",
+		"value": true,
+		"category": "flake8-bugbear"
+	},
+	"B006": {
+		"description": "Do not use mutable data structures for argument defaults.",
+		"name": "mutable-argument-default",
+		"value": true,
+		"category": "flake8-bugbear"
+	},
+	"B008": {
+		"description": "Do not perform function call {name} in argument defaults.",
+		"name": "function-call-in-default-argument",
+		"value": true,
+		"category": "flake8-bugbear"
+	},
+	"B010": {
+		"description": "Do not call setattr with a constant attribute value. It is not any safer than normal property access.",
+		"name": "set-attr-with-constant",
+		"value": true,
+		"category": "flake8-bugbear"
+	},
+	"B012": {
+		"description": "{name} inside finally blocks cause exceptions to be silenced.",
+		"name": "jump-statement-in-finally",
+		"value": true,
+		"category": "flake8-bugbear"
+	},
+	"B014": {
+		"description": "Exception handler with duplicate exception: {name}.",
+		"name": "duplicate-handler-exception",
+		"value": true,
+		"category": "flake8-bugbear"
+	},
+	"B016": {
+		"description": "Cannot raise a literal. Did you intend to return it or raise an Exception?.",
+		"name": "raise-literal",
+		"value": true,
+		"category": "flake8-bugbear"
+	},
+	"B018": {
+		"description": "Found useless expression. Either assign it to a variable or remove it.",
+		"name": "useless-expression",
+		"value": true,
+		"category": "flake8-bugbear"
+	},
+	"B020": {
+		"description": "Loop control variable {name} overrides iterable it iterates.",
+		"name": "loop-variable-overrides-iterator",
+		"value": true,
+		"category": "flake8-bugbear"
+	},
+	"B022": {
+		"description": "No arguments passed to contextlib.suppress. No exceptions will be suppressed and therefore this context manager is redundant.",
+		"name": "useless-contextlib-suppress",
+		"value": true,
+		"category": "flake8-bugbear"
+	},
+	"B024": {
+		"description": "{name} is an abstract base class, but it has no abstract methods.",
+		"name": "abstract-base-class-without-abstract-method",
+		"value": true,
+		"category": "flake8-bugbear"
+	},
+	"B026": {
+		"description": "Star-arg unpacking after a keyword argument is strongly discouraged.",
+		"name": "star-arg-unpacking-after-keyword-arg",
+		"value": true,
+		"category": "flake8-bugbear"
+	},
+	"B028": {
+		"description": "No explicit stacklevel keyword argument found.",
+		"name": "no-explicit-stacklevel",
+		"value": true,
+		"category": "flake8-bugbear"
+	},
+	"B030": {
+		"description": "Except handlers should only be exception classes or tuples of exception classes.",
+		"name": "except-with-non-exception-classes",
+		"value": true,
+		"category": "flake8-bugbear"
+	},
+	"B032": {
+		"description": "Possible unintentional type annotation (using :). Did you mean to assign (using =)?.",
+		"name": "unintentional-type-annotation",
+		"value": true,
+		"category": "flake8-bugbear"
+	},
+	"B034": {
+		"description": "{method} should pass {param_name} and flags as keyword arguments to avoid confusion due to unintuitive argument positions.",
+		"name": "re-sub-positional-args",
+		"value": true,
+		"category": "flake8-bugbear"
+	},
+	"B905": {
+		"description": "Zip() without an explicit strict= parameter.",
+		"name": "zip-without-explicit-strict",
+		"value": true,
+		"category": "flake8-bugbear"
+	},
+	"A001": {
+		"description": "Variable {name} is shadowing a Python builtin.",
+		"name": "builtin-variable-shadowing",
+		"value": true,
+		"category": "flake8-builtins"
+	},
+	"A003": {
+		"description": "Class attribute {name} is shadowing a Python builtin.",
+		"name": "builtin-attribute-shadowing",
+		"value": true,
+		"category": "flake8-builtins"
+	},
+	"ANN002": {
+		"description": "Missing type annotation for *{name}.",
+		"name": "missing-type-args",
+		"value": true,
+		"category": "flake8-builtins"
+	},
+	"ANN201": {
+		"description": "Missing return type annotation for public function {name}.",
+		"name": "missing-return-type-undocumented-public-function",
+		"value": true,
+		"category": "flake8-builtins"
+	},
+	"ANN206": {
+		"description": "Missing return type annotation for classmethod {name}.",
+		"name": "missing-return-type-class-method",
+		"value": true,
+		"category": "flake8-builtins"
+	},
+	"ARG002": {
+		"description": "Unused method argument: {name}.",
+		"name": "unused-method-argument",
+		"value": true,
+		"category": "flake8-builtins"
+	},
+	"COM812": {
+		"description": "Trailing comma missing.",
+		"name": "missing-trailing-comma",
+		"value": true,
+		"category": "flake8-commas"
+	},
+	"COM819": {
+		"description": "Trailing comma prohibited.",
+		"name": "prohibited-trailing-comma",
+		"value": true,
+		"category": "flake8-commas"
+	},
+	"C400": {
+		"description": "Unnecessary generator (rewrite as a list comprehension).",
+		"name": "unnecessary-generator-list",
+		"value": true,
+		"category": "flake8-comprehensions"
+	},
+	"C402": {
+		"description": "Unnecessary generator (rewrite as a dict comprehension).",
+		"name": "unnecessary-generator-dict",
+		"value": true,
+		"category": "flake8-comprehensions"
+	},
+	"C404": {
+		"description": "Unnecessary list comprehension (rewrite as a dict comprehension).",
+		"name": "unnecessary-list-comprehension-dict",
+		"value": true,
+		"category": "flake8-comprehensions"
+	},
+	"C406": {
+		"description": "Unnecessary {obj_type} literal (rewrite as a dict literal).",
+		"name": "unnecessary-literal-dict",
+		"value": true,
+		"category": "flake8-comprehensions"
+	},
+	"C409": {
+		"description": "Unnecessary {literal} literal passed to tuple() (rewrite as a tuple literal).",
+		"name": "unnecessary-literal-within-tuple-call",
+		"value": true,
+		"category": "flake8-comprehensions"
+	},
+	"C411": {
+		"description": "Unnecessary list call (remove the outer call to list()).",
+		"name": "unnecessary-list-call",
+		"value": true,
+		"category": "flake8-comprehensions"
+	},
+	"C414": {
+		"description": "Unnecessary {inner} call within {outer}().",
+		"name": "unnecessary-double-cast-or-process",
+		"value": true,
+		"category": "flake8-comprehensions"
+	},
+	"C416": {
+		"description": "Unnecessary {obj_type} comprehension (rewrite using {obj_type}()).",
+		"name": "unnecessary-comprehension",
+		"value": true,
+		"category": "flake8-comprehensions"
+	},
+	"C418": {
+		"description": "Unnecessary dict {kind} passed to dict() (remove the outer call to dict()).",
+		"name": "unnecessary-literal-within-dict-call",
+		"value": true,
+		"category": "flake8-comprehensions"
+	},
+	"CPY001": {
+		"description": "Missing copyright notice at top of file.",
+		"name": "missing-copyright-notice",
+		"value": true,
+		"category": "flake8-copyright"
+	},
+	"DTZ001": {
+		"description": "The use of datetime.datetime() without tzinfo argument is not allowed.",
+		"name": "call-datetime-without-tzinfo",
+		"value": true,
+		"category": "flake8-datetimez"
+	},
+	"DTZ003": {
+		"description": "The use of datetime.datetime.utcnow() is not allowed, use datetime.datetime.now(tz=) instead.",
+		"name": "call-datetime-utcnow",
+		"value": true,
+		"category": "flake8-datetimez"
+	},
+	"DTZ005": {
+		"description": "The use of datetime.datetime.now() without tz argument is not allowed.",
+		"name": "call-datetime-now-without-tzinfo",
+		"value": true,
+		"category": "flake8-datetimez"
+	},
+	"DTZ007": {
+		"description": "The use of datetime.datetime.strptime() without %z must be followed by .replace(tzinfo=) or .astimezone().",
+		"name": "call-datetime-strptime-without-zone",
+		"value": true,
+		"category": "flake8-datetimez"
+	},
+	"DTZ012": {
+		"description": "The use of datetime.date.fromtimestamp() is not allowed, use datetime.datetime.fromtimestamp(ts, tz=).date() instead.",
+		"name": "call-date-fromtimestamp",
+		"value": true,
+		"category": "flake8-datetimez"
+	},
+	"T100": {
+		"description": "Trace found: {name} used.",
+		"name": "debugger",
+		"value": true,
+		"category": "flake8-debugger"
+	},
+	"DJ001": {
+		"description": "Avoid using null=True on string-based fields such as.",
+		"name": "django-nullable-model-string-field",
+		"value": true,
+		"category": "flake8-django"
+	},
+	"DJ006": {
+		"description": "Do not use exclude with ModelForm, use fields instead.",
+		"name": "django-exclude-with-model-form",
+		"value": true,
+		"category": "flake8-django"
+	},
+	"DJ008": {
+		"description": "Model does not define __str__ method.",
+		"name": "django-model-without-dunder-str",
+		"value": true,
+		"category": "flake8-django"
+	},
+	"DJ013": {
+		"description": "@receiver decorator must be on top of all the other decorators.",
+		"name": "django-non-leading-receiver-decorator",
+		"value": true,
+		"category": "flake8-django"
+	},
+	"EM101": {
+		"description": "Exception must not use a string literal, assign to variable first.",
+		"name": "raw-string-in-exception",
+		"value": true,
+		"category": "flake8-errmsg"
+	},
+	"EM103": {
+		"description": "Exception must not use a .format() string directly, assign to variable first.",
+		"name": "dot-format-in-exception",
+		"value": true,
+		"category": "flake8-errmsg"
+	},
+	"EXE001": {
+		"description": "Shebang is present but file is not executable.",
+		"name": "shebang-not-executable",
+		"value": true,
+		"category": "flake8-executable"
+	},
+	"EXE003": {
+		"description": "Shebang should contain python.",
+		"name": "shebang-missing-python",
+		"value": true,
+		"category": "flake8-executable"
+	},
+	"EXE005": {
+		"description": "Shebang should be at the beginning of the file.",
+		"name": "shebang-not-first-line",
+		"value": true,
+		"category": "flake8-executable"
+	},
+	"FIX001": {
+		"description": "Line contains FIXME, consider resolving the issue.",
+		"name": "line-contains-fixme",
+		"value": true,
+		"category": "flake8-fixme"
+	},
+	"FIX003": {
+		"description": "Line contains XXX, consider resolving the issue.",
+		"name": "line-contains-xxx",
+		"value": true,
+		"category": "flake8-fixme"
+	},
+	"FA100": {
+		"description": "Missing from __future__ import annotations, but uses {name}.",
+		"name": "future-rewritable-type-annotation",
+		"value": true,
+		"category": "flake8-future-annotations"
+	},
+	"INT001": {
+		"description": "F-string is resolved before function call; consider _(\"string %s\") % arg.",
+		"name": "f-string-in-get-text-func-call",
+		"value": true,
+		"category": "flake8-gettext"
+	},
+	"INT003": {
+		"description": "Printf-style format is resolved before function call; consider _(\"string %s\") % arg.",
+		"name": "printf-in-get-text-func-call",
+		"value": true,
+		"category": "flake8-gettext"
+	},
+	"ISC001": {
+		"description": "Implicitly concatenated string literals on one line.",
+		"name": "single-line-implicit-string-concatenation",
+		"value": true,
+		"category": "flake8-implicit-str-concat"
+	},
+	"ISC003": {
+		"description": "Explicitly concatenated string should be implicitly concatenated.",
+		"name": "explicit-string-concatenation",
+		"value": true,
+		"category": "flake8-implicit-str-concat"
+	},
+	"ICN001": {
+		"description": "{name} should be imported as {asname}.",
+		"name": "unconventional-import-alias",
+		"value": true,
+		"category": "flake8-import-conventions"
+	},
+	"ICN003": {
+		"description": "Members of {name} should not be imported explicitly.",
+		"name": "banned-import-from",
+		"value": true,
+		"category": "flake8-import-conventions"
+	},
+	"LOG001": {
+		"description": "Use logging.getLogger() to instantiate loggers.",
+		"name": "direct-logger-instantiation",
+		"value": true,
+		"category": "flake8-logging"
+	},
+	"LOG007": {
+		"description": "Use of logging.exception with falsy exc_info.",
+		"name": "exception-without-exc-info",
+		"value": true,
+		"category": "flake8-logging"
+	},
+	"G001": {
+		"description": "Logging statement uses str.format.",
+		"name": "logging-string-format",
+		"value": true,
+		"category": "flake8-logging-format"
+	},
+	"G003": {
+		"description": "Logging statement uses +.",
+		"name": "logging-string-concat",
+		"value": true,
+		"category": "flake8-logging-format"
+	},
+	"G010": {
+		"description": "Logging statement uses warn instead of warning.",
+		"name": "logging-warn",
+		"value": true,
+		"category": "flake8-logging-format"
+	},
+	"G201": {
+		"description": "Logging .exception(...) should be used instead of .error(..., exc_info=True).",
+		"name": "logging-exc-info",
+		"value": true,
+		"category": "flake8-logging-format"
+	},
+	"INP001": {
+		"description": "File {filename} is part of an implicit namespace package. Add an __init__.py.",
+		"name": "implicit-namespace-package",
+		"value": true,
+		"category": "flake8-no-pep420"
+	},
+	"PIE790": {
+		"description": "Unnecessary pass statement.",
+		"name": "unnecessary-pass",
+		"value": true,
+		"category": "flake8-pie"
+	},
+	"PIE796": {
+		"description": "Enum contains duplicate value: {value}.",
+		"name": "non-unique-enums",
+		"value": true,
+		"category": "flake8-pie"
+	},
+	"PIE804": {
+		"description": "Unnecessary dict kwargs.",
+		"name": "unnecessary-dict-kwargs",
+		"value": true,
+		"category": "flake8-pie"
+	},
+	"PIE808": {
+		"description": "Unnecessary start argument in range.",
+		"name": "unnecessary-range-start",
+		"value": true,
+		"category": "flake8-pie"
+	},
+	"T201": {
+		"description": "Print found.",
+		"name": "print",
+		"value": true,
+		"category": "flake8-print"
+	},
+	"PYI001": {
+		"description": "Name of private {kind} must start with _.",
+		"name": "unprefixed-type-param",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI003": {
+		"description": "Unrecognized sys.version_info check.",
+		"name": "unrecognized-version-info-check",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI005": {
+		"description": "Version comparison must be against a length-{expected_length} tuple.",
+		"name": "wrong-tuple-length-version-comparison",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI007": {
+		"description": "Unrecognized sys.platform check.",
+		"name": "unrecognized-platform-check",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI009": {
+		"description": "Empty body should contain ..., not pass.",
+		"name": "pass-statement-stub-body",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI011": {
+		"description": "Only simple default values allowed for typed arguments.",
+		"name": "typed-argument-default-in-stub",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI013": {
+		"description": "Non-empty class body must not contain ...",
+		"name": "ellipsis-in-non-empty-class-body",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI015": {
+		"description": "Only simple default values allowed for assignments.",
+		"name": "assignment-default-in-stub",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI017": {
+		"description": "Stubs should not contain assignments to attributes or multiple targets.",
+		"name": "complex-assignment-in-stub",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI019": {
+		"description": "Methods like {method_name} should return typing.Self instead of a custom TypeVar.",
+		"name": "custom-type-var-return-type",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI021": {
+		"description": "Docstrings should not be included in stubs.",
+		"name": "docstring-in-stub",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI025": {
+		"description": "Use from collections.abc import Set as AbstractSet to avoid confusion with the set builtin.",
+		"name": "unaliased-collections-abc-set-import",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI029": {
+		"description": "Defining {name} in a stub is almost always redundant.",
+		"name": "str-or-repr-defined-in-stub",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI032": {
+		"description": "Prefer object to Any for the second parameter to {method_name}.",
+		"name": "any-eq-ne-annotation",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI034": {
+		"description": "__new__ methods usually return self at runtime.",
+		"name": "non-self-return-type",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI036": {
+		"description": "Star-args in {method_name} should be annotated with object.",
+		"name": "bad-exit-annotation",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI042": {
+		"description": "Type alias {name} should be CamelCase.",
+		"name": "snake-case-type-alias",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI044": {
+		"description": "From __future__ import annotations has no effect in stub files, since type checkers automatically treat stubs as having those semantics.",
+		"name": "future-annotations-in-stub",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI046": {
+		"description": "Private protocol {name} is never used.",
+		"name": "unused-private-protocol",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI048": {
+		"description": "Function body must contain exactly one statement.",
+		"name": "stub-body-multiple-statements",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI050": {
+		"description": "Prefer {module}.Never over NoReturn for argument annotations.",
+		"name": "no-return-argument-annotation-in-stub",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI052": {
+		"description": "Need type annotation for {name}.",
+		"name": "unannotated-assignment-in-stub",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI054": {
+		"description": "Numeric literals with a string representation longer than ten characters are not permitted.",
+		"name": "numeric-literal-too-long",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PYI056": {
+		"description": "Calling .{name}() on __all__ may not be supported by all type checkers (use += instead).",
+		"name": "unsupported-method-call-on-all",
+		"value": true,
+		"category": "flake8-pyi"
+	},
+	"PT001": {
+		"description": "Use @pytest.fixture{expected} over @pytest.fixture{actual}.",
+		"name": "pytest-fixture-incorrect-parentheses-style",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PT003": {
+		"description": "Scope='function' is implied in @pytest.fixture().",
+		"name": "pytest-extraneous-scope-function",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PT005": {
+		"description": "Fixture {function} returns a value, remove leading underscore.",
+		"name": "pytest-incorrect-fixture-name-underscore",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PT007": {
+		"description": "Wrong values type in @pytest.mark.parametrize expected {values} of {row}.",
+		"name": "pytest-parametrize-values-wrong-type",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PT009": {
+		"description": "Use a regular assert instead of unittest-style {assertion}.",
+		"name": "pytest-unittest-assertion",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PT011": {
+		"description": "Pytest.raises({exception}) is too broad, set the match parameter or use a more specific exception.",
+		"name": "pytest-raises-too-broad",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PT013": {
+		"description": "Found incorrect import of pytest, use simple import pytest instead.",
+		"name": "pytest-incorrect-pytest-import",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PT015": {
+		"description": "Assertion always fails, replace with pytest.fail().",
+		"name": "pytest-assert-always-false",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PT017": {
+		"description": "Found assertion on exception {name} in except block, use pytest.raises() instead.",
+		"name": "pytest-assert-in-except",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PT019": {
+		"description": "Fixture {name} without value is injected as parameter, use @pytest.mark.usefixtures instead.",
+		"name": "pytest-fixture-param-without-value",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PT021": {
+		"description": "Use yield instead of request.addfinalizer.",
+		"name": "pytest-fixture-finalizer-callback",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PT023": {
+		"description": "Use @pytest.mark.{mark_name}{expected_parens} over @pytest.mark.{mark_name}{actual_parens}.",
+		"name": "pytest-incorrect-mark-parentheses-style",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PT025": {
+		"description": "Pytest.mark.usefixtures has no effect on fixtures.",
+		"name": "pytest-erroneous-use-fixtures-on-fixture",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PT027": {
+		"description": "Use pytest.raises instead of unittest-style {assertion}.",
+		"name": "pytest-unittest-raises-assertion",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PTH101": {
+		"description": "Os.chmod() should be replaced by Path.chmod().",
+		"name": "os-chmod",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PTH105": {
+		"description": "Os.replace() should be replaced by Path.replace().",
+		"name": "os-replace",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PTH109": {
+		"description": "Os.getcwd() should be replaced by Path.cwd().",
+		"name": "os-getcwd",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PTH113": {
+		"description": "Os.path.isfile() should be replaced by Path.is_file().",
+		"name": "os-path-isfile",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PTH117": {
+		"description": "Os.path.isabs() should be replaced by Path.is_absolute().",
+		"name": "os-path-isabs",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PTH121": {
+		"description": "Os.path.samefile() should be replaced by Path.samefile().",
+		"name": "os-path-samefile",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PTH122": {
+		"description": "Os.path.splitext() should be replaced by Path.suffix, Path.stem, and Path.parent.",
+		"name": "os-path-splitext",
+		"value": true,
+		"category": "flake8-use-pathlib"
+	},
+	"PTH123": {
+		"description": "Open() should be replaced by Path.open().",
+		"name": "builtin-open",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PTH201": {
+		"description": "Do not pass the current directory explicitly to Path.",
+		"name": "path-constructor-current-directory",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"PTH205": {
+		"description": "Os.path.getctime should be replaced by Path.stat().st_ctime.",
+		"name": "os-path-getctime",
+		"value": true,
+		"category": "flake8-pytest-style"
+	},
+	"Q000": {
+		"description": "Single quotes found but double quotes preferred.",
+		"name": "bad-quotes-inline-string",
+		"value": true,
+		"category": "flake8-quotes"
+	},
+	"Q002": {
+		"description": "Single quote docstring found but double quotes preferred.",
+		"name": "bad-quotes-docstring",
+		"value": true,
+		"category": "flake8-quotes"
+	},
+	"RSE102": {
+		"description": "Unnecessary parentheses on raised exception.",
+		"name": "unnecessary-paren-on-raise-exception",
+		"value": true,
+		"category": "flake8-raise"
+	},
+	"RET501": {
+		"description": "Do not explicitly return None in function if it is the only possible return value.",
+		"name": "unnecessary-return-none",
+		"value": true,
+		"category": "flake8-return"
+	},
+	"RET503": {
+		"description": "Missing explicit return at the end of function able to return non-None value.",
+		"name": "implicit-return",
+		"value": true,
+		"category": "flake8-return"
+	},
+	"RET505": {
+		"description": "Unnecessary {branch} after return statement.",
+		"name": "superfluous-else-return",
+		"value": true,
+		"category": "flake8-return"
+	},
+	"RET507": {
+		"description": "Unnecessary {branch} after continue statement.",
+		"name": "superfluous-else-continue",
+		"value": true,
+		"category": "flake8-return"
+	},
+	"SLF001": {
+		"description": "Private member accessed: {access}.",
+		"name": "private-member-access",
+		"value": true,
+		"category": "flake8-self"
+	},
+	"SIM101": {
+		"description": "Multiple isinstance calls for {name}, merge into a single call.",
+		"name": "duplicate-isinstance-call",
+		"value": true,
+		"category": "flake8-simplify"
+	},
+	"SIM103": {
+		"description": "Return the condition {condition} directly.",
+		"name": "needless-bool",
+		"value": true,
+		"category": "flake8-simplify"
+	},
+	"SIM107": {
+		"description": "Don't use return in try-except and finally.",
+		"name": "return-in-try-except-finally",
+		"value": true,
+		"category": "flake8-simplify"
+	},
+	"SIM109": {
+		"description": "Use {replacement} instead of multiple equality comparisons.",
+		"name": "compare-with-tuple",
+		"value": true,
+		"category": "flake8-simplify"
+	},
+	"SIM112": {
+		"description": "Use capitalized environment variable {expected} instead of {actual}.",
+		"name": "uncapitalized-environment-variables",
+		"value": true,
+		"category": "flake8-simplify"
+	},
+	"SIM115": {
+		"description": "Use context handler for opening files.",
+		"name": "open-file-with-context-handler",
+		"value": true,
+		"category": "flake8-simplify"
+	},
+	"SIM117": {
+		"description": "Use a single with statement with multiple contexts instead of nested with statements.",
+		"name": "multiple-with-statements",
+		"value": true,
+		"category": "flake8-simplify"
+	},
+	"SIM201": {
+		"description": "Use {left} != {right} instead of not {left} == {right}.",
+		"name": "negate-equal-op",
+		"value": true,
+		"category": "flake8-simplify"
+	},
+	"SIM208": {
+		"description": "Use {expr} instead of not (not {expr}).",
+		"name": "double-negation",
+		"value": true,
+		"category": "flake8-simplify"
+	},
+	"SIM211": {
+		"description": "Use not ... instead of False if ... else True.",
+		"name": "if-expr-with-false-true",
+		"value": true,
+		"category": "flake8-simplify"
+	},
+	"SIM220": {
+		"description": "Use False instead of {name} and not {name}.",
+		"name": "expr-and-not-expr",
+		"value": true,
+		"category": "flake8-simplify"
+	},
+	"SIM222": {
+		"description": "Use {expr} instead of {replaced}.",
+		"name": "expr-or-true",
+		"value": true,
+		"category": "flake8-simplify"
+	},
+	"SIM300": {
+		"description": "Yoda conditions are discouraged, use {suggestion} instead.",
+		"name": "yoda-conditions",
+		"value": true,
+		"category": "flake8-simplify"
+	},
+	"SIM910": {
+		"description": "Use {expected} instead of {actual}.",
+		"name": "dict-get-with-none-default",
+		"value": true,
+		"category": "flake8-simplify"
+	},
+	"SLOT000": {
+		"description": "Subclasses of str should define __slots__.",
+		"name": "no-slots-in-str-subclass",
+		"value": true,
+		"category": "flake8-slots"
+	},
+	"SLOT002": {
+		"description": "Subclasses of collections.namedtuple() should define __slots__.",
+		"name": "no-slots-in-namedtuple-subclass",
+		"value": true,
+		"category": "flake8-slots"
+	},
+	"TID251": {
+		"description": "{name} is banned:.",
+		"name": "banned-api",
+		"value": true,
+		"category": "flake8-tidy-imports"
+	},
+	"TID253": {
+		"description": "{name} is banned at the module level.",
+		"name": "banned-module-level-imports",
+		"value": true,
+		"category": "flake8-tidy-imports"
+	},
+	"TD001": {
+		"description": "Invalid TODO tag: {tag}.",
+		"name": "invalid-todo-tag",
+		"value": true,
+		"category": "flake8-todos"
+	},
+	"TD003": {
+		"description": "Missing issue link on the line following this TODO.",
+		"name": "missing-todo-link",
+		"value": true,
+		"category": "flake8-todos"
+	},
+	"TD005": {
+		"description": "Missing issue description after TODO.",
+		"name": "missing-todo-description",
+		"value": true,
+		"category": "flake8-todos"
+	},
+	"TD007": {
+		"description": "Missing space after colon in TODO.",
+		"name": "missing-space-after-todo-colon",
+		"value": true,
+		"category": "flake8-todos"
+	},
+	"TCH001": {
+		"description": "Move application import {} into a type-checking block.",
+		"name": "typing-only-first-party-import",
+		"value": true,
+		"category": "flake8-type-checking"
+	},
+	"TCH003": {
+		"description": "Move standard library import {} into a type-checking block.",
+		"name": "typing-only-standard-library-import",
+		"value": true,
+		"category": "flake8-type-checking"
+	},
+	"TCH005": {
+		"description": "Found empty type-checking block.",
+		"name": "empty-type-checking-block",
+		"value": true,
+		"category": "flake8-type-checking"
+	},
+	"ARG001": {
+		"description": "Unused function argument: {name}.",
+		"name": "unused-function-argument",
+		"value": true,
+		"category": "flake8-unused-arguments"
+	},
+	"ARG003": {
+		"description": "Unused class method argument: {name}.",
+		"name": "unused-class-method-argument",
+		"value": true,
+		"category": "flake8-unused-arguments"
+	},
+	"ARG005": {
+		"description": "Unused lambda argument: {name}.",
+		"name": "unused-lambda-argument",
+		"value": true,
+		"category": "flake8-unused-arguments"
+	},
+	"PTH100": {
+		"description": "Os.path.abspath() should be replaced by Path.resolve().",
+		"name": "os-path-abspath",
+		"value": true,
+		"category": "flake8-use-pathlib"
+	},
+	"PTH102": {
+		"description": "Os.mkdir() should be replaced by Path.mkdir().",
+		"name": "os-mkdir",
+		"value": true,
+		"category": "flake8-use-pathlib"
+	},
+	"PTH104": {
+		"description": "Os.rename() should be replaced by Path.rename().",
+		"name": "os-rename",
+		"value": true,
+		"category": "flake8-use-pathlib"
+	},
+	"PTH106": {
+		"description": "Os.rmdir() should be replaced by Path.rmdir().",
+		"name": "os-rmdir",
+		"value": true,
+		"category": "flake8-use-pathlib"
+	},
+	"PTH108": {
+		"description": "Os.unlink() should be replaced by Path.unlink().",
+		"name": "os-unlink",
+		"value": true,
+		"category": "flake8-use-pathlib"
+	},
+	"PTH110": {
+		"description": "Os.path.exists() should be replaced by Path.exists().",
+		"name": "os-path-exists",
+		"value": true,
+		"category": "flake8-use-pathlib"
+	},
+	"PTH112": {
+		"description": "Os.path.isdir() should be replaced by Path.is_dir().",
+		"name": "os-path-isdir",
+		"value": true,
+		"category": "flake8-use-pathlib"
+	},
+	"PTH114": {
+		"description": "Os.path.islink() should be replaced by Path.is_symlink().",
+		"name": "os-path-islink",
+		"value": true,
+		"category": "flake8-use-pathlib"
+	},
+	"PTH116": {
+		"description": "Os.stat() should be replaced by Path.stat(), Path.owner(), or Path.group().",
+		"name": "os-stat",
+		"value": true,
+		"category": "flake8-use-pathlib"
+	},
+	"PTH118": {
+		"description": "Os.{module}.join() should be replaced by Path with / operator.",
+		"name": "os-path-join",
+		"value": true,
+		"category": "flake8-use-pathlib"
+	},
+	"PTH120": {
+		"description": "Os.path.dirname() should be replaced by Path.parent.",
+		"name": "os-path-dirname",
+		"value": true,
+		"category": "flake8-use-pathlib"
+	},
+	"PTH124": {
+		"description": "Py.path is in maintenance mode, use pathlib instead.",
+		"name": "py-path",
+		"value": true,
+		"category": "flake8-use-pathlib"
+	},
+	"PTH202": {
+		"description": "Os.path.getsize should be replaced by Path.stat().st_size.",
+		"name": "os-path-getsize",
+		"value": true,
+		"category": "flake8-use-pathlib"
+	},
+	"PTH204": {
+		"description": "Os.path.getmtime should be replaced by Path.stat().st_mtime.",
+		"name": "os-path-getmtime",
+		"value": true,
+		"category": "flake8-use-pathlib"
+	},
+	"PTH206": {
+		"description": "Replace .split(os.sep) with Path.parts.",
+		"name": "os-sep-split",
+		"value": true,
+		"category": "flake8-use-pathlib"
+	},
+	"FLY002": {
+		"description": "Consider {expression} instead of string join.",
+		"name": "static-join-to-f-string",
+		"value": true,
+		"category": "flynt"
+	},
+	"I001": {
+		"description": "Import block is un-sorted or un-formatted.",
+		"name": "unsorted-imports",
+		"value": true,
+		"category": "isort"
+	},
+	"INT002": {
+		"description": "Format method argument is resolved before function call; consider _(\"string %s\") % arg.",
+		"name": "format-in-get-text-func-call",
+		"value": true,
+		"category": "isort"
+	},
+	"ISC002": {
+		"description": "Implicitly concatenated string literals over multiple lines.",
+		"name": "multi-line-implicit-string-concatenation",
+		"value": true,
+		"category": "isort"
+	},
+	"C901": {
+		"description": "{name} is too complex ({complexity} > {max_complexity}).",
+		"name": "complex-structure",
+		"value": true,
+		"category": "mccabe"
+	},
+	"PD002": {
+		"description": "Inplace=True should be avoided; it has inconsistent behavior.",
+		"name": "pandas-use-of-inplace-argument",
+		"value": true,
+		"category": "pandas-vet"
+	},
+	"PD004": {
+		"description": ".notna is preferred to .notnull; functionality is equivalent.",
+		"name": "pandas-use-of-dot-not-null",
+		"value": true,
+		"category": "pandas-vet"
+	},
+	"PD008": {
+		"description": "Use .loc instead of .at. If speed is important, use NumPy.",
+		"name": "pandas-use-of-dot-at",
+		"value": true,
+		"category": "pandas-vet"
+	},
+	"PD010": {
+		"description": ".pivot_table is preferred to .pivot or .unstack; provides same functionality.",
+		"name": "pandas-use-of-dot-pivot-or-unstack",
+		"value": true,
+		"category": "pandas-vet"
+	},
+	"PD012": {
+		"description": "Use .read_csv instead of .read_table to read CSV files.",
+		"name": "pandas-use-of-dot-read-table",
+		"value": true,
+		"category": "pandas-vet"
+	},
+	"PD015": {
+		"description": "Use .merge method instead of pd.merge function. They have equivalent functionality.",
+		"name": "pandas-use-of-pd-merge",
+		"value": true,
+		"category": "pandas-vet"
+	},
+	"PD901": {
+		"description": "Df is a bad variable name. Be kinder to your future self.",
+		"name": "pandas-df-variable-name",
+		"value": true,
+		"category": "pandas-vet"
+	},
+	"N801": {
+		"description": "Class name {name} should use CapWords convention.",
+		"name": "invalid-class-name",
+		"value": true,
+		"category": "pep8-naming"
+	},
+	"N803": {
+		"description": "Argument name {name} should be lowercase.",
+		"name": "invalid-argument-name",
+		"value": true,
+		"category": "pep8-naming"
+	},
+	"N805": {
+		"description": "First argument of a method should be named self.",
+		"name": "invalid-first-argument-name-for-method",
+		"value": true,
+		"category": "pep8-naming"
+	},
+	"N807": {
+		"description": "Function name should not start and end with __.",
+		"name": "dunder-function-name",
+		"value": true,
+		"category": "pep8-naming"
+	},
+	"N812": {
+		"description": "Lowercase {name} imported as non-lowercase {asname}.",
+		"name": "lowercase-imported-as-non-lowercase",
+		"value": true,
+		"category": "pep8-naming"
+	},
+	"N814": {
+		"description": "Camelcase {name} imported as constant {asname}.",
+		"name": "camelcase-imported-as-constant",
+		"value": true,
+		"category": "pep8-naming"
+	},
+	"N816": {
+		"description": "Variable {name} in global scope should not be mixedCase.",
+		"name": "mixed-case-variable-in-global-scope",
+		"value": true,
+		"category": "pep8-naming"
+	},
+	"N818": {
+		"description": "Exception name {name} should be named with an Error suffix.",
+		"name": "error-suffix-on-exception-name",
+		"value": true,
+		"category": "pep8-naming"
+	},
+	"NPY002": {
+		"description": "Replace legacy np.random.{method_name} call with np.random.Generator.",
+		"name": "numpy-legacy-random",
+		"value": true,
+		"category": "pep8-naming"
+	},
+	"E101": {
+		"description": "Indentation contains mixed spaces and tabs.",
+		"name": "mixed-spaces-and-tabs",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E112": {
+		"description": "Expected an indented block.",
+		"name": "no-indented-block",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E114": {
+		"description": "Indentation is not a multiple of {indent_size} (comment).",
+		"name": "indentation-with-invalid-multiple-comment",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E116": {
+		"description": "Unexpected indentation (comment).",
+		"name": "unexpected-indentation-comment",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E201": {
+		"description": "Whitespace after '{symbol}'.",
+		"name": "whitespace-after-open-bracket",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E203": {
+		"description": "Whitespace before '{symbol}'.",
+		"name": "whitespace-before-punctuation",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E221": {
+		"description": "Multiple spaces before operator.",
+		"name": "multiple-spaces-before-operator",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E223": {
+		"description": "Tab before operator.",
+		"name": "tab-before-operator",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E225": {
+		"description": "Missing whitespace around operator.",
+		"name": "missing-whitespace-around-operator",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E227": {
+		"description": "Missing whitespace around bitwise or shift operator.",
+		"name": "missing-whitespace-around-bitwise-or-shift-operator",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E231": {
+		"description": "Missing whitespace after '{token}'.",
+		"name": "missing-whitespace",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E242": {
+		"description": "Tab after comma.",
+		"name": "tab-after-comma",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E252": {
+		"description": "Missing whitespace around parameter equals.",
+		"name": "missing-whitespace-around-parameter-equals",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E262": {
+		"description": "Inline comment should start with #.",
+		"name": "no-space-after-inline-comment",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E266": {
+		"description": "Too many leading # before block comment.",
+		"name": "multiple-leading-hashes-for-block-comment",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E272": {
+		"description": "Multiple spaces before keyword.",
+		"name": "multiple-spaces-before-keyword",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E274": {
+		"description": "Tab before keyword.",
+		"name": "tab-before-keyword",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E401": {
+		"description": "Multiple imports on one line.",
+		"name": "multiple-imports-on-one-line",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E501": {
+		"description": "Line too long ({width} > {limit} characters).",
+		"name": "line-too-long",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E702": {
+		"description": "Multiple statements on one line (semicolon).",
+		"name": "multiple-statements-on-one-line-semicolon",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E711": {
+		"description": "Comparison to None should be cond is None.",
+		"name": "none-comparison",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E713": {
+		"description": "Test for membership should be not in.",
+		"name": "not-in-test",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E721": {
+		"description": "Do not compare types, use isinstance().",
+		"name": "type-comparison",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E731": {
+		"description": "Do not assign a lambda expression, use a def.",
+		"name": "lambda-assignment",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E742": {
+		"description": "Ambiguous class name: {name}.",
+		"name": "ambiguous-class-name",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"E902": {
+		"description": "{message}.",
+		"name": "io-error",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"EM102": {
+		"description": "Exception must not use an f-string literal, assign to variable first.",
+		"name": "f-string-in-exception",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"EXE004": {
+		"description": "Avoid whitespace before shebang.",
+		"name": "shebang-leading-whitespace",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"W191": {
+		"description": "Indentation contains tabs.",
+		"name": "tab-indentation",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"W292": {
+		"description": "No newline at end of file.",
+		"name": "missing-newline-at-end-of-file",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"W505": {
+		"description": "Doc line too long ({width} > {limit} characters).",
+		"name": "doc-line-too-long",
+		"value": true,
+		"category": "pycodestyle"
+	},
+	"D100": {
+		"description": "Missing docstring in public module.",
+		"name": "undocumented-public-module",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D102": {
+		"description": "Missing docstring in public method.",
+		"name": "undocumented-public-method",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D104": {
+		"description": "Missing docstring in public package.",
+		"name": "undocumented-public-package",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D106": {
+		"description": "Missing docstring in public nested class.",
+		"name": "undocumented-public-nested-class",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D200": {
+		"description": "One-line docstring should fit on one line.",
+		"name": "fits-on-one-line",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D202": {
+		"description": "No blank lines allowed after function docstring (found {num_lines}).",
+		"name": "no-blank-line-after-function",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D204": {
+		"description": "1 blank line required after class docstring.",
+		"name": "one-blank-line-after-class",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D206": {
+		"description": "Docstring should be indented with spaces, not tabs.",
+		"name": "indent-with-spaces",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D208": {
+		"description": "Docstring is over-indented.",
+		"name": "over-indentation",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D210": {
+		"description": "No whitespaces allowed surrounding docstring text.",
+		"name": "surrounding-whitespace",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D212": {
+		"description": "Multi-line docstring summary should start at the first line.",
+		"name": "multi-line-summary-first-line",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D214": {
+		"description": "Section is over-indented (\"{name}\").",
+		"name": "section-not-over-indented",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D300": {
+		"description": "Use triple double quotes \"\"\".",
+		"name": "triple-single-quotes",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D400": {
+		"description": "First line should end with a period.",
+		"name": "ends-in-period",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D402": {
+		"description": "First line should not be the function's signature.",
+		"name": "no-signature",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D404": {
+		"description": "First word of the docstring should not be \"This\".",
+		"name": "docstring-starts-with-this",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D406": {
+		"description": "Section name should end with a newline (\"{name}\").",
+		"name": "new-line-after-section-name",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D408": {
+		"description": "Section underline should be in the line following the section's name (\"{name}\").",
+		"name": "section-underline-after-name",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D410": {
+		"description": "Missing blank line after section (\"{name}\").",
+		"name": "no-blank-line-after-section",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D412": {
+		"description": "No blank lines allowed between a section header and its content (\"{name}\").",
+		"name": "blank-lines-between-header-and-content",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D414": {
+		"description": "Section has no content (\"{name}\").",
+		"name": "empty-docstring-section",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D416": {
+		"description": "Section name should end with a colon (\"{name}\").",
+		"name": "section-name-ends-in-colon",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"D418": {
+		"description": "Function decorated with @overload shouldn't contain a docstring.",
+		"name": "overload-with-docstring",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"DJ003": {
+		"description": "Avoid passing locals() as context to a render function.",
+		"name": "django-locals-in-render-function",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"DJ012": {
+		"description": "Order of model's inner classes, methods, and fields does not follow the Django Style Guide: {element_type} should come before.",
+		"name": "django-unordered-body-content-in-model",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"DTZ002": {
+		"description": "The use of datetime.datetime.today() is not allowed, use datetime.datetime.now(tz=) instead.",
+		"name": "call-datetime-today",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"DTZ006": {
+		"description": "The use of datetime.datetime.fromtimestamp() without tz argument is not allowed.",
+		"name": "call-datetime-fromtimestamp",
+		"value": true,
+		"category": "pydocstyle"
+	},
+	"PGH001": {
+		"description": "No builtin eval() allowed.",
+		"name": "eval",
+		"value": true,
+		"category": "pygrep-hooks"
+	},
+	"PGH003": {
+		"description": "Use specific rule codes when ignoring type issues.",
+		"name": "blanket-type-ignore",
+		"value": true,
+		"category": "pygrep-hooks"
+	},
+	"PGH005": {
+		"description": "Mock method should be called: {name}.",
+		"name": "invalid-mock-access",
+		"value": true,
+		"category": "pygrep-hooks"
+	},
+	"UP001": {
+		"description": "__metaclass__ = type is implied.",
+		"name": "useless-metaclass-type",
+		"value": true,
+		"category": "pyupgrade"
+	},
+	"UP004": {
+		"description": "Class {name} inherits from object.",
+		"name": "useless-object-inheritance",
+		"value": true,
+		"category": "pyupgrade"
+	},
+	"UP006": {
+		"description": "Use {to} instead of {from} for type annotation.",
+		"name": "non-pep585-annotation",
+		"value": true,
+		"category": "pyupgrade"
+	},
+	"UP008": {
+		"description": "Use super() instead of super(__class__, self).",
+		"name": "super-call-with-parameters",
+		"value": true,
+		"category": "pyupgrade"
+	},
+	"UP010": {
+		"description": "Unnecessary __future__ import {import} for target Python version.",
+		"name": "unnecessary-future-import",
+		"value": true,
+		"category": "pyupgrade"
+	},
+	"UP012": {
+		"description": "Unnecessary call to encode as UTF-8.",
+		"name": "unnecessary-encode-utf8",
+		"value": true,
+		"category": "pyupgrade"
+	},
+	"UP014": {
+		"description": "Convert {name} from NamedTuple functional to class syntax.",
+		"name": "convert-named-tuple-functional-to-class",
+		"value": true,
+		"category": "pyupgrade"
+	},
+	"UP017": {
+		"description": "Use datetime.UTC alias.",
+		"name": "datetime-timezone-utc",
+		"value": true,
+		"category": "pyupgrade"
+	},
+	"UP019": {
+		"description": "Typing.Text is deprecated, use str.",
+		"name": "typing-text-str-alias",
+		"value": true,
+		"category": "pyupgrade"
+	},
+	"UP021": {
+		"description": "Universal_newlines is deprecated, use text.",
+		"name": "replace-universal-newlines",
+		"value": true,
+		"category": "pyupgrade"
+	},
+	"UP023": {
+		"description": "CElementTree is deprecated, use ElementTree.",
+		"name": "deprecated-c-element-tree",
+		"value": true,
+		"category": "pyupgrade"
+	},
+	"UP025": {
+		"description": "Remove unicode literals from strings.",
+		"name": "unicode-kind-prefix",
+		"value": true,
+		"category": "pyupgrade"
+	},
+	"UP027": {
+		"description": "Replace unpacked list comprehension with a generator expression.",
+		"name": "unpacked-list-comprehension",
+		"value": true,
+		"category": "pyupgrade"
+	},
+	"UP029": {
+		"description": "Unnecessary builtin import: {import}.",
+		"name": "unnecessary-builtin-import",
+		"value": true,
+		"category": "pyupgrade"
+	},
+	"UP031": {
+		"description": "Use format specifiers instead of percent format.",
+		"name": "printf-string-formatting",
+		"value": true,
+		"category": "pyupgrade"
+	},
+	"UP033": {
+		"description": "Use @functools.cache instead of @functools.lru_cache(maxsize=None).",
+		"name": "lru-cache-with-maxsize-none",
+		"value": true,
+		"category": "pyupgrade"
+	},
+	"UP035": {
+		"description": "Import from {target} instead:.",
+		"name": "deprecated-import",
+		"value": true,
+		"category": "pyupgrade"
+	},
+	"UP037": {
+		"description": "Remove quotes from type annotation.",
+		"name": "quoted-annotation",
+		"value": true,
+		"category": "pyupgrade"
+	},
+	"UP039": {
+		"description": "Unnecessary parentheses after class definition.",
+		"name": "unnecessary-class-parentheses",
+		"value": true,
+		"category": "pyupgrade"
+	},
+	"FURB105": {
+		"description": "Unnecessary empty string passed to print.",
+		"name": "print-empty-string",
+		"value": true,
+		"category": "refurb"
+	},
+	"FURB131": {
+		"description": "Prefer clear over deleting a full slice.",
+		"name": "delete-full-slice",
+		"value": true,
+		"category": "refurb"
+	},
+	"FURB140": {
+		"description": "Use itertools.starmap instead of the generator.",
+		"name": "reimplemented-starmap",
+		"value": true,
+		"category": "refurb"
+	},
+	"FURB148": {
+		"description": "Enumerate value is unused, use for x in range(len(y)) instead.",
+		"name": "unnecessary-enumerate",
+		"value": true,
+		"category": "refurb"
+	},
+	"TRY002": {
+		"description": "Create your own exception.",
+		"name": "raise-vanilla-class",
+		"value": true,
+		"category": "tryceratops"
+	},
+	"TRY004": {
+		"description": "Prefer TypeError exception for invalid type.",
+		"name": "type-check-without-type-error",
+		"value": true,
+		"category": "tryceratops"
+	},
+	"TRY201": {
+		"description": "Use raise without specifying exception name.",
+		"name": "verbose-raise",
+		"value": true,
+		"category": "tryceratops"
+	},
+	"TRY301": {
+		"description": "Abstract raise to an inner function.",
+		"name": "raise-within-try",
+		"value": true,
+		"category": "tryceratops"
+	},
+	"TRY400": {
+		"description": "Use logging.exception instead of logging.error.",
+		"name": "error-instead-of-exception",
+		"value": true,
+		"category": "tryceratops"
+	}
+}
