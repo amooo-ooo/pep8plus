@@ -12,8 +12,7 @@
 pep8plus is an open-source online tool built for educational institutions to help students enforce and maintain Python programming standards. Powered by Ruff, Flake8 and Pylint, pep8plus is built on the principle of customisability, ease of use and user experience. 
 
 > **Warning**
-> This project is still in its early stages. Hence, bugs and ironically, questionable programming practices may be present.
-
+> Project is in beta. Hence, bugs and ironically, questionable programming practices may be present.
 
 ## Features
 
@@ -49,9 +48,10 @@ git clone https://github.com/amooo-ooo/pep8plus
 ## Setup
 Setup dependencies by running the following on the terminal: 
 ```shell
-pip install -r requirements.txt
-cd client
-npm install
+cd api
+poetry install
+cd ../web
+bun install
 ```
 
 ## Hosting
@@ -63,5 +63,6 @@ python server.py
 ## Support
 pep8plus was created as a school project with the aspiration of helping other young Pythonistas enforce and learn python coding practices. The purpose of this project is to provide educators with a transparent, customisable and easy solution to helping their students enforce Python conventions. 
 
-## Contact
-You can contact me at [amor.budiyanto@gmail.com](mailto:amor.budiyanto@gmail.com).
+## TODO's
+[ ] Add new Ruff & Pylint Rules
+[ ] Automate commits of new rules
