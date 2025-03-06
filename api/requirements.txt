@@ -1,7 +1,0 @@
-Flask
-Flask-Cors
-cryptography
-autopep8
-flake8
-pylint
-ruff

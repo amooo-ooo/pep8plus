@@ -1,2 +1,24 @@
 [tool.ruff]
 select = ["ALL"]
+
+[tool.poetry]
+name = "pep8plus-api"
+version = "0.0.1"
+description = ""
+authors = ["amoooooo <amor.budiyanto2006@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "^3.1.0"
+flask-cors = "^5.0.1"
+cryptography = "^44.0.2"
+autopep8 = "^2.3.2"
+flake8 = "^7.1.2"
+pylint = "^3.3.4"
+ruff = "^0.9.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
