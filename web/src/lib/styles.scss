@@ -55,6 +55,7 @@ div.workspace-sidebar {
     div.workspace-navmenu {
         flex: 5;
         background-color: var(--lm-fore-colour);
+        overflow-y: hidden;
 
         h3 {
             margin: var(--tab-icon-gap) 1rem;

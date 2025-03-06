@@ -53,9 +53,6 @@ def encode(disabled: list, linter: str = 'flake8') -> str:
 def decode(code: str, linter: str = 'flake8') -> dict:
     settings = SETTINGS[linter]
 
-    if code == 'all':
-        return settings
-
     total_errors = len(settings)
     decoded_bytes = base64.urlsafe_b64decode(code + '==='[:len(code) % 4])
     n = int.from_bytes(decoded_bytes, 'big')
@@ -73,10 +70,12 @@ def wrap(output: str, linter: str = 'flake8') -> dict[str]:
 
 def lint(code: str, disable: list = None, linter: str = 'flake8') -> dict[str]:
     linter = linter.lower()
-    command = [sys.executable, "-m", linter, "-"]
+    command = [sys.executable, "-m", linter]
     
     if linter == "ruff":
         command.append("check")
+        
+    command.append("-")
     
     if disable:
         command.append(DISABLE_KEYS[linter] + '=' + ','.join(disable))
