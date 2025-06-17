@@ -18,6 +18,7 @@ autopep8 = "^2.3.2"
 flake8 = "^7.1.2"
 pylint = "^3.3.4"
 ruff = "^0.9.9"
+aiosqlite = "^0.21.0"
 
 [build-system]
 requires = ["poetry-core"]
